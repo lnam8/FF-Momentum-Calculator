@@ -1,4 +1,4 @@
-The Python files in this package will append `projection_data.csv` with weekly projection point values from either ESPN, Sleeper, or FantasyPros.
+The Python files in this directory will append `projection_data.csv` with weekly projection point values from either ESPN, Sleeper, or FantasyPros.
 
 The players that these projections will be populated for are:
 - Puka Nacua
