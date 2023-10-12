@@ -6,18 +6,18 @@ url = 'https://api.sleeper.app/v1/stats/nfl/regular/2023/'
 
 # Player information relative to Sleeper API
 players = [
-    {'id': '9493', 'name': 'Puka Nacua', 'position': 'WR'},
-    {'id': '7553', 'name': 'Kyle Pitts', 'position': 'TE'},
-    {'id': '5850', 'name': 'Josh Jacobs', 'position': 'RB'},
-    {'id': '4981', 'name': 'Calvin Ridley', 'position': 'WR'},
-    {'id': '2749', 'name': 'Raheem Mostert', 'position': 'RB'},
-    {'id': '1339', 'name': 'Zach Ertz', 'position': 'TE'}
+    {'id': '9493', 'name': 'Puka Nacua', 'position': 'WR', 'team': 'LAR'},
+    {'id': '7553', 'name': 'Kyle Pitts', 'position': 'TE', 'team': 'ATL'},
+    {'id': '5850', 'name': 'Josh Jacobs', 'position': 'RB', 'team': 'LV'},
+    {'id': '4981', 'name': 'Calvin Ridley', 'position': 'WR', 'team': 'JAC'},
+    {'id': '2749', 'name': 'Raheem Mostert', 'position': 'RB', 'team': 'MIA'},
+    {'id': '1339', 'name': 'Zach Ertz', 'position': 'TE', 'team': 'ARI'}
 ]
 
 # FantasyPros column names
-wr_columns = ['Rank', 'name', 'receptions', 'targets', 'receiving_yards', 'receiving_yards_per_reception', 'LG', '20+', 'receiving_touchdowns', 'rushing_attempts', 'rushing_yards', 'rushing_touchdowns', 'FL', 'G', 'half_ppr_points', 'FPTS/G', 'ROST']
-rb_columns = ['Rank', 'name', 'rushing_attempts', 'rushing_yards', 'rushing_yards_per_attempt', 'LG', '20+', 'rushing_touchdowns', 'receptions', 'targets', 'receiving_yards', 'receiving_yards_per_reception', 'receiving_touchdowns', 'FL', 'G', 'half_ppr_points', 'FPTS/G', 'ROST']
-te_columns = ['Rank', 'name', 'receptions', 'targets', 'receiving_yards', 'receiving_yards_per_reception', 'LG', '20+', 'receiving_touchdowns', 'rushing_attempts', 'rushing_yards', 'rushing_touchdowns', 'FL', 'G', 'half_ppr_points', 'FPTS/G', 'ROST']
+wr_columns = ['Rank', 'player_name', 'receptions', 'targets', 'receiving_yards', 'receiving_yards_per_reception', 'LG', '20+', 'receiving_touchdowns', 'rushing_attempts', 'rushing_yards', 'rushing_touchdowns', 'FL', 'G', 'half_ppr_points', 'FPTS/G', 'ROST']
+rb_columns = ['Rank', 'player_name', 'rushing_attempts', 'rushing_yards', 'rushing_yards_per_attempt', 'LG', '20+', 'rushing_touchdowns', 'receptions', 'targets', 'receiving_yards', 'receiving_yards_per_reception', 'receiving_touchdowns', 'FL', 'G', 'half_ppr_points', 'FPTS/G', 'ROST']
+te_columns = ['Rank', 'player_name', 'receptions', 'targets', 'receiving_yards', 'receiving_yards_per_reception', 'LG', '20+', 'receiving_touchdowns', 'rushing_attempts', 'rushing_yards', 'rushing_touchdowns', 'FL', 'G', 'half_ppr_points', 'FPTS/G', 'ROST']
 
 
 if __name__ == "__main__":
@@ -37,8 +37,9 @@ if __name__ == "__main__":
             try:
                 d_info = d[player['id']]
                 data.append({
-                    'name': player['name'],
-                    'position': player['position'],
+                    'player_name': player['name'],
+                    'player_position': player['position'],
+                    'player_team': player['team'],
                     'week': int(week),
                     'receptions': int(d_info.get('rec', 0)),
                     'targets': int(d_info.get('rec_tgt', 0)),
@@ -74,14 +75,15 @@ if __name__ == "__main__":
 
             # Format data so that it is similar to JSON above
             df.columns = df_columns
-            df['name'] = df.name.apply(lambda x: ' '.join(x.split()[:-1]))
-            df['position'] = position
+            df['player_team'] = df.player_name.apply(lambda x: ' '.join(x.split()[-1:])[1:-1])
+            df['player_name'] = df.player_name.apply(lambda x: ' '.join(x.split()[:-1]))
+            df['player_position'] = position
             df['week'] = week
             df['standard_points'] = float(0)
             df['ppr_points'] = float(0)
             if position in ['WR', 'TE']:
                 df['rushing_yards_per_attempt'] = df['rushing_yards'].div(df['rushing_attempts'], axis=0).round(1).fillna(0)
-            df = df[['name', 'position', 'week', 'receptions', 'targets', 'receiving_yards', 'receiving_yards_per_reception', 'receiving_touchdowns', 'rushing_attempts', 'rushing_yards', 'rushing_yards_per_attempt', 'rushing_touchdowns', 'standard_points', 'half_ppr_points', 'ppr_points']]
+            df = df[['player_name', 'player_position', 'player_team', 'week', 'receptions', 'targets', 'receiving_yards', 'receiving_yards_per_reception', 'receiving_touchdowns', 'rushing_attempts', 'rushing_yards', 'rushing_yards_per_attempt', 'rushing_touchdowns', 'standard_points', 'half_ppr_points', 'ppr_points']]
             
             # Retrieving only records that have fantasy points scored in that week
             df = df[df.half_ppr_points > 0]
