@@ -1,0 +1,627 @@
+import sqlite3
+import csv
+import os
+
+def create_db_tables(DB):
+    # Connect to the SQLite database
+    conn = sqlite3.connect(DB)
+
+    # Create a cursor object to execute SQLite queries
+    cursor = conn.cursor()
+
+    # Historical Madden weekly table 
+    cursor.execute(
+    '''
+        CREATE TABLE IF NOT EXISTS historical_madden_weekly (
+            college TEXT,
+            signingBonus_diff REAL,
+            awareness_rating INTEGER,
+            shortRouteRunning_diff REAL,
+            press_diff REAL,
+            carrying_diff REAL,
+            strength_rating INTEGER,
+            catchInTraffic_rating INTEGER,
+            pursuit_rating INTEGER,
+            plyrAssetname TEXT,
+            breakSack_diff REAL,
+            plyrPortrait_diff REAL,
+            catching_rating INTEGER,
+            spinMove_rating INTEGER,
+            acceleration_diff REAL,
+            breakTackle_diff REAL,
+            height INTEGER,
+            finesseMoves_rating INTEGER,
+            strength_diff REAL,
+            runBlock_rating INTEGER,
+            tackle_rating INTEGER,
+            runBlock_diff REAL,
+            kickPower_diff REAL,
+            zoneCoverage_rating INTEGER,
+            plyrBirthdate TEXT,
+            awareness_diff REAL,
+            runningStyle_rating TEXT,
+            totalSalary REAL,
+            trucking_rating INTEGER,
+            toughness_diff REAL,
+            hitPower_diff REAL,
+            tackle_diff REAL,
+            jukeMove_rating INTEGER,
+            playRecognition_rating INTEGER,
+            shortRouteRunning_rating INTEGER,
+            status TEXT,
+            lastName TEXT,
+            jerseyNum_diff REAL,
+            jerseyNum INTEGER,
+            breakSack_rating INTEGER,
+            passBlockFinesse_diff REAL,
+            jumping_rating INTEGER,
+            throwAccuracyDeep_diff REAL,
+            stamina_diff REAL,
+            throwAccuracyShort_diff REAL,
+            powerMoves_diff REAL,
+            throwOnTheRun_diff REAL,
+            zoneCoverage_diff REAL,
+            jukeMove_diff REAL,
+            speed_diff REAL,
+            release_rating INTEGER,
+            agility_diff REAL,
+            hitPower_rating INTEGER,
+            throwAccuracyMid_rating INTEGER,
+            kickAccuracy_rating INTEGER,
+            impactBlocking_diff REAL,
+            stamina_rating INTEGER,
+            plyrPortrait TEXT,
+            kickPower_rating INTEGER,
+            throwUnderPressure_rating INTEGER,
+            team TEXT,
+            signingBonus REAL,
+            height_diff REAL,
+            playAction_diff REAL,
+            throwUnderPressure_diff REAL,
+            changeOfDirection_diff REAL,
+            blockShedding_rating INTEGER,
+            fullNameForSearch TEXT,
+            overall_rating INTEGER,
+            deepRouteRunning_diff REAL,
+            passBlockFinesse_rating INTEGER,
+            runBlockFinesse_diff REAL,
+            throwPower_rating INTEGER,
+            kickReturn_rating INTEGER,
+            leadBlock_rating INTEGER,
+            bCVision_rating INTEGER,
+            primaryKey_diff REAL,
+            mediumRouteRunning_diff REAL,
+            playAction_rating INTEGER,
+            totalSalary_diff REAL,
+            teamId_diff REAL,
+            leadBlock_diff REAL,
+            catchInTraffic_diff REAL,
+            mediumRouteRunning_rating INTEGER,
+            acceleration_rating INTEGER,
+            spinMove_diff REAL,
+            yearsPro_diff REAL,
+            spectacularCatch_rating INTEGER,
+            injury_rating INTEGER,
+            weight INTEGER,
+            playRecognition_diff REAL,
+            deepRouteRunning_rating INTEGER,
+            firstName TEXT,
+            yearsPro INTEGER,
+            manCoverage_diff REAL,
+            catching_diff REAL,
+            throwAccuracyShort_rating INTEGER,
+            position TEXT,
+            overall_diff REAL,
+            weight_diff REAL,
+            bCVision_diff REAL,
+            throwPower_diff REAL,
+            speed_rating INTEGER,
+            runBlockPower_rating INTEGER,
+            injury_diff REAL,
+            toughness_rating INTEGER,
+            throwOnTheRun_rating INTEGER,
+            jumping_diff REAL,
+            spectacularCatch_diff REAL,
+            manCoverage_rating INTEGER,
+            stiffArm_rating INTEGER,
+            throwAccuracyMid_diff REAL,
+            trucking_diff REAL,
+            passBlock_diff REAL,
+            powerMoves_rating INTEGER,
+            iteration TEXT,
+            stiffArm_diff REAL,
+            passBlockPower_rating INTEGER,
+            impactBlocking_rating INTEGER,
+            carrying_rating INTEGER,
+            breakTackle_rating INTEGER,
+            plyrHandedness TEXT,
+            kickReturn_diff REAL,
+            passBlock_rating INTEGER,
+            changeOfDirection_rating INTEGER,
+            press_rating INTEGER,
+            passBlockPower_diff REAL,
+            pursuit_diff REAL,
+            release_diff REAL,
+            throwAccuracyDeep_rating INTEGER,
+            age_diff REAL,
+            archetype TEXT,
+            runBlockPower_diff REAL,
+            runBlockFinesse_rating INTEGER,
+            finesseMoves_diff REAL,
+            blockShedding_diff REAL,
+            kickAccuracy_diff REAL,
+            teamId INTEGER,
+            agility_rating INTEGER,
+            age TEXT,
+            primaryKey INTEGER
+        );
+    '''
+    )
+
+    # Madden Weekly table
+    cursor.execute('''
+        CREATE TABLE IF NOT EXISTS madden_weekly (
+            college TEXT,
+            signingBonus_diff INTEGER,
+            awareness_rating INTEGER,
+            shortRouteRunning_diff INTEGER,
+            press_diff INTEGER,
+            carrying_diff INTEGER,
+            strength_rating INTEGER,
+            catchInTraffic_rating INTEGER,
+            pursuit_rating INTEGER,
+            plyrAssetname TEXT,
+            breakSack_diff INTEGER,
+            plyrPortrait_diff INTEGER,
+            catching_rating INTEGER,
+            spinMove_rating INTEGER,
+            acceleration_diff INTEGER,
+            breakTackle_diff INTEGER,
+            height INTEGER,
+            finesseMoves_rating INTEGER,
+            strength_diff INTEGER,
+            runBlock_rating INTEGER,
+            tackle_rating INTEGER,
+            runBlock_diff INTEGER,
+            kickPower_diff INTEGER,
+            zoneCoverage_rating INTEGER,
+            plyrBirthdate TEXT,
+            awareness_diff INTEGER,
+            runningStyle_rating INTEGER,
+            totalSalary INTEGER,
+            trucking_rating INTEGER,
+            toughness_diff INTEGER,
+            hitPower_diff INTEGER,
+            tackle_diff INTEGER,
+            jukeMove_rating INTEGER,
+            playRecognition_rating INTEGER,
+            shortRouteRunning_rating INTEGER,
+            status TEXT,
+            lastName TEXT,
+            jerseyNum_diff INTEGER,
+            jerseyNum INTEGER,
+            breakSack_rating INTEGER,
+            passBlockFinesse_diff INTEGER,
+            jumping_rating INTEGER,
+            throwAccuracyDeep_diff INTEGER,
+            stamina_diff INTEGER,
+            throwAccuracyShort_diff INTEGER,
+            powerMoves_diff INTEGER,
+            throwOnTheRun_diff INTEGER,
+            zoneCoverage_diff INTEGER,
+            jukeMove_diff INTEGER,
+            speed_diff INTEGER,
+            release_rating INTEGER,
+            agility_diff INTEGER,
+            hitPower_rating INTEGER,
+            throwAccuracyMid_rating INTEGER,
+            kickAccuracy_rating INTEGER,
+            impactBlocking_diff INTEGER,
+            stamina_rating INTEGER,
+            plyrPortrait TEXT,
+            kickPower_rating INTEGER,
+            throwUnderPressure_rating INTEGER,
+            team TEXT,
+            signingBonus INTEGER,
+            height_diff INTEGER,
+            playAction_diff INTEGER,
+            throwUnderPressure_diff INTEGER,
+            changeOfDirection_diff INTEGER,
+            blockShedding_rating INTEGER,
+            fullNameForSearch TEXT,
+            overall_rating INTEGER,
+            deepRouteRunning_diff INTEGER,
+            passBlockFinesse_rating INTEGER,
+            runBlockFinesse_diff INTEGER,
+            throwPower_rating INTEGER,
+            kickReturn_rating INTEGER,
+            leadBlock_rating INTEGER,
+            bCVision_rating INTEGER,
+            primaryKey_diff INTEGER,
+            mediumRouteRunning_diff INTEGER,
+            playAction_rating INTEGER,
+            totalSalary_diff INTEGER,
+            teamId_diff INTEGER,
+            leadBlock_diff INTEGER,
+            catchInTraffic_diff INTEGER,
+            mediumRouteRunning_rating INTEGER,
+            acceleration_rating INTEGER,
+            spinMove_diff INTEGER,
+            yearsPro_diff INTEGER,
+            spectacularCatch_rating INTEGER,
+            injury_rating INTEGER,
+            weight INTEGER,
+            playRecognition_diff INTEGER,
+            deepRouteRunning_rating INTEGER,
+            firstName TEXT,
+            yearsPro INTEGER,
+            manCoverage_diff INTEGER,
+            catching_diff INTEGER,
+            throwAccuracyShort_rating INTEGER,
+            position TEXT,
+            overall_diff INTEGER,
+            weight_diff INTEGER,
+            bCVision_diff INTEGER,
+            throwPower_diff INTEGER,
+            speed_rating INTEGER,
+            runBlockPower_rating INTEGER,
+            injury_diff INTEGER,
+            toughness_rating INTEGER,
+            throwOnTheRun_rating INTEGER,
+            jumping_diff INTEGER,
+            spectacularCatch_diff INTEGER,
+            manCoverage_rating INTEGER,
+            stiffArm_rating INTEGER,
+            throwAccuracyMid_diff INTEGER,
+            trucking_diff INTEGER,
+            passBlock_diff INTEGER,
+            powerMoves_rating INTEGER,
+            iteration INTEGER,
+            stiffArm_diff INTEGER,
+            passBlockPower_rating INTEGER,
+            impactBlocking_rating INTEGER,
+            carrying_rating INTEGER,
+            breakTackle_rating INTEGER,
+            plyrHandedness TEXT,
+            kickReturn_diff INTEGER,
+            passBlock_rating INTEGER,
+            changeOfDirection_rating INTEGER,
+            press_rating INTEGER,
+            passBlockPower_diff INTEGER,
+            pursuit_diff INTEGER,
+            release_diff INTEGER,
+            throwAccuracyDeep_rating INTEGER,
+            age_diff INTEGER,
+            archetype TEXT,
+            runBlockPower_diff INTEGER,
+            runBlockFinesse_rating INTEGER,
+            finesseMoves_diff INTEGER,
+            blockShedding_diff INTEGER,
+            kickAccuracy_diff INTEGER,
+            teamId TEXT,
+            agility_rating INTEGER,
+            age INTEGER,
+            primaryKey INTEGER
+        )
+    ''')
+
+    cursor.execute('''
+        CREATE TABLE IF NOT EXISTS historical_weekly_stats (
+            player_name TEXT,
+            player_position TEXT,
+            player_team TEXT,
+            week INTEGER,
+            receptions INTEGER,
+            targets INTEGER,
+            receiving_yards INTEGER,
+            receiving_yards_per_reception REAL,
+            receiving_touchdowns INTEGER,
+            rushing_attempts INTEGER,
+            rushing_yards INTEGER,
+            rushing_yards_per_attempt REAL,
+            rushing_touchdowns INTEGER,
+            standard_points REAL,
+            half_ppr_points REAL,
+            ppr_points REAL
+        );
+    '''
+    )
+
+    # Season projections table
+    cursor.execute('''
+    CREATE TABLE IF NOT EXISTS season_projections (
+        player_name TEXT,
+        player_position TEXT,
+        years_experience INTEGER,
+        receptions INTEGER,
+        receiving_yards INTEGER,
+        receiving_touchdowns INTEGER,
+        rushing_attempts INTEGER,
+        rushing_yards INTEGER,
+        rushing_touchdowns INTEGER,
+        standard_points REAL,
+        half_ppr_points REAL,
+        ppr_points REAL
+    )
+    ''')
+
+    cursor.execute('''
+    CREATE TABLE IF NOT EXISTS weekly_projections (
+        data_source TEXT,
+        player_id INTEGER,
+        player_name TEXT,
+        player_position TEXT,
+        week INTEGER,
+        standard_projected_points REAL,
+        half_ppr_projected_points REAL,
+        ppr_projected_points REAL
+    )
+    ''')
+
+    # Weekly stats table 
+    cursor.execute('''
+    CREATE TABLE IF NOT EXISTS weekly_stats (
+        player_name TEXT,
+        player_position TEXT,
+        player_team TEXT,
+        week INTEGER,
+        receptions INTEGER,
+        targets INTEGER,
+        receiving_yards INTEGER,
+        receiving_yards_per_reception REAL,
+        receiving_touchdowns INTEGER,
+        rushing_attempts INTEGER,
+        rushing_yards INTEGER,
+        rushing_yards_per_attempt REAL,
+        rushing_touchdowns INTEGER,
+        standard_points REAL,
+        half_ppr_points REAL,
+        ppr_points REAL
+    )
+    ''')
+
+    cursor.execute('''
+    CREATE TABLE IF NOT EXISTS files_processed (
+        file_id INTEGER PRIMARY KEY AUTOINCREMENT,
+        file_name TEXT,
+        file_dir TEXT
+    )
+    ''')
+
+    # Commit the changes and close the connection
+    conn.commit()
+    conn.close()
+    print("Finished creating database tables\n")
+
+def delete_db(DB):
+    try:
+        os.remove(DB)
+        print(f"{DB} has been succesfully deleted")
+
+    except Exception as e:
+        print(e)
+
+# To Do: Merge this with current weekly data
+def add_historical_madden_data(DB, csv_file):
+    conn = sqlite3.connect(DB)
+    cursor = conn.cursor()
+    
+    print(f"Starting: Processing historical Madden weekly file: {csv_file}")
+
+    with open(csv_file, 'r') as f:
+        csv_reader = csv.DictReader(f)
+    
+        for row in csv_reader:
+            cursor.execute(f'''
+                INSERT INTO historical_madden_weekly (
+                    college, signingBonus_diff, awareness_rating, shortRouteRunning_diff, press_diff,
+                    carrying_diff, strength_rating, catchInTraffic_rating, pursuit_rating, plyrAssetname,
+                    breakSack_diff, plyrPortrait_diff, catching_rating, spinMove_rating, acceleration_diff,
+                    breakTackle_diff, height, finesseMoves_rating, strength_diff, runBlock_rating, tackle_rating,
+                    runBlock_diff, kickPower_diff, zoneCoverage_rating, plyrBirthdate, awareness_diff,
+                    runningStyle_rating, totalSalary, trucking_rating, toughness_diff, hitPower_diff, tackle_diff,
+                    jukeMove_rating, playRecognition_rating, shortRouteRunning_rating, status, lastName,
+                    jerseyNum_diff, jerseyNum, breakSack_rating, passBlockFinesse_diff, jumping_rating,
+                    throwAccuracyDeep_diff, stamina_diff, throwAccuracyShort_diff, powerMoves_diff, throwOnTheRun_diff,
+                    zoneCoverage_diff, jukeMove_diff, speed_diff, release_rating, agility_diff, hitPower_rating,
+                    throwAccuracyMid_rating, kickAccuracy_rating, impactBlocking_diff, stamina_rating, plyrPortrait,
+                    kickPower_rating, throwUnderPressure_rating, team, signingBonus, height_diff, playAction_diff,
+                    throwUnderPressure_diff, changeOfDirection_diff, blockShedding_rating, fullNameForSearch,
+                    overall_rating, deepRouteRunning_diff, passBlockFinesse_rating, runBlockFinesse_diff,
+                    throwPower_rating, kickReturn_rating, leadBlock_rating, bCVision_rating, primaryKey_diff,
+                    mediumRouteRunning_diff, playAction_rating, totalSalary_diff, teamId_diff, leadBlock_diff,
+                    catchInTraffic_diff, mediumRouteRunning_rating, acceleration_rating, spinMove_diff, yearsPro_diff,
+                    spectacularCatch_rating, injury_rating, weight, playRecognition_diff, deepRouteRunning_rating,
+                    firstName, yearsPro, manCoverage_diff, catching_diff, throwAccuracyShort_rating, position,
+                    overall_diff, weight_diff, bCVision_diff, throwPower_diff, speed_rating, runBlockPower_rating,
+                    injury_diff, toughness_rating, throwOnTheRun_rating, jumping_diff, spectacularCatch_diff,
+                    manCoverage_rating, stiffArm_rating, throwAccuracyMid_diff, trucking_diff, passBlock_diff,
+                    powerMoves_rating, iteration, stiffArm_diff, passBlockPower_rating, impactBlocking_rating,
+                    carrying_rating, breakTackle_rating, plyrHandedness, kickReturn_diff, passBlock_rating,
+                    changeOfDirection_rating, press_rating, passBlockPower_diff, pursuit_diff, release_diff,
+                    throwAccuracyDeep_rating, age_diff, archetype, runBlockPower_diff, runBlockFinesse_rating,
+                    finesseMoves_diff, blockShedding_diff, kickAccuracy_diff, teamId, agility_rating, age, primaryKey
+                ) VALUES (
+                    :college, :signingBonus_diff, :awareness_rating, :shortRouteRunning_diff, :press_diff,
+                    :carrying_diff, :strength_rating, :catchInTraffic_rating, :pursuit_rating, :plyrAssetname,
+                    :breakSack_diff, :plyrPortrait_diff, :catching_rating, :spinMove_rating, :acceleration_diff,
+                    :breakTackle_diff, :height, :finesseMoves_rating, :strength_diff, :runBlock_rating, :tackle_rating,
+                    :runBlock_diff, :kickPower_diff, :zoneCoverage_rating, :plyrBirthdate, :awareness_diff,
+                    :runningStyle_rating, :totalSalary, :trucking_rating, :toughness_diff, :hitPower_diff, :tackle_diff,
+                    :jukeMove_rating, :playRecognition_rating, :shortRouteRunning_rating, :status, :lastName,
+                    :jerseyNum_diff, :jerseyNum, :breakSack_rating, :passBlockFinesse_diff, :jumping_rating,
+                    :throwAccuracyDeep_diff, :stamina_diff, :throwAccuracyShort_diff, :powerMoves_diff, :throwOnTheRun_diff,
+                    :zoneCoverage_diff, :jukeMove_diff, :speed_diff, :release_rating, :agility_diff, :hitPower_rating,
+                    :throwAccuracyMid_rating, :kickAccuracy_rating, :impactBlocking_diff, :stamina_rating, :plyrPortrait,
+                    :kickPower_rating, :throwUnderPressure_rating, :team, :signingBonus, :height_diff, :playAction_diff,
+                    :throwUnderPressure_diff, :changeOfDirection_diff, :blockShedding_rating, :fullNameForSearch,
+                    :overall_rating, :deepRouteRunning_diff, :passBlockFinesse_rating, :runBlockFinesse_diff,
+                    :throwPower_rating, :kickReturn_rating, :leadBlock_rating, :bCVision_rating, :primaryKey_diff,
+                    :mediumRouteRunning_diff, :playAction_rating, :totalSalary_diff, :teamId_diff, :leadBlock_diff,
+                    :catchInTraffic_diff, :mediumRouteRunning_rating, :acceleration_rating, :spinMove_diff, :yearsPro_diff,
+                    :spectacularCatch_rating, :injury_rating, :weight, :playRecognition_diff, :deepRouteRunning_rating,
+                    :firstName, :yearsPro, :manCoverage_diff, :catching_diff, :throwAccuracyShort_rating, :position,
+                    :overall_diff, :weight_diff, :bCVision_diff, :throwPower_diff, :speed_rating, :runBlockPower_rating,
+                    :injury_diff, :toughness_rating, :throwOnTheRun_rating, :jumping_diff, :spectacularCatch_diff,
+                    :manCoverage_rating, :stiffArm_rating, :throwAccuracyMid_diff, :trucking_diff, :passBlock_diff,
+                    :powerMoves_rating, :iteration, :stiffArm_diff, :passBlockPower_rating, :impactBlocking_rating,
+                    :carrying_rating, :breakTackle_rating, :plyrHandedness, :kickReturn_diff, :passBlock_rating,
+                    :changeOfDirection_rating, :press_rating, :passBlockPower_diff, :pursuit_diff, :release_diff,
+                    :throwAccuracyDeep_rating, :age_diff, :archetype, :runBlockPower_diff, :runBlockFinesse_rating,
+                    :finesseMoves_diff, :blockShedding_diff, :kickAccuracy_diff, :teamId, :agility_rating, :age, :primaryKey
+                );
+            ''', row)
+    print(f"Finished: Processing file: {csv_file}\n")
+    conn.commit()
+    conn.close()
+
+def add_madden_data(DB, csv_file):
+    conn = sqlite3.connect(DB)
+    cursor = conn.cursor()
+    
+    print(f"Starting: Processing Madden weekly file: {csv_file}")
+
+    with open(csv_file, 'r') as f:
+        csv_reader = csv.DictReader(f)
+    
+        for row in csv_reader:
+            cursor.execute(f'''
+                INSERT INTO madden_weekly (
+                    college, signingBonus_diff, awareness_rating, shortRouteRunning_diff, press_diff,
+                    carrying_diff, strength_rating, catchInTraffic_rating, pursuit_rating, plyrAssetname,
+                    breakSack_diff, plyrPortrait_diff, catching_rating, spinMove_rating, acceleration_diff,
+                    breakTackle_diff, height, finesseMoves_rating, strength_diff, runBlock_rating, tackle_rating,
+                    runBlock_diff, kickPower_diff, zoneCoverage_rating, plyrBirthdate, awareness_diff,
+                    runningStyle_rating, totalSalary, trucking_rating, toughness_diff, hitPower_diff, tackle_diff,
+                    jukeMove_rating, playRecognition_rating, shortRouteRunning_rating, status, lastName,
+                    jerseyNum_diff, jerseyNum, breakSack_rating, passBlockFinesse_diff, jumping_rating,
+                    throwAccuracyDeep_diff, stamina_diff, throwAccuracyShort_diff, powerMoves_diff, throwOnTheRun_diff,
+                    zoneCoverage_diff, jukeMove_diff, speed_diff, release_rating, agility_diff, hitPower_rating,
+                    throwAccuracyMid_rating, kickAccuracy_rating, impactBlocking_diff, stamina_rating, plyrPortrait,
+                    kickPower_rating, throwUnderPressure_rating, team, signingBonus, height_diff, playAction_diff,
+                    throwUnderPressure_diff, changeOfDirection_diff, blockShedding_rating, fullNameForSearch,
+                    overall_rating, deepRouteRunning_diff, passBlockFinesse_rating, runBlockFinesse_diff,
+                    throwPower_rating, kickReturn_rating, leadBlock_rating, bCVision_rating, primaryKey_diff,
+                    mediumRouteRunning_diff, playAction_rating, totalSalary_diff, teamId_diff, leadBlock_diff,
+                    catchInTraffic_diff, mediumRouteRunning_rating, acceleration_rating, spinMove_diff, yearsPro_diff,
+                    spectacularCatch_rating, injury_rating, weight, playRecognition_diff, deepRouteRunning_rating,
+                    firstName, yearsPro, manCoverage_diff, catching_diff, throwAccuracyShort_rating, position,
+                    overall_diff, weight_diff, bCVision_diff, throwPower_diff, speed_rating, runBlockPower_rating,
+                    injury_diff, toughness_rating, throwOnTheRun_rating, jumping_diff, spectacularCatch_diff,
+                    manCoverage_rating, stiffArm_rating, throwAccuracyMid_diff, trucking_diff, passBlock_diff,
+                    powerMoves_rating, iteration, stiffArm_diff, passBlockPower_rating, impactBlocking_rating,
+                    carrying_rating, breakTackle_rating, plyrHandedness, kickReturn_diff, passBlock_rating,
+                    changeOfDirection_rating, press_rating, passBlockPower_diff, pursuit_diff, release_diff,
+                    throwAccuracyDeep_rating, age_diff, archetype, runBlockPower_diff, runBlockFinesse_rating,
+                    finesseMoves_diff, blockShedding_diff, kickAccuracy_diff, teamId, agility_rating, age, primaryKey
+                ) VALUES (
+                    :college, :signingBonus_diff, :awareness_rating, :shortRouteRunning_diff, :press_diff,
+                    :carrying_diff, :strength_rating, :catchInTraffic_rating, :pursuit_rating, :plyrAssetname,
+                    :breakSack_diff, :plyrPortrait_diff, :catching_rating, :spinMove_rating, :acceleration_diff,
+                    :breakTackle_diff, :height, :finesseMoves_rating, :strength_diff, :runBlock_rating, :tackle_rating,
+                    :runBlock_diff, :kickPower_diff, :zoneCoverage_rating, :plyrBirthdate, :awareness_diff,
+                    :runningStyle_rating, :totalSalary, :trucking_rating, :toughness_diff, :hitPower_diff, :tackle_diff,
+                    :jukeMove_rating, :playRecognition_rating, :shortRouteRunning_rating, :status, :lastName,
+                    :jerseyNum_diff, :jerseyNum, :breakSack_rating, :passBlockFinesse_diff, :jumping_rating,
+                    :throwAccuracyDeep_diff, :stamina_diff, :throwAccuracyShort_diff, :powerMoves_diff, :throwOnTheRun_diff,
+                    :zoneCoverage_diff, :jukeMove_diff, :speed_diff, :release_rating, :agility_diff, :hitPower_rating,
+                    :throwAccuracyMid_rating, :kickAccuracy_rating, :impactBlocking_diff, :stamina_rating, :plyrPortrait,
+                    :kickPower_rating, :throwUnderPressure_rating, :team, :signingBonus, :height_diff, :playAction_diff,
+                    :throwUnderPressure_diff, :changeOfDirection_diff, :blockShedding_rating, :fullNameForSearch,
+                    :overall_rating, :deepRouteRunning_diff, :passBlockFinesse_rating, :runBlockFinesse_diff,
+                    :throwPower_rating, :kickReturn_rating, :leadBlock_rating, :bCVision_rating, :primaryKey_diff,
+                    :mediumRouteRunning_diff, :playAction_rating, :totalSalary_diff, :teamId_diff, :leadBlock_diff,
+                    :catchInTraffic_diff, :mediumRouteRunning_rating, :acceleration_rating, :spinMove_diff, :yearsPro_diff,
+                    :spectacularCatch_rating, :injury_rating, :weight, :playRecognition_diff, :deepRouteRunning_rating,
+                    :firstName, :yearsPro, :manCoverage_diff, :catching_diff, :throwAccuracyShort_rating, :position,
+                    :overall_diff, :weight_diff, :bCVision_diff, :throwPower_diff, :speed_rating, :runBlockPower_rating,
+                    :injury_diff, :toughness_rating, :throwOnTheRun_rating, :jumping_diff, :spectacularCatch_diff,
+                    :manCoverage_rating, :stiffArm_rating, :throwAccuracyMid_diff, :trucking_diff, :passBlock_diff,
+                    :powerMoves_rating, :iteration, :stiffArm_diff, :passBlockPower_rating, :impactBlocking_rating,
+                    :carrying_rating, :breakTackle_rating, :plyrHandedness, :kickReturn_diff, :passBlock_rating,
+                    :changeOfDirection_rating, :press_rating, :passBlockPower_diff, :pursuit_diff, :release_diff,
+                    :throwAccuracyDeep_rating, :age_diff, :archetype, :runBlockPower_diff, :runBlockFinesse_rating,
+                    :finesseMoves_diff, :blockShedding_diff, :kickAccuracy_diff, :teamId, :agility_rating, :age, :primaryKey
+                );
+            ''', row)
+    print(f"Finished: Processing file: {csv_file}\n")
+    conn.commit()
+    conn.close()
+
+def add_historical_weekly_stats(DB, csv_file):
+
+    conn = sqlite3.connect(DB)
+    cursor = conn.cursor()
+    
+    print(f"Starting: Processing Madden weekly file: {csv_file}")
+
+    with open(csv_file, 'r') as f:
+        csv_reader = csv.DictReader(f)
+        for row in csv_reader:
+            cursor.execute(f'''
+                INSERT INTO historical_weekly_stats (
+                    player_name, player_position, player_team, week, receptions, targets,
+                    receiving_yards, receiving_yards_per_reception, receiving_touchdowns, rushing_attempts,
+                    rushing_yards, rushing_yards_per_attempt, rushing_touchdowns, standard_points,
+                    half_ppr_points, ppr_points
+                ) VALUES (
+                    :player_name, :player_position, :player_team, :week, :receptions, :targets,
+                    :receiving_yards, :receiving_yards_per_reception, :receiving_touchdowns, :rushing_attempts,
+                    :rushing_yards, :rushing_yards_per_attempt, :rushing_touchdowns, :standard_points,
+                    :half_ppr_points, :ppr_points
+                );
+            ''', row)
+
+    # Commit the changes and close the database connection
+    print(f"Finished: Processing file: {csv_file}\n")
+    conn.commit()
+    conn.close()
+
+def update_historical_db(DB):
+
+    historical_madden_dir = "../scripts/get_historical_madden_ratings/historical_weekly_ratings/"
+    historical_stats_dir = "../scripts/get_historical_statistics/"
+
+    files_historical_madden = os.listdir(historical_madden_dir)
+    files_historical_stats = os.listdir(historical_stats_dir)
+
+    for file in files_historical_madden:
+        full_path = os.path.join(historical_madden_dir, file) 
+        add_historical_madden_data(DB, full_path)
+
+    for file in files_historical_stats:
+        if ".csv" in file:
+            full_path = os.path.join(historical_stats_dir, file) 
+            add_historical_weekly_stats(DB, full_path)
+    
+def menu(DB):
+    while(1):
+        print(f"\n{DB} Menu")
+        print(f"1. Create {DB}")
+        print(f"2. Delete {DB}")
+        print("3. Update historical data tables")
+        print("4. Exit\n")
+
+        choice = input("Enter your choice: ")
+
+        if choice == '1':
+            create_db_tables(DB)
+
+        elif choice == '2':
+            delete_db(DB)
+
+        elif choice == '3':
+            update_historical_db(DB)
+
+        elif choice == '4':
+            print("Exiting the program")
+            return
+        else:
+            print("Invalid choice. Please try again.")
+
+if __name__ == "__main__":
+    
+    DB = "ff_momentum.db"
+
+    menu(DB)
+
