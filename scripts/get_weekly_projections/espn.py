@@ -22,35 +22,29 @@ if __name__ == "__main__":
     # For each week, go through the Free Agent list and pull the projection amounts
     data = []
     positions = ['WR', 'RB', 'TE']
-    for week in range(1, week + 1):
-        for position in positions:
-            fa = league.free_agents(position=position, week=week)
-            filtered_players = [i for i in fa if i.name in player_list]
-            for player in filtered_players:
-                data.append(
-                    {
-                        'data_source': 'ESPN',
-                        'player_id': player.playerId,
-                        'player_name': player.name,
-                        'player_position': player.position,
-                        'week': week,
-                        'standard_projected_points': None,
-                        'half_ppr_projected_points': player.projected_points,
-                        'ppr_projected_points': None
-                    }
-                )
+    for position in positions:
+        fa = league.free_agents(position=position, week=week)
+        filtered_players = [i for i in fa if i.name in player_list]
+        for player in filtered_players:
+            data.append(
+                {
+                    'data_source': 'ESPN',
+                    'player_id': player.playerId,
+                    'player_name': player.name,
+                    'player_position': player.position,
+                    'week': week,
+                    'standard_projected_points': None,
+                    'half_ppr_projected_points': player.projected_points,
+                    'ppr_projected_points': None
+                }
+            )
 
     pdf = pd.DataFrame(data)
 
-    # Appending any new ESPN records to the CSV
-    historical_data = pd.read_csv('projection_data.csv')
-    espn_only = historical_data[historical_data.data_source == 'ESPN']
-    espn_only = espn_only.astype({'player_id': 'int'})
-    complement = pd.concat([espn_only, pdf], ignore_index=True)
-    complement.drop_duplicates(inplace=True, keep=False)
-    if len(complement) != 0:
-        print('Adding {} records to `projection_data.csv`'.format(len(complement)))
-        print(complement.T)
-        complement.to_csv('projection_data.csv', mode='a', index=False, header=False)
+    # Appending new weekly ESPN records to the CSV
+    if len(pdf) != 0:
+        print('Adding {} records to `projection_data.csv`'.format(len(pdf)))
+        print(pdf)
+        pdf.to_csv('projection_data.csv', mode='a', index=False, header=False)
     else:
         print('No new records to add')

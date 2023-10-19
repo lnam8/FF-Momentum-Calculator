@@ -75,37 +75,32 @@ if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="A script that gathers weekly FantasyPros Fantasy Football Projections")
     parser.add_argument("--week", type=int, help="Week as an integer ex. 1")
     args = parser.parse_args()
-    weeks = args.week
+    week = args.week
 
-    # Loops through and populates data set with projection data for each unique week and score type
-    for week in range(1, weeks + 1):
-        for score in scoring:
-            url = 'https://www.fantasypros.com/nfl/projections/flex.php?scoring={}&week={}'.format(score, week)
+    # Populates data set with projection data for each unique week and score type
+    for score in scoring:
+        url = 'https://www.fantasypros.com/nfl/projections/flex.php?scoring={}&week={}'.format(score, week)
 
-            pdf = pd.read_html(url)[0]
-            cols = ['player_name', 'position', 'RUSHING ATT', 'RUSHING YDS', 'RUSHING TDS', 'RECEIVING REC', 'RECEIVING YDS', 'RECEIVING TDS', 'MISC FL', 'projected_points']
-            
-            df = pdf.copy()
-            df.columns = cols
-            df = df[['player_name', 'position', 'projected_points']]
-            df['team'] = df.player_name.apply(lambda x: x.split()[-1])
-            df['position'] = df.position.apply(lambda x: x[:2])
-            df['player_name'] = df.player_name.apply(lambda x: ' '.join(x.split()[:-1]))
+        pdf = pd.read_html(url)[0]
+        cols = ['player_name', 'position', 'RUSHING ATT', 'RUSHING YDS', 'RUSHING TDS', 'RECEIVING REC', 'RECEIVING YDS', 'RECEIVING TDS', 'MISC FL', 'projected_points']
+        
+        df = pdf.copy()
+        df.columns = cols
+        df = df[['player_name', 'position', 'projected_points']]
+        df['team'] = df.player_name.apply(lambda x: x.split()[-1])
+        df['position'] = df.position.apply(lambda x: x[:2])
+        df['player_name'] = df.player_name.apply(lambda x: ' '.join(x.split()[:-1]))
 
-            players_to_use = df[df['player_name'].isin(list(players.keys()))]
-            players_to_use.apply(lambda x: update(x, score, week), axis=1)
+        players_to_use = df[df['player_name'].isin(list(players.keys()))]
+        players_to_use.apply(lambda x: update(x, score, week), axis=1)
             
 
     pdf = pd.DataFrame(data)
 
-    # Appending any new FantasyPros records to the CSV
-    historical_data = pd.read_csv('projection_data.csv')
-    fantasypros_only = historical_data[historical_data.data_source == 'FantasyPros']
-    complement = pd.concat([fantasypros_only, pdf], ignore_index=True)
-    complement.drop_duplicates(inplace=True, keep=False)
-    if len(complement) != 0:
-        print('Adding {} records to `projection_data.csv`'.format(len(complement)))
-        print(complement)
-        complement.to_csv('projection_data.csv', mode='a', index=False, header=False)
+    # Appending new weekly FantasyPros records to the CSV
+    if len(pdf) != 0:
+        print('Adding {} records to `projection_data.csv`'.format(len(pdf)))
+        print(pdf)
+        pdf.to_csv('projection_data.csv', mode='a', index=False, header=False)
     else:
         print('No new records to add')
