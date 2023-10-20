@@ -125,9 +125,9 @@ labels = kmmodel.labels_
 # Add some labels
 # =============================================================================
 latest["label"]=labels
-latest.loc[latest['label'] == 2, 'Category'] = 'Good'
-latest.loc[latest['label'] == 1, 'Category'] = 'Okay'
-latest.loc[latest['label'] == 0, 'Category'] = 'Not Good'
+latest.loc[latest['label'] == 2, 'Category'] = '2'
+latest.loc[latest['label'] == 1, 'Category'] = '1'
+latest.loc[latest['label'] == 0, 'Category'] = '0'
 
 
 # =============================================================================
