@@ -13,7 +13,7 @@ The players that these projections will be populated for are:
 ## Usage
 
 ```bash
-python3 weekly_data.py
+python3 weekly_data.py --week <week>
 ```
 
 ## Contributing
