@@ -34,7 +34,7 @@ for item in tables:
 
 #In[]:
 
-weekly_stats_query = """select * FROM """ +"historical_weekly_stats LIMIT 3" 
+weekly_stats_query = """select * FROM """ +"historical_weekly_stats" 
 cursor.execute(weekly_stats_query)
 data_weekly = cursor.fetchall()
 
@@ -65,20 +65,23 @@ if conn:
         # the connection
         conn.close()
 #In[]:
-
+import tqdm
 years =  df_data_weekly['what_year'].unique()
 all_players =  df_data_weekly['player_name'].unique()
 each_player_by_year = {}
+for x in tqdm.tqdm(years):
+    print(x)
 
-for y in years:
+#In[]:
+for y in tqdm.tqdm(years):
       for player in all_players:
-            print(y,player)
+            #print(y,player)
             temp_df = df_data_weekly[df_data_weekly['what_year'] == y]
 
             try: 
                 one_player = temp_df[temp_df['player_name'] == player]
                 temp_list = []
-                for week_of_season in range(1,WEEK_OF_THE_SEASON):
+                for week_of_season in range(1,18):
                     try:
                         did_they_play = one_player[one_player['week'] == week_of_season]
                         if len(did_they_play) < 1:
@@ -92,10 +95,54 @@ for y in years:
                 string_concat = str(player) + " " + str(y)
                 each_player_by_year[string_concat] = (temp_list) 
             except:
-                  print('didnt play this year')
+                  pass # print('didnt play this year')
 
 
 
 
 
 output_df_int_cluster = pd.DataFrame.from_dict(each_player_by_year).T
+
+
+
+#In[]:
+
+COLUMNS_NEEDED = range(0,WEEK_OF_THE_SEASON - 1)
+
+modeling_output_df_int_cluster  = output_df_int_cluster[COLUMNS_NEEDED]
+
+from sklearn.neighbors import NearestNeighbors
+neigh = NearestNeighbors(n_neighbors=5)
+neigh.fit(modeling_output_df_int_cluster)
+A = neigh.kneighbors_graph(modeling_output_df_int_cluster)
+B =A.toarray()
+#In[]:
+#from sklearn.neighbors import NearestNeighbors
+import numpy as np
+import matplotlib.pyplot as plt
+
+new_df = modeling_output_df_int_cluster.reset_index()
+future_df = output_df_int_cluster.reset_index()
+
+
+"""This section to be removed for real world application"""
+TEMP_PROVE_POINT_COL = range(max(modeling_output_df_int_cluster.columns),max(output_df_int_cluster.columns)+1)
+future_output_df_int_cluster  = output_df_int_cluster[TEMP_PROVE_POINT_COL]
+temp_df = future_output_df_int_cluster.reset_index()
+
+def findsuccess(id):
+    labels = []
+    plt.figure(figsize=(15,5))
+    index_for_nn = np.where(B[:][id] ==1)[0]
+    plt.plot(np.array(modeling_output_df_int_cluster.columns),np.array(new_df.iloc[id])[1:])
+    plt.plot(np.array(future_output_df_int_cluster.columns),np.array(temp_df.iloc[id])[1:],'r--')
+    labels.append(np.array(new_df.iloc[id])[0])
+    labels.append(str(np.array(new_df.iloc[id])[0]) + ' Projected')
+    plt.title('Players most like ' + str(np.array(new_df.iloc[id])[0]))
+    for item in index_for_nn:
+        if item != id: 
+            print('Neighbors of id', new_df.iloc[item]['index'])
+            plt.scatter(output_df_int_cluster.columns,list(future_df.iloc[item])[1:])
+            labels.append(np.array(future_df.iloc[item])[0])
+    plt.legend(labels)
+findsuccess(4)
