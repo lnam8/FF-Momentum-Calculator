@@ -25,18 +25,32 @@ if __name__ == "__main__":
         url = 'https://api.sleeper.com/projections/nfl/player/{}?season_type=regular&season=2023&grouping=week'.format(player['id'])
         r = requests.get(url)
         d = r.json()
-        data.append(
-            {
-                'data_source': 'Sleeper',
-                'player_id': int(player['id']),
-                'player_name': player['name'],
-                'player_position': player['position'],
-                'week': week,
-                'standard_projected_points': d[str(week)]['stats']['pts_std'],
-                'half_ppr_projected_points': d[str(week)]['stats']['pts_half_ppr'],
-                'ppr_projected_points': d[str(week)]['stats']['pts_ppr']
-            }
-        )
+        if d[str(week)] is not None:
+            data.append(
+                {
+                    'data_source': 'Sleeper',
+                    'player_id': int(player['id']),
+                    'player_name': player['name'],
+                    'player_position': player['position'],
+                    'week': week,
+                    'standard_projected_points': d[str(week)]['stats']['pts_std'],
+                    'half_ppr_projected_points': d[str(week)]['stats']['pts_half_ppr'],
+                    'ppr_projected_points': d[str(week)]['stats']['pts_ppr']
+                }
+            )
+        else:
+            data.append(
+                {
+                    'data_source': 'Sleeper',
+                    'player_id': int(player['id']),
+                    'player_name': player['name'],
+                    'player_position': player['position'],
+                    'week': week,
+                    'standard_projected_points': 0,
+                    'half_ppr_projected_points': 0,
+                    'ppr_projected_points': 0
+                }
+            )
 
     pdf = pd.DataFrame(data)
 
