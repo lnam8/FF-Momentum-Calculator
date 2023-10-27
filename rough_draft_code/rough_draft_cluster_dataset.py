@@ -4,7 +4,7 @@ import pandas as pd
 import os 
 import glob
 import sqlite3          
-WEEK_OF_THE_SEASON = 7 
+WEEK_OF_THE_SEASON = 6
 
 #In[]:
 conn = sqlite3.connect("C:\\Users\\15869\\Desktop\\FF_Teamwork\\FF-Momentum-Calculator\\db\\ff_momentum.db")
@@ -25,16 +25,17 @@ tables = cursor.fetchall()
 #In[]:
 
 
-for item in tables:
-    print(item[0])
-    temp_query = """select * FROM """ +str(item[0]) +    "Limit 3"
-    print(temp_query)
-    cursor.execute(sql_query)
-    print(cursor.fetchall())
+# for item in tables:
+
+#     print(item[0])
+#     temp_query = """select * FROM """ +str(item[0]) +    "Limit 3"
+#     #print(temp_query)
+#     cursor.execute(sql_query)
+#     print(cursor.fetchall())
 
 #In[]:
 
-weekly_stats_query = """select * FROM """ +"historical_weekly_stats" 
+weekly_stats_query = """select * FROM """ +"historical_weekly_stats " 
 cursor.execute(weekly_stats_query)
 data_weekly = cursor.fetchall()
 
@@ -57,7 +58,15 @@ cols = ['player_name' ,
 df_data_weekly = pd.DataFrame(data_weekly,columns = cols)
 df_data_weekly['year_shift']= df_data_weekly['week'].shift(1)
 df_data_weekly['new_year'] = 1 * (df_data_weekly['year_shift'] != df_data_weekly['week']) * (df_data_weekly['week'] == 1)
-df_data_weekly['what_year'] = df_data_weekly['new_year'].cumsum() + 2001
+df_data_weekly['what_year'] = df_data_weekly['new_year'].cumsum() 
+
+#In[]:
+
+current_weekly_data = pd.read_csv('C:\\Users\\15869\\Desktop\\FF_Teamwork\\FF-Momentum-Calculator\\scripts\\get_weekly_statistics\\weekly_data.csv')
+current_weekly_data['what_year'] = 'CURRENT'
+
+df_data_weekly = pd.concat([df_data_weekly,current_weekly_data]).reset_index(drop=True)
+
 
 #In[]:
 if conn:
@@ -103,8 +112,10 @@ for y in tqdm.tqdm(years):
 
 output_df_int_cluster = pd.DataFrame.from_dict(each_player_by_year).T
 
+#In[]:
+good_indexes =  output_df_int_cluster.sum(axis = 1) > 10
 
-
+output_df_int_cluster = output_df_int_cluster[good_indexes]
 #In[]:
 
 COLUMNS_NEEDED = range(0,WEEK_OF_THE_SEASON - 1)
@@ -112,10 +123,11 @@ COLUMNS_NEEDED = range(0,WEEK_OF_THE_SEASON - 1)
 modeling_output_df_int_cluster  = output_df_int_cluster[COLUMNS_NEEDED]
 
 from sklearn.neighbors import NearestNeighbors
-neigh = NearestNeighbors(n_neighbors=5)
-neigh.fit(modeling_output_df_int_cluster)
-A = neigh.kneighbors_graph(modeling_output_df_int_cluster)
-B =A.toarray()
+for i in tqdm.tqdm([1]):
+    neigh = NearestNeighbors(n_neighbors=5)
+    neigh.fit(modeling_output_df_int_cluster)
+    A = neigh.kneighbors_graph(modeling_output_df_int_cluster)
+    B =A.toarray()
 #In[]:
 #from sklearn.neighbors import NearestNeighbors
 import numpy as np
@@ -130,14 +142,17 @@ TEMP_PROVE_POINT_COL = range(max(modeling_output_df_int_cluster.columns),max(out
 future_output_df_int_cluster  = output_df_int_cluster[TEMP_PROVE_POINT_COL]
 temp_df = future_output_df_int_cluster.reset_index()
 
+
+
+
 def findsuccess(id):
     labels = []
     plt.figure(figsize=(15,5))
     index_for_nn = np.where(B[:][id] ==1)[0]
     plt.plot(np.array(modeling_output_df_int_cluster.columns),np.array(new_df.iloc[id])[1:])
-    plt.plot(np.array(future_output_df_int_cluster.columns),np.array(temp_df.iloc[id])[1:],'r--')
+    #plt.plot(np.array(future_output_df_int_cluster.columns),np.array(temp_df.iloc[id])[1:],'r--')
     labels.append(np.array(new_df.iloc[id])[0])
-    labels.append(str(np.array(new_df.iloc[id])[0]) + ' Projected')
+    #labels.append(str(np.array(new_df.iloc[id])[0]) + ' Projected')
     plt.title('Players most like ' + str(np.array(new_df.iloc[id])[0]))
     for item in index_for_nn:
         if item != id: 
@@ -145,4 +160,27 @@ def findsuccess(id):
             plt.scatter(output_df_int_cluster.columns,list(future_df.iloc[item])[1:])
             labels.append(np.array(future_df.iloc[item])[0])
     plt.legend(labels)
-findsuccess(4)
+
+
+
+
+
+
+
+#In[]:
+import re
+list_of_people = []
+these_players = ['Puka Nakua CURRENT','Josh Jacobs CURRENT','Kyle Pitts CURRENT','Zach Ertz CURRENT','Raheem Mostert CURRENT','Calvin Ridley CURRENT'] 
+for person in these_players: 
+    for item in modeling_output_df_int_cluster.index:
+
+        if re.findall(person,item) :
+            temps = re.findall(person,item)
+            for k in temps:
+                if re.findall('CURR',k):
+
+                    list_of_people.append(new_df[new_df['index']== item ].index[0])
+
+
+for number_id in list_of_people:
+     findsuccess(number_id)
