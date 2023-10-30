@@ -39,12 +39,13 @@ if __name__ == "__main__":
                 df['player_team'] = df.player_name.apply(lambda x: ' '.join(x.split()[-1:])[1:-1])
                 df['player_name'] = df.player_name.apply(lambda x: ' '.join(x.split()[:-1]))
                 df['player_position'] = position
+                df['year'] = year
                 df['week'] = week
                 df['standard_points'] = float(0)
                 df['ppr_points'] = float(0)
                 if position in ['WR', 'TE']:
                     df['rushing_yards_per_attempt'] = df['rushing_yards'].div(df['rushing_attempts'], axis=0).round(1).fillna(0)
-                df = df[['player_name', 'player_position', 'player_team', 'week', 'receptions', 'targets', 'receiving_yards', 'receiving_yards_per_reception', 'receiving_touchdowns', 'rushing_attempts', 'rushing_yards', 'rushing_yards_per_attempt', 'rushing_touchdowns', 'standard_points', 'half_ppr_points', 'ppr_points']]
+                df = df[['player_name', 'player_position', 'player_team', 'year', 'week', 'receptions', 'targets', 'receiving_yards', 'receiving_yards_per_reception', 'receiving_touchdowns', 'rushing_attempts', 'rushing_yards', 'rushing_yards_per_attempt', 'rushing_touchdowns', 'standard_points', 'half_ppr_points', 'ppr_points']]
                 
                 # Retrieving only records that have fantasy points scored in that week
                 df = df[df.half_ppr_points > 0]
