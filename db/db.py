@@ -629,6 +629,94 @@ def add_season_projection(DB, csv_file):
     conn.commit()
     conn.close()
 
+def add_weekly_stats(DB, csv_file):
+
+    conn = sqlite3.connect(DB)
+    cursor = conn.cursor()
+
+    print(f"Starting: Processing weekly_stats file: {csv_file}")
+
+    with open(csv_file, 'r') as f:
+        reader = csv.DictReader(f)
+
+        # Iterate over each row in the CSV file
+        for row in reader:
+            # Extract the data from the current row
+            player_name = row['player_name']
+            player_position = row['player_position']
+            player_team = row['player_team']
+            week = int(row['week'])
+            receptions = int(row['receptions'])
+            targets = int(row['targets'])
+            receiving_yards = int(row['receiving_yards'])
+            receiving_yards_per_reception = float(row['receiving_yards_per_reception'])
+            receiving_touchdowns = int(row['receiving_touchdowns'])
+            rushing_attempts = int(row['rushing_attempts'])
+            rushing_yards = int(row['rushing_yards'])
+            rushing_yards_per_attempt = float(row['rushing_yards'])
+            rushing_touchdowns = int(row['rushing_touchdowns'])
+            standard_points = float(row['standard_points'])
+            half_ppr_points = float(row['half_ppr_points'])
+            ppr_points = float(row['ppr_points'])
+
+            # Insert the data into the "weekly_stats" table
+            cursor.execute('''
+                INSERT INTO weekly_stats (
+                    player_name, player_position, player_team, week,
+                    receptions, targets, receiving_yards, receiving_yards_per_reception, receiving_touchdowns,
+                    rushing_attempts, rushing_yards, rushing_yards_per_attempt, rushing_touchdowns,
+                    standard_points, half_ppr_points, ppr_points
+                )
+                VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+            ''', (
+                player_name, player_position, player_team, week,
+                receptions, targets, receiving_yards, receiving_yards_per_reception, receiving_touchdowns,
+                rushing_attempts, rushing_yards, rushing_yards_per_attempt, rushing_touchdowns,
+                standard_points, half_ppr_points, ppr_points
+            ))
+
+    print(f"Finished: Processing file: {csv_file}\n")
+    conn.commit()
+    conn.close() 
+
+def add_weekly_projections(DB, csv_file):
+
+    conn = sqlite3.connect(DB)
+    cursor = conn.cursor()
+
+    print(f"Starting: Processing weekly_projections file: {csv_file}")
+
+    with open(csv_file, 'r') as f:
+        reader = csv.DictReader(f)
+
+        # Iterate over each row in the CSV file
+        for row in reader:
+            # Extract the data from the current row
+            data_source = row['data_source']
+            player_id = int(row['player_id']) if row['player_id'] else 0 
+            player_name = row['player_name']
+            player_position = row['player_position']
+            week = int(row['week'])
+            standard_projected_points = float(row['standard_projected_points']) if row['standard_projected_points'] else 0.00
+            half_ppr_projected_points = float(row['half_ppr_projected_points']) if row['half_ppr_projected_points'] else 0.00
+            ppr_projected_points = float(row['ppr_projected_points']) if row['ppr_projected_points'] else 0.00
+
+            # Insert the data into the "weekly_stats" table
+            cursor.execute('''
+                INSERT INTO weekly_projections (
+                    data_source, player_id, player_name, player_position, week,
+                    standard_projected_points, half_ppr_projected_points, ppr_projected_points
+                )
+                VALUES (?, ?, ?, ?, ?, ?, ?, ?) 
+            ''', (
+                data_source, player_id, player_name, player_position, week,
+                standard_projected_points, half_ppr_projected_points, ppr_projected_points
+            ))
+
+    print(f"Finished: Processing file: {csv_file}\n")
+    conn.commit()
+    conn.close() 
+
 def add_processed_file(DB, csv_file, dir):
 
     conn = sqlite3.connect(DB)
@@ -674,7 +762,7 @@ def process_madden_ratings(DB):
     files = os.listdir(dir)
 
     for file in files:
-        if file_exists(DB, file): 
+        if check_file_exists(DB, file): 
             print(f"{file} already exists. Skipping")
             continue
 
@@ -684,7 +772,29 @@ def process_madden_ratings(DB):
             add_processed_file(DB, file, dir)
             print(f"Added {file} to files_processed")
 
-def file_exists(DB, file_name):
+def process_weekly_stats_csv(DB):
+
+    dir = "../scripts/get_weekly_statistics/"
+
+    files = os.listdir(dir)
+
+    for file in files:
+        if ".csv" in file:
+            full_path = os.path.join(dir, file) 
+            add_weekly_stats(DB, full_path)
+
+def process_weekly_projections_csv(DB):
+
+    dir = "../scripts/get_weekly_projections/"
+
+    files = os.listdir(dir)
+
+    for file in files:
+        if ".csv" in file:
+            full_path = os.path.join(dir, file) 
+            add_weekly_projections(DB, full_path)
+
+def check_file_exists(DB, file_name):
     conn = sqlite3.connect(DB)
     cursor = conn.cursor()
 
@@ -718,7 +828,10 @@ def menu(DB):
         print("3. Update historical data tables")
         print("4. Update season projection data table")
         print("5. Update Madden weekly ratings data table")
-        print("6. Exit\n")
+        print("6. Update weekly stats data table")
+        print("7. Update weekly projections data table")
+        print("8. Reset db and run all scripts")
+        print("9. Exit\n")
 
         choice = input("Enter your choice: ")
 
@@ -738,6 +851,21 @@ def menu(DB):
             process_madden_ratings(DB)
 
         elif choice == '6':
+            process_weekly_stats_csv(DB)
+            
+        elif choice == '7':
+            process_weekly_projections_csv(DB)
+            
+        elif choice == '8':
+            delete_db(DB)
+            create_db_tables(DB)
+            process_historical_csv(DB)
+            process_season_projection_csv(DB)
+            process_madden_ratings(DB)
+            process_weekly_stats_csv(DB)
+            process_weekly_projections_csv(DB)
+
+        elif choice == '9':
             print("Exiting the program")
             return
             
