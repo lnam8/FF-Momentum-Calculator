@@ -315,6 +315,7 @@ def create_db_tables(DB):
             player_name TEXT,
             player_position TEXT,
             player_team TEXT,
+            year TEXT,
             week INTEGER,
             receptions INTEGER,
             targets INTEGER,
@@ -565,12 +566,12 @@ def add_historical_weekly_stats(DB, csv_file):
         for row in csv_reader:
             cursor.execute(f'''
                 INSERT INTO historical_weekly_stats (
-                    player_name, player_position, player_team, week, receptions, targets,
+                    player_name, player_position, player_team, year, week, receptions, targets,
                     receiving_yards, receiving_yards_per_reception, receiving_touchdowns, rushing_attempts,
                     rushing_yards, rushing_yards_per_attempt, rushing_touchdowns, standard_points,
                     half_ppr_points, ppr_points
                 ) VALUES (
-                    :player_name, :player_position, :player_team, :week, :receptions, :targets,
+                    :player_name, :player_position, :player_team, :year, :week, :receptions, :targets,
                     :receiving_yards, :receiving_yards_per_reception, :receiving_touchdowns, :rushing_attempts,
                     :rushing_yards, :rushing_yards_per_attempt, :rushing_touchdowns, :standard_points,
                     :half_ppr_points, :ppr_points
