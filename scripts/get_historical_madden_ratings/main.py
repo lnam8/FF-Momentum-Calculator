@@ -51,6 +51,12 @@ if __name__ == "__main__":
             try:
                 file = f"{dir}/year_{year}_week_{j + 1}_madden_ratings.csv"
                 df = pd.DataFrame(list_players_data)
+                df['year'] = int(year) + 2000
+                df['week'] = j + 1
+
+                # Rearrange to make last two columns the first two
+                last_two_cols = df.columns[-2:]                
+                df = df[last_two_cols.tolist() + df.columns[:-2].tolist()]
                 df.to_csv(file, index=False)
                 print(f"File successfully created: {file}")
 
