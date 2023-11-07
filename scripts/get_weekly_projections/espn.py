@@ -19,7 +19,7 @@ if __name__ == "__main__":
     # Retrieves Player instances for players named in players_list
     player_list = ['Puka Nacua', 'Calvin Ridley', 'Kyle Pitts', 'Zach Ertz', 'Josh Jacobs', 'Raheem Mostert']
 
-    # For each week, go through the Free Agent list and pull the projection amounts
+    # For the week provided, go through the Free Agent list and pull the projection amounts
     data = []
     positions = ['WR', 'RB', 'TE']
     for position in positions:
@@ -41,10 +41,32 @@ if __name__ == "__main__":
 
     pdf = pd.DataFrame(data)
 
+    # Get the overall projections for all FLEX players for that week over a 3 point threshold
+    fa_data = []
+    fas = [i for pos in positions for i in league.free_agents(position=pos, week=week) if i.projected_points >= 3.0]
+    for pl in fas:
+        fa_data.append(
+            {
+                'data_source': 'ESPN',
+                'player_id': pl.playerId,
+                'player_name': pl.name,
+                'player_position': pl.position,
+                'week': week,
+                'standard_projected_points': None,
+                'half_ppr_projected_points': pl.projected_points,
+                'ppr_projected_points': None
+            }
+        )
+    fa_pdf = pd.DataFrame(fa_data)
+
+    # Concat and see if the new df has 6 less records after dropping duplicates
+    concat_pdf = pd.concat([pdf, fa_pdf])
+    de_duped_pdf = concat_pdf.drop_duplicates()
+
     # Appending new weekly ESPN records to the CSV
-    if len(pdf) != 0:
-        print('Adding {} records to `projection_data.csv`'.format(len(pdf)))
-        print(pdf)
-        pdf.to_csv('projection_data.csv', mode='a', index=False, header=False)
+    if len(de_duped_pdf) != 0:
+        print('Adding {} records to `projection_data.csv`'.format(len(de_duped_pdf)))
+        print(de_duped_pdf.head(6))
+        de_duped_pdf.to_csv('projection_data.csv', mode='a', index=False, header=False)
     else:
         print('No new records to add')

@@ -54,10 +54,35 @@ if __name__ == "__main__":
 
     pdf = pd.DataFrame(data)
 
+    # Get the projected points for all FLEX players over 3.0 points
+    flex_data = []
+    u = 'https://api.sleeper.app/projections/nfl/2023/1?season_type=regular&position[]=RB&position[]=TE&position[]=WR&order_by=ppr'
+    re = requests.get(u)
+    dd = re.json()
+    d0 = [i for i in dd if len(i.get('stats')) != 1 and i.get('stats').get('pts_half_ppr') is not None and i.get('stats').get('pts_half_ppr') >= 3.0]
+    for a in d0:
+        flex_data.append(
+            {
+                'data_source': 'Sleeper',
+                'player_id': int(a['player_id']),
+                'player_name': ' '.join([a['player']['first_name'], a['player']['last_name']]),
+                'player_position': a['player']['position'],
+                'week': week,
+                'standard_projected_points': a['stats']['pts_std'],
+                'half_ppr_projected_points': a['stats']['pts_half_ppr'],
+                'ppr_projected_points': a['stats']['pts_ppr']
+            }
+        )
+    flex_pdf = pd.DataFrame(flex_data)
+
+    # Concat and drop duplicates
+    concat_pdf = pd.concat([pdf, flex_pdf])
+    de_duped_pdf = concat_pdf.drop_duplicates()
+
     # Appending any new Sleeper records to the CSV
-    if len(pdf) != 0:
-        print('Adding {} records to `projection_data.csv`'.format(len(pdf)))
-        print(pdf)
-        pdf.to_csv('projection_data.csv', mode='a', index=False, header=False)
+    if len(de_duped_pdf) != 0:
+        print('Adding {} records to `projection_data.csv`'.format(len(de_duped_pdf)))
+        print(de_duped_pdf.head(6))
+        de_duped_pdf.to_csv('projection_data.csv', mode='a', index=False, header=False)
     else:
         print('No new records to add')

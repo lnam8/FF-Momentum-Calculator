@@ -7,7 +7,7 @@ def add_new_data(row, score_type, week):
         data.append(
             {
                 'data_source': 'FantasyPros', 'player_id': None, 'player_name': row.player_name,
-                'player_position': players[row.player_name], 'week': week,
+                'player_position': row.position, 'week': week,
                 'standard_projected_points': None, 'half_ppr_projected_points': row.projected_points,
                 'ppr_projected_points': None
             }
@@ -16,7 +16,7 @@ def add_new_data(row, score_type, week):
         data.append(
             {
                 'data_source': 'FantasyPros', 'player_id': None, 'player_name': row.player_name,
-                'player_position': players[row.player_name], 'week': week,
+                'player_position': row.position, 'week': week,
                 'standard_projected_points': None, 'half_ppr_projected_points': None,
                 'ppr_projected_points': row.projected_points
             }
@@ -25,7 +25,7 @@ def add_new_data(row, score_type, week):
         data.append(
             {
                 'data_source': 'FantasyPros', 'player_id': None, 'player_name': row.player_name,
-                'player_position': players[row.player_name], 'week': week,
+                'player_position': row.position, 'week': week,
                 'standard_projected_points': row.projected_points, 'half_ppr_projected_points': None,
                 'ppr_projected_points': None
             }
@@ -59,14 +59,7 @@ def update(row, score_type, week):
 
 
 scoring = ['STD', 'HALF', 'PPR']
-players = {
-    'Puka Nacua': 'WR',
-    'Kyle Pitts': 'TE',
-    'Josh Jacobs': 'RB',
-    'Calvin Ridley': 'WR',
-    'Raheem Mostert': 'RB',
-    'Zach Ertz': 'TE'
-}
+players = ['Puka Nacua', 'Kyle Pitts', 'Josh Jacobs', 'Calvin Ridley', 'Raheem Mostert', 'Zach Ertz']
 data = []
 
 
@@ -91,16 +84,23 @@ if __name__ == "__main__":
         df['position'] = df.position.apply(lambda x: x[:2])
         df['player_name'] = df.player_name.apply(lambda x: ' '.join(x.split()[:-1]))
 
-        players_to_use = df[df['player_name'].isin(list(players.keys()))]
+        players_to_use = df[df['player_name'].isin(players)]
         players_to_use.apply(lambda x: update(x, score, week), axis=1)
-            
+
+        # Adding the rest of the players projection data for that week
+        df.apply(lambda x: update(x, score, week), axis=1)
 
     pdf = pd.DataFrame(data)
+
+    # Filters the non-players list data fo those over 3.0 points in Half-PPR
+    players = pdf[pdf.player_name.isin(players)].reset_index(drop=True)
+    flex = pdf[(pdf.half_ppr_projected_points >= 3.0) & (~pdf.player_name.isin(players))].reset_index(drop=True)
+    pdf = pd.concat([players, flex]).drop_duplicates()
 
     # Appending new weekly FantasyPros records to the CSV
     if len(pdf) != 0:
         print('Adding {} records to `projection_data.csv`'.format(len(pdf)))
-        print(pdf)
+        print(pdf.head(6))
         pdf.to_csv('projection_data.csv', mode='a', index=False, header=False)
     else:
         print('No new records to add')
