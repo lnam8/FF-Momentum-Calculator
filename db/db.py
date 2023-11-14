@@ -242,6 +242,48 @@ def create_db_tables(DB):
     )
     ''')
 
+    # Historical weekly defense
+    cursor.execute('''
+    CREATE TABLE historical_weekly_defense (
+        Year INT,
+        Week INT,
+        Day TEXT,
+        Date TEXT,
+        Win_Loss TEXT,
+        OT INT,
+        Team TEXT,
+        Opponent TEXT,
+        Team_Score INT,
+        Opponent_Score INT,
+        Passing_Complete INT,
+        Passing_Attempts INT,
+        Passing_Yards INT,
+        Passing_TD INT,
+        Passing_Int INT,
+        Sacks_Allowed INT,
+        Sacks_Yards_Allowed INT,
+        Passing_Y_A REAL,
+        Passing_Net_Y_A REAL,
+        Passing_Completion REALL,
+        QB_Rating REAL,
+        Rushing_Attempts INT,
+        Rushing_Yards INT,
+        Rushing_Y_A REAL,
+        Rushing_TD INT,
+        Field_Goals_Made INT,
+        Field_Goals_Attempted INT,
+        Extra_Points_Made INT,
+        Extra_Points_Attempted INT,
+        Number_of_Punts INT,
+        Punting_Yards INT,
+        Third_Down_Conversions INT,
+        Third_Down_Attempts INT,
+        Fourth_Down_Conversions INT,
+        Fourth_Down_Attempts INT,
+        Time_of_Possession TEXT
+    )
+    ''')
+
     # Commit the changes and close the connection
     conn.commit()
     conn.close()
@@ -491,6 +533,43 @@ def add_weekly_projections(DB, csv_file):
     conn.commit()
     conn.close() 
 
+def add_historical_weekly_defense(DB, csv_file):
+    conn = sqlite3.connect(DB)
+    cursor = conn.cursor()
+
+    print(f"Starting: Processing historical_weekly_defense file: {csv_file}")
+
+    with open(csv_file, 'r') as f:
+        reader = csv.DictReader(f)
+
+        # Iterate over each row in the CSV file
+        for row in reader:
+            cursor.execute(f'''
+                        INSERT INTO historical_weekly_defense (
+                        Year, Week, Day, Date, Win_Loss, OT, Team, Opponent, Team_Score, 
+                        Opponent_Score, Passing_Complete, Passing_Attempts, Passing_Yards, 
+                        Passing_TD, Passing_Int, Sacks_Allowed, Sacks_Yards_Allowed, 
+                        Passing_Y_A, Passing_Net_Y_A, Passing_Completion, QB_Rating, 
+                        Rushing_Attempts, Rushing_Yards, Rushing_Y_A, Rushing_TD, Field_Goals_Made, 
+                        Field_Goals_Attempted, Extra_Points_Made, Extra_Points_Attempted,
+                        Number_of_Punts, Punting_Yards, Third_Down_Conversions, 
+                        Third_Down_Attempts, Fourth_Down_Conversions, Fourth_Down_Attempts, 
+                        Time_of_Possession) 
+                    VALUES (
+                        :Year, :Week, :Day, :Date, :Win_Loss, :OT, :Team, :Opponent, :Team_Score, 
+                        :Opponent_Score, :Passing_Complete, :Passing_Attempts, :Passing_Yards, 
+                        :Passing_TD, :Passing_Int, :Sacks_Allowed, :Sacks_Yards_Allowed, 
+                        :Passing_Y_A, :Passing_Net_Y_A, :Passing_Completion, :QB_Rating, 
+                        :Rushing_Attempts, :Rushing_Yards, :Rushing_Y_A, :Rushing_TD, :Field_Goals_Made, 
+                        :Field_Goals_Attempted, :Extra_Points_Made, :Extra_Points_Attempted,
+                        :Number_of_Punts, :Punting_Yards, :Third_Down_Conversions, 
+                        :Third_Down_Attempts, :Fourth_Down_Conversions, :Fourth_Down_Attempts, 
+                        :Time_of_Possession);
+                    ''', row)
+    print(f"Finished: Processing file: {csv_file}\n")
+    conn.commit()
+    conn.close() 
+            
 def add_processed_file(DB, csv_file, dir):
 
     conn = sqlite3.connect(DB)
@@ -568,6 +647,17 @@ def process_weekly_projections_csv(DB):
             full_path = os.path.join(dir, file) 
             add_weekly_projections(DB, full_path)
 
+def process_historical_weekly_defense_csv(DB):
+
+    dir = "../scripts/get_historical_weekly_defense/weekly_files/"
+
+    files = os.listdir(dir)
+
+    for file in files:
+        if ".csv" in file:
+            full_path = os.path.join(dir, file) 
+            add_historical_weekly_defense(DB, full_path)
+
 def check_file_exists(DB, file_name):
     conn = sqlite3.connect(DB)
     cursor = conn.cursor()
@@ -604,8 +694,9 @@ def menu(DB):
         print("5. Update Madden weekly ratings data table")
         print("6. Update weekly stats data table")
         print("7. Update weekly projections data table")
-        print("8. Reset db and run all scripts")
-        print("9. Exit\n")
+        print("8. Update historical weekly defense data table")
+        print("9. Reset db and run all scripts")
+        print("0. Exit\n")
 
         choice = input("Enter your choice: ")
 
@@ -629,8 +720,11 @@ def menu(DB):
             
         elif choice == '7':
             process_weekly_projections_csv(DB)
-            
+
         elif choice == '8':
+            process_historical_weekly_defense_csv(DB)
+            
+        elif choice == '9':
             delete_db(DB)
             create_db_tables(DB)
             process_historical_csv(DB)
@@ -638,8 +732,9 @@ def menu(DB):
             process_madden_ratings(DB)
             process_weekly_stats_csv(DB)
             process_weekly_projections_csv(DB)
+            process_historical_weekly_defense_csv(DB)
 
-        elif choice == '9':
+        elif choice == '0':
             print("Exiting the program")
             return
             
