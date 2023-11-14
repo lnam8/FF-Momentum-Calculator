@@ -29,10 +29,10 @@ if __name__ == "__main__":
     url = 'https://www.pro-football-reference.com/teams/{}/{}/gamelog/'
     
     # Column names
-    dataframe_cols = ['Week', 'Day', 'Date', 'boxscore', 'Win/Loss', 'OT', 'at', 'Opponent', 'Team_Score', 'Opponent_Score', 
+    dataframe_cols = ['Week', 'Day', 'Date', 'boxscore', 'Win_Loss', 'OT', 'at', 'Opponent', 'Team_Score', 'Opponent_Score', 
                       'Passing_Complete', 'Passing_Attempts', 'Passing_Yards', 'Passing_TD', 'Passing_Int', 'Sacks_Allowed', 
-                      'Sacks_Yards_Allowed', 'Passing_Y/A', 'Passing_Net_Y/A', 'Passing_Completion%', 'QB_Rating', 
-                      'Rushing_Attempts', 'Rushing_Yards', 'Rushing_Y/A', 'Rushing_TD', 'Field_Goals_Made', 'Field_Goals_Attempted', 
+                      'Sacks_Yards_Allowed', 'Passing_Y_A', 'Passing_Net_Y_A', 'Passing_Completion', 'QB_Rating', 
+                      'Rushing_Attempts', 'Rushing_Yards', 'Rushing_Y_A', 'Rushing_TD', 'Field_Goals_Made', 'Field_Goals_Attempted', 
                       'Extra_Points_Made', 'Extra_Points_Attempted', 'Number_of_Punts', 'Punting_Yards', 'Third_Down_Conversions', 
                       'Third_Down_Attempts', 'Fourth_Down_Conversions', 'Fourth_Down_Attempts', 'Time_of_Possession'
                      ]
