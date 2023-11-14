@@ -1,0 +1,513 @@
+Year,Week,Day,Date,Win/Loss,OT,Team,Opponent,Team_Score,Opponent_Score,Passing_Complete,Passing_Attempts,Passing_Yards,Passing_TD,Passing_Int,Sacks_Allowed,Sacks_Yards_Allowed,Passing_Y/A,Passing_Net_Y/A,Passing_Completion%,QB_Rating,Rushing_Attempts,Rushing_Yards,Rushing_Y/A,Rushing_TD,Field_Goals_Made,Field_Goals_Attempted,Extra_Points_Made,Extra_Points_Attempted,Number_of_Punts,Punting_Yards,Third_Down_Conversions,Third_Down_Attempts,Fourth_Down_Conversions,Fourth_Down_Attempts,Time_of_Possession
+2017,1,Sun,September 10,L,0,Arizona Cardinals,Detroit Lions,23,35,29,41,285,4,1,1,7,7.1,6.8,70.7,112.3,27,82,3.0,0,1,1,2,2,5,189,8,16,0,1,33:20
+2017,2,Sun,September 17,W,1,Arizona Cardinals,Indianapolis Colts,16,13,20,37,190,0,1,4,26,5.8,4.6,54.1,57.3,29,76,2.6,1,2,2,1,1,7,303,8,18,0,0,33:09
+2017,3,Mon,September 25,L,0,Arizona Cardinals,Dallas Cowboys,17,28,13,18,174,2,0,1,9,10.2,9.2,72.2,139.6,26,99,3.8,2,0,0,4,4,7,311,2,9,0,0,23:45
+2017,4,Sun,October 1,W,1,Arizona Cardinals,San Francisco 49ers,18,15,24,49,210,0,1,3,24,4.8,4.0,49.0,52.3,27,95,3.5,0,5,5,0,0,7,351,5,19,1,1,33:13
+2017,5,Sun,October 8,L,0,Arizona Cardinals,Philadelphia Eagles,7,34,21,30,297,4,1,1,7,10.1,9.6,70.0,127.4,33,122,3.7,0,2,2,4,4,3,129,9,14,0,0,35:47
+2017,6,Sun,October 15,W,0,Arizona Cardinals,Tampa Bay Buccaneers,38,33,27,42,344,3,2,2,7,8.4,7.8,64.3,93.8,21,68,3.2,1,0,0,1,1,4,154,7,14,2,3,27:37
+2017,7,Sun,October 22,L,0,Arizona Cardinals,Los Angeles Rams,0,33,22,37,228,1,1,1,7,6.4,6.0,59.5,75.1,40,197,4.9,2,4,4,3,3,2,119,13,19,0,0,39:01
+2017,9,Sun,November 5,W,0,Arizona Cardinals,San Francisco 49ers,20,10,24,51,266,0,1,5,28,5.8,4.8,47.1,54.9,17,63,3.7,1,1,1,1,1,8,352,6,17,0,2,23:38
+2017,10,Thu,November 9,L,0,Arizona Cardinals,Seattle Seahawks,16,22,22,32,212,2,0,5,26,7.4,5.7,68.8,107.8,23,75,3.3,0,2,2,2,2,8,398,3,13,0,0,30:53
+2017,11,Sun,November 19,L,0,Arizona Cardinals,Houston Texans,21,31,22,32,223,2,1,1,7,7.2,6.8,68.8,96.2,34,134,3.9,2,1,1,4,4,6,281,8,15,0,0,33:46
+2017,12,Sun,November 26,W,0,Arizona Cardinals,Jacksonville Jaguars,27,24,19,33,128,0,1,3,32,4.8,3.6,57.6,53.6,22,91,4.1,2,1,1,3,3,8,396,1,12,1,1,25:21
+2017,13,Sun,December 3,L,0,Arizona Cardinals,Los Angeles Rams,16,32,21,31,213,2,1,1,7,7.1,6.7,67.7,95.2,24,90,3.8,0,4,4,2,3,4,207,3,11,1,1,28:58
+2017,14,Sun,December 10,W,0,Arizona Cardinals,Tennessee Titans,12,7,16,31,139,0,2,3,20,5.1,4.1,51.6,36.9,22,65,3.0,1,0,1,1,1,6,313,4,12,0,2,26:11
+2017,15,Sun,December 17,L,0,Arizona Cardinals,Washington Redskins,15,20,18,26,187,2,0,1,9,7.5,6.9,69.2,115.4,20,31,1.6,0,2,2,2,2,6,319,1,9,0,0,23:44
+2017,16,Sun,December 24,W,0,Arizona Cardinals,New York Giants,23,0,27,45,250,0,2,2,13,5.8,5.3,60.0,56.7,20,43,2.2,0,0,1,0,0,6,263,1,14,1,4,26:47
+2017,17,Sun,December 31,W,0,Arizona Cardinals,Seattle Seahawks,26,24,18,29,195,2,0,3,26,7.6,6.1,62.1,104.8,22,101,4.6,0,1,2,3,3,8,348,1,12,1,1,27:44
+2017,1,Sun,September 10,W,0,Atlanta Falcons,Chicago Bears,23,17,26,40,176,1,0,4,37,5.3,4.0,65.0,82.9,19,125,6.6,1,1,1,2,2,5,244,5,13,1,2,29:26
+2017,2,Sun,September 17,W,0,Atlanta Falcons,Green Bay Packers,34,23,33,50,308,2,1,3,35,6.9,5.8,66.0,87.7,15,59,3.9,1,1,1,2,2,3,119,5,12,3,3,31:23
+2017,3,Sun,September 24,W,0,Atlanta Falcons,Detroit Lions,30,26,25,45,253,1,0,2,11,5.9,5.4,55.6,79.2,19,71,3.7,0,4,4,2,2,5,239,3,13,0,0,27:25
+2017,4,Sun,October 1,L,0,Atlanta Falcons,Buffalo Bills,17,23,12,20,164,1,0,3,18,9.1,7.1,60.0,102.9,36,117,3.3,0,3,3,2,2,4,189,6,13,0,0,28:45
+2017,6,Sun,October 15,L,0,Atlanta Falcons,Miami Dolphins,17,20,19,33,151,2,1,0,0,4.6,4.6,57.6,76.7,31,138,4.5,0,2,2,2,2,2,80,5,12,2,3,34:24
+2017,7,Sun,October 22,L,0,Atlanta Falcons,New England Patriots,7,23,21,29,241,2,0,2,8,8.6,7.8,72.4,120.0,36,162,4.5,0,3,3,2,2,2,100,7,13,0,0,34:05
+2017,8,Sun,October 29,W,0,Atlanta Falcons,New York Jets,25,20,26,33,236,2,0,3,21,7.8,6.6,78.8,116.7,22,43,2.0,0,2,4,2,2,5,262,5,15,1,1,31:41
+2017,9,Sun,November 5,L,0,Atlanta Falcons,Carolina Panthers,17,20,13,24,129,0,0,1,8,5.7,5.2,54.2,69.6,38,201,5.3,2,2,2,2,2,5,249,4,13,1,2,32:52
+2017,10,Sun,November 12,W,0,Atlanta Falcons,Dallas Cowboys,27,7,20,30,126,0,0,8,50,5.9,3.3,66.7,75.1,21,107,5.1,1,0,1,1,1,4,171,5,11,0,1,27:54
+2017,11,Mon,November 20,W,0,Atlanta Falcons,Seattle Seahawks,34,31,27,43,224,2,1,3,30,5.9,4.9,62.8,81.9,23,136,5.9,1,3,4,2,2,1,43,5,12,1,2,29:39
+2017,12,Sun,November 26,W,0,Atlanta Falcons,Tampa Bay Buccaneers,34,20,27,44,279,0,0,1,4,6.4,6.2,61.4,79.6,23,94,4.1,2,2,2,2,2,3,160,4,11,1,2,29:54
+2017,13,Sun,December 3,L,0,Atlanta Falcons,Minnesota Vikings,9,14,25,30,207,2,0,2,20,7.6,6.5,83.3,117.6,31,105,3.4,0,0,0,2,2,5,225,6,12,0,0,34:02
+2017,14,Thu,December 7,W,0,Atlanta Falcons,New Orleans Saints,20,17,26,35,256,2,1,2,15,7.7,6.9,74.3,101.6,15,50,3.3,0,1,1,2,2,5,208,3,10,1,1,25:19
+2017,15,Mon,December 18,W,0,Atlanta Falcons,Tampa Bay Buccaneers,24,21,27,35,289,3,0,2,10,8.5,7.8,77.1,129.3,18,84,4.7,0,0,1,3,3,4,191,4,8,0,0,26:45
+2017,16,Sun,December 24,L,0,Atlanta Falcons,New Orleans Saints,13,23,21,28,229,1,1,1,10,8.5,7.9,75.0,95.7,31,86,2.8,1,3,3,2,2,6,268,3,13,1,1,33:48
+2017,17,Sun,December 31,W,0,Atlanta Falcons,Carolina Panthers,22,10,14,34,161,1,3,2,19,5.3,4.5,41.2,29.2,24,87,3.6,0,1,1,1,1,7,329,5,15,1,1,25:18
+2017,1,Sun,September 10,W,0,Baltimore Ravens,Cincinnati Bengals,20,0,16,31,144,0,4,5,26,5.5,4.0,51.6,24.9,22,77,3.5,0,0,0,0,0,5,212,4,13,0,1,26:00
+2017,2,Sun,September 17,W,0,Baltimore Ravens,Cleveland Browns,24,10,20,42,293,1,4,3,7,7.1,6.5,47.6,39.2,21,93,4.4,0,1,1,1,1,4,209,2,12,1,2,26:36
+2017,3,Sun,September 24,L,0,Baltimore Ravens,Jacksonville Jaguars,7,44,20,33,244,4,0,0,0,7.4,7.4,60.6,123.0,35,166,4.7,1,3,3,5,5,3,150,3,12,2,2,34:03
+2017,4,Sun,October 1,L,0,Baltimore Ravens,Pittsburgh Steelers,9,26,18,30,208,1,1,1,8,7.2,6.7,60.0,78.2,42,173,4.1,2,2,3,2,2,4,150,7,15,0,0,35:29
+2017,5,Sun,October 8,W,0,Baltimore Ravens,Oakland Raiders,30,17,13,26,137,1,0,3,22,6.1,4.7,50.0,78.5,25,108,4.3,1,1,1,2,2,4,197,6,12,0,1,26:17
+2017,6,Sun,October 15,L,1,Baltimore Ravens,Chicago Bears,24,27,9,17,111,2,0,4,23,7.9,5.3,52.9,112.6,54,231,4.3,0,2,2,3,3,9,420,5,17,0,0,36:45
+2017,7,Sun,October 22,L,0,Baltimore Ravens,Minnesota Vikings,16,24,20,31,188,0,1,0,0,6.1,6.1,64.5,67.7,33,169,5.1,1,6,6,0,1,2,92,7,15,0,0,32:01
+2017,8,Thu,October 26,W,0,Baltimore Ravens,Miami Dolphins,40,0,25,44,151,0,2,3,25,4.0,3.2,56.8,44.8,19,45,2.4,0,0,1,0,0,8,328,4,15,0,2,28:46
+2017,9,Sun,November 5,L,0,Baltimore Ravens,Tennessee Titans,20,23,19,28,186,2,1,3,32,7.8,6.0,67.9,95.2,21,71,3.4,1,1,1,2,3,5,256,3,11,0,0,27:38
+2017,11,Sun,November 19,W,0,Baltimore Ravens,Green Bay Packers,23,0,21,36,190,0,3,6,49,6.6,4.5,58.3,38.0,25,75,3.0,0,0,0,0,0,5,202,4,13,1,4,29:57
+2017,12,Mon,November 27,W,0,Baltimore Ravens,Houston Texans,23,16,22,37,237,0,2,2,15,6.8,6.1,59.5,55.8,25,66,2.6,1,3,3,1,1,4,174,6,14,0,0,30:16
+2017,13,Sun,December 3,W,0,Baltimore Ravens,Detroit Lions,44,20,27,34,294,1,2,3,22,9.3,7.9,79.4,88.0,24,78,3.3,2,0,1,2,3,6,275,4,13,0,0,30:09
+2017,14,Sun,December 10,L,0,Baltimore Ravens,Pittsburgh Steelers,38,39,44,66,486,2,0,3,20,7.7,7.0,66.7,98.4,16,59,3.7,2,4,4,3,3,3,141,12,18,0,0,33:50
+2017,15,Sun,December 17,W,0,Baltimore Ravens,Cleveland Browns,27,10,20,37,136,0,2,2,10,3.9,3.5,54.1,39.9,19,130,6.8,1,1,1,1,1,5,216,5,14,0,1,23:12
+2017,16,Sat,December 23,W,0,Baltimore Ravens,Indianapolis Colts,23,16,16,33,203,1,0,2,12,6.5,5.8,48.5,78.2,24,93,3.9,0,3,5,1,1,2,74,5,13,1,2,24:12
+2017,17,Sun,December 31,L,0,Baltimore Ravens,Cincinnati Bengals,27,31,23,44,213,3,0,1,9,5.0,4.7,52.3,88.5,30,146,4.9,0,1,1,4,4,8,342,5,15,1,1,28:39
+2017,1,Sun,September 10,W,0,Buffalo Bills,New York Jets,21,12,26,39,176,0,2,1,11,4.8,4.4,66.7,55.1,15,38,2.5,1,2,2,0,0,6,297,4,14,1,1,26:56
+2017,2,Sun,September 17,L,0,Buffalo Bills,Carolina Panthers,3,9,20,32,178,0,0,6,50,7.1,4.7,62.5,77.3,28,77,2.8,0,3,3,0,0,6,249,7,16,0,0,38:53
+2017,3,Sun,September 24,W,0,Buffalo Bills,Denver Broncos,26,16,24,40,255,0,2,3,4,6.5,5.9,60.0,57.8,23,111,4.8,1,3,3,1,1,3,125,6,14,0,2,29:34
+2017,4,Sun,October 1,W,0,Buffalo Bills,Atlanta Falcons,23,17,24,42,242,1,2,1,0,5.8,5.6,57.1,61.8,29,147,5.1,1,1,1,2,2,3,120,5,13,1,2,31:15
+2017,5,Sun,October 8,L,0,Buffalo Bills,Cincinnati Bengals,16,20,22,36,323,1,2,1,5,9.1,8.7,61.1,76.5,27,65,2.4,1,2,2,2,2,4,187,6,15,0,0,30:01
+2017,7,Sun,October 22,W,0,Buffalo Bills,Tampa Bay Buccaneers,30,27,32,44,378,3,1,1,6,8.7,8.4,72.7,111.7,25,69,2.8,0,2,2,3,3,2,77,6,11,0,0,33:10
+2017,8,Sun,October 29,W,0,Buffalo Bills,Oakland Raiders,34,14,31,49,313,1,2,0,0,6.4,6.4,63.3,71.2,14,54,3.9,1,0,0,2,2,4,153,3,10,1,2,24:23
+2017,9,Thu,November 2,L,0,Buffalo Bills,New York Jets,21,34,14,20,137,1,0,1,3,7.0,6.5,70.0,105.6,41,194,4.7,3,2,2,4,4,5,208,6,14,0,0,33:30
+2017,10,Sun,November 12,L,0,Buffalo Bills,New Orleans Saints,10,47,18,25,184,0,0,0,0,7.4,7.4,72.0,92.7,48,298,6.2,6,2,2,5,6,0,0,6,12,2,2,41:23
+2017,11,Sun,November 19,L,0,Buffalo Bills,Los Angeles Chargers,24,54,25,37,283,2,0,1,1,7.7,7.4,67.6,108.3,35,146,4.2,2,4,5,6,6,2,73,7,14,0,0,36:05
+2017,12,Sun,November 26,W,0,Buffalo Bills,Kansas City Chiefs,16,10,23,36,181,1,1,2,18,5.5,4.8,63.9,74.0,19,55,2.9,0,1,1,1,1,8,390,2,13,0,1,26:42
+2017,13,Sun,December 3,L,0,Buffalo Bills,New England Patriots,3,23,21,30,244,0,1,3,14,8.6,7.4,70.0,80.4,35,191,5.5,2,3,3,2,2,3,105,5,12,0,0,34:01
+2017,14,Sun,December 10,W,1,Buffalo Bills,Indianapolis Colts,13,7,11,22,64,1,0,1,5,3.1,2.8,50.0,71.4,46,163,3.5,0,0,2,1,1,7,269,4,16,3,4,36:02
+2017,15,Sun,December 17,W,0,Buffalo Bills,Miami Dolphins,24,16,28,49,249,0,3,3,25,5.6,4.8,57.1,45.4,21,100,4.8,1,3,3,1,1,4,187,5,16,1,2,32:25
+2017,16,Sun,December 24,L,0,Buffalo Bills,New England Patriots,16,37,21,28,218,2,1,2,6,8.0,7.3,75.0,106.0,38,193,5.1,2,3,3,4,4,1,44,5,11,1,1,31:44
+2017,17,Sun,December 31,W,0,Buffalo Bills,Miami Dolphins,22,16,30,44,263,1,1,1,8,6.2,5.8,68.2,81.9,22,93,4.2,1,1,1,1,1,4,186,5,13,1,3,28:56
+2017,1,Sun,September 10,W,0,Carolina Panthers,San Francisco 49ers,23,3,24,35,166,0,1,4,27,5.5,4.3,68.6,67.1,15,51,3.4,0,1,1,0,0,4,163,2,11,1,4,25:39
+2017,2,Sun,September 17,W,0,Carolina Panthers,Buffalo Bills,9,3,17,25,107,0,0,3,18,5.0,3.8,68.0,76.6,23,69,3.0,0,1,1,0,0,6,297,4,13,0,2,21:07
+2017,3,Sun,September 24,L,0,Carolina Panthers,New Orleans Saints,13,34,22,29,213,3,0,1,7,7.6,7.1,75.9,130.4,27,149,5.5,1,2,3,4,4,3,150,6,12,0,0,31:09
+2017,4,Sun,October 1,W,0,Carolina Panthers,New England Patriots,33,30,32,45,293,2,0,3,14,6.8,6.1,71.1,103.3,19,80,4.2,1,3,3,3,3,3,135,7,14,2,2,31:07
+2017,5,Sun,October 8,W,0,Carolina Panthers,Detroit Lions,27,24,23,35,192,2,0,6,37,6.5,4.7,65.7,98.7,15,50,3.3,1,1,1,3,3,5,206,5,13,0,1,24:37
+2017,6,Thu,October 12,L,0,Carolina Panthers,Philadelphia Eagles,23,28,16,30,209,3,0,3,13,7.4,6.3,53.3,108.9,27,101,3.7,0,2,2,2,2,6,305,5,14,1,1,28:34
+2017,7,Sun,October 22,L,0,Carolina Panthers,Chicago Bears,3,17,4,7,85,0,0,4,22,15.3,7.7,57.1,100.3,26,68,2.6,0,1,2,2,2,6,296,2,11,0,0,21:25
+2017,8,Sun,October 29,W,0,Carolina Panthers,Tampa Bay Buccaneers,17,3,21,38,194,0,2,3,16,5.5,4.7,55.3,47.5,22,85,3.9,0,1,1,0,0,6,274,2,12,0,1,27:49
+2017,9,Sun,November 5,W,0,Carolina Panthers,Atlanta Falcons,20,17,24,38,302,2,1,2,11,8.2,7.6,63.2,94.4,18,53,2.9,0,1,1,2,2,4,196,4,12,0,3,27:08
+2017,10,Mon,November 13,W,0,Carolina Panthers,Miami Dolphins,45,21,22,37,213,2,1,0,0,5.8,5.8,59.5,82.4,17,100,5.9,1,0,0,3,3,4,167,7,12,0,1,24:21
+2017,12,Sun,November 26,W,0,Carolina Panthers,New York Jets,35,27,19,36,282,3,0,3,25,8.5,7.2,52.8,106.5,26,109,4.2,0,2,2,3,3,7,318,5,14,0,0,28:10
+2017,13,Sun,December 3,L,0,Carolina Panthers,New Orleans Saints,21,31,25,34,252,1,0,2,17,7.9,7.0,73.5,104.0,28,148,5.3,3,1,2,4,4,4,184,6,15,1,1,33:21
+2017,14,Sun,December 10,W,0,Carolina Panthers,Minnesota Vikings,31,24,27,44,256,2,2,6,24,6.4,5.1,61.4,73.7,21,100,4.8,0,3,4,1,1,3,131,7,15,0,1,28:42
+2017,15,Sun,December 17,W,0,Carolina Panthers,Green Bay Packers,31,24,26,45,264,3,3,3,26,6.4,5.5,57.8,69.1,19,120,6.3,0,1,1,3,3,2,82,4,11,2,3,26:03
+2017,16,Sun,December 24,W,0,Carolina Panthers,Tampa Bay Buccaneers,22,19,21,27,326,1,0,6,41,13.6,9.9,77.8,129.3,24,66,2.8,0,4,5,1,1,1,50,6,11,0,0,29:30
+2017,17,Sun,December 31,L,0,Carolina Panthers,Atlanta Falcons,10,22,28,45,311,1,0,1,6,7.0,6.8,62.2,90.1,26,60,2.3,0,5,5,1,1,5,233,6,16,0,0,34:42
+2017,1,Sun,September 10,L,0,Chicago Bears,Atlanta Falcons,17,23,21,30,308,1,0,2,13,10.7,9.6,70.0,114.3,23,64,2.8,1,3,3,2,2,3,178,5,11,0,0,30:34
+2017,2,Sun,September 17,L,0,Chicago Bears,Tampa Bay Buccaneers,7,29,18,31,194,1,0,2,10,6.6,5.9,58.1,87.3,34,117,3.4,1,3,3,2,3,3,146,8,15,0,0,33:11
+2017,3,Sun,September 24,W,1,Chicago Bears,Pittsburgh Steelers,23,17,22,39,212,1,0,3,23,6.0,5.0,56.4,80.3,17,70,4.1,1,1,2,2,2,5,203,4,11,0,0,27:34
+2017,4,Thu,September 28,L,0,Chicago Bears,Green Bay Packers,14,35,19,27,169,4,0,2,10,6.6,5.8,70.4,126.4,24,91,3.8,1,0,0,5,5,5,238,7,14,1,1,28:09
+2017,5,Mon,October 9,L,0,Chicago Bears,Minnesota Vikings,17,20,22,32,141,1,0,4,35,5.5,3.9,68.8,88.2,31,159,5.1,1,2,2,2,2,6,258,6,15,0,0,31:24
+2017,6,Sun,October 15,W,1,Chicago Bears,Baltimore Ravens,27,24,24,41,166,0,2,3,14,4.4,3.8,58.5,47.4,26,125,4.8,0,3,3,1,1,7,385,3,18,1,1,31:09
+2017,7,Sun,October 22,W,0,Chicago Bears,Carolina Panthers,17,3,21,34,185,0,2,5,26,6.2,4.7,61.8,51.7,30,108,3.6,0,1,1,0,0,5,263,6,15,0,1,38:35
+2017,8,Sun,October 29,L,0,Chicago Bears,New Orleans Saints,12,20,23,28,286,0,0,2,13,10.7,9.5,82.1,109.2,30,101,3.4,2,2,2,2,2,4,204,2,9,0,0,31:23
+2017,10,Sun,November 12,L,0,Chicago Bears,Green Bay Packers,16,23,18,25,182,1,0,3,30,8.5,6.5,72.0,105.7,37,160,4.3,1,3,4,2,2,4,160,7,16,1,1,33:53
+2017,11,Sun,November 19,L,0,Chicago Bears,Detroit Lions,24,27,21,31,287,2,0,3,12,9.6,8.4,67.7,118.6,24,65,2.7,0,2,2,3,3,4,172,3,10,0,0,30:36
+2017,12,Sun,November 26,L,0,Chicago Bears,Philadelphia Eagles,3,31,26,39,244,3,0,1,4,6.4,6.1,66.7,109.3,33,176,5.3,0,1,1,4,4,2,87,7,16,3,4,37:08
+2017,13,Sun,December 3,L,0,Chicago Bears,San Francisco 49ers,14,15,26,37,278,0,1,2,15,7.9,7.1,70.3,80.7,34,110,3.2,0,5,5,0,0,2,72,10,18,0,0,38:47
+2017,14,Sun,December 10,W,0,Chicago Bears,Cincinnati Bengals,33,7,18,37,164,1,1,3,24,5.1,4.1,48.6,58.8,13,70,5.4,0,0,0,1,1,5,251,3,12,0,2,21:51
+2017,15,Sat,December 16,L,0,Chicago Bears,Detroit Lions,10,20,25,33,202,2,0,4,35,7.2,5.5,75.8,110.9,20,91,4.6,0,2,2,2,2,4,182,6,13,0,0,29:05
+2017,16,Sun,December 24,W,0,Chicago Bears,Cleveland Browns,20,3,18,36,178,0,2,1,4,5.1,4.8,50.0,41.2,20,76,3.8,0,1,1,0,0,7,334,4,13,0,1,26:46
+2017,17,Sun,December 31,L,0,Chicago Bears,Minnesota Vikings,10,23,21,29,180,1,0,2,9,6.5,5.8,72.4,99.8,36,147,4.1,2,0,1,3,3,8,358,5,13,0,0,35:55
+2017,1,Sun,September 10,L,0,Cincinnati Bengals,Baltimore Ravens,0,20,9,17,111,1,1,1,10,7.1,6.2,52.9,68.5,42,157,3.7,1,2,2,2,2,6,250,6,14,0,0,34:00
+2017,2,Thu,September 14,L,0,Cincinnati Bengals,Houston Texans,9,13,15,24,98,0,0,3,27,5.2,3.6,62.5,71.2,35,168,4.8,1,2,2,1,1,9,440,4,15,0,0,32:15
+2017,3,Sun,September 24,L,1,Cincinnati Bengals,Green Bay Packers,24,27,28,42,280,3,1,6,33,7.5,5.8,66.7,99.3,17,64,3.8,0,2,2,3,3,6,296,7,15,0,0,29:21
+2017,4,Sun,October 1,W,0,Cincinnati Bengals,Cleveland Browns,31,7,21,42,170,0,1,2,13,4.4,3.9,50.0,50.7,17,45,2.6,1,0,1,1,1,6,295,5,16,1,2,24:58
+2017,5,Sun,October 8,W,0,Cincinnati Bengals,Buffalo Bills,20,16,20,37,139,1,1,6,27,4.5,3.2,54.1,60.5,24,82,3.4,0,3,3,1,1,7,315,6,18,0,0,29:59
+2017,7,Sun,October 22,L,0,Cincinnati Bengals,Pittsburgh Steelers,14,29,15,25,268,2,0,0,0,10.7,10.7,60.0,123.4,43,152,3.5,0,5,5,2,2,2,90,2,11,1,3,35:15
+2017,8,Sun,October 29,W,0,Cincinnati Bengals,Indianapolis Colts,24,23,25,39,216,2,1,4,17,6.0,5.0,64.1,85.0,28,115,4.1,0,3,3,2,2,5,183,8,16,0,1,33:13
+2017,9,Sun,November 5,L,0,Cincinnati Bengals,Jacksonville Jaguars,7,23,24,38,259,1,0,0,0,6.8,6.8,63.2,91.9,40,149,3.7,0,3,3,2,2,2,94,12,18,0,1,40:14
+2017,10,Sun,November 12,L,0,Cincinnati Bengals,Tennessee Titans,20,24,25,44,236,1,1,4,28,6.0,4.9,56.8,69.9,36,180,5.0,2,1,2,3,3,6,339,7,15,0,0,40:09
+2017,11,Sun,November 19,W,0,Cincinnati Bengals,Denver Broncos,20,17,23,42,229,1,1,3,25,6.0,5.1,54.8,68.5,34,112,3.3,1,1,2,2,2,5,222,12,21,1,2,35:11
+2017,12,Sun,November 26,W,0,Cincinnati Bengals,Cleveland Browns,30,16,18,32,236,0,0,4,32,8.4,6.6,56.3,79.7,31,169,5.5,1,3,4,1,1,3,108,6,15,2,3,29:28
+2017,13,Mon,December 4,L,0,Cincinnati Bengals,Pittsburgh Steelers,20,23,24,40,282,2,1,1,8,7.3,6.9,60.0,87.7,22,92,4.2,0,3,3,2,2,4,178,4,12,1,1,29:49
+2017,14,Sun,December 10,L,0,Cincinnati Bengals,Chicago Bears,7,33,25,32,250,1,0,2,21,8.5,7.4,78.1,109.6,38,232,6.1,3,2,2,3,4,3,142,4,11,1,2,38:09
+2017,15,Sun,December 17,L,0,Cincinnati Bengals,Minnesota Vikings,7,34,20,25,222,2,1,2,14,9.4,8.2,80.0,113.7,34,124,3.6,1,2,2,4,4,5,217,4,12,0,0,35:52
+2017,16,Sun,December 24,W,0,Cincinnati Bengals,Detroit Lions,26,17,19,35,189,1,1,2,14,5.8,5.1,54.3,67.4,22,87,4.0,1,1,2,2,2,5,202,6,15,1,2,27:31
+2017,17,Sun,December 31,W,0,Cincinnati Bengals,Baltimore Ravens,31,27,25,47,194,2,1,1,9,4.3,4.0,53.2,68.9,26,118,4.5,1,2,2,3,3,8,333,5,17,1,2,31:21
+2017,1,Sun,September 10,L,0,Cleveland Browns,Pittsburgh Steelers,18,21,24,36,255,2,1,1,8,7.3,6.9,66.7,94.1,17,35,2.1,0,0,0,3,3,6,275,5,13,0,0,28:50
+2017,2,Sun,September 17,L,0,Cleveland Browns,Baltimore Ravens,10,24,25,34,201,2,1,2,16,6.4,5.6,73.5,95.3,32,136,4.3,1,1,2,3,3,5,235,4,11,0,0,33:24
+2017,3,Sun,September 24,L,0,Cleveland Browns,Indianapolis Colts,28,31,17,24,243,1,0,3,16,10.8,9.0,70.8,117.2,36,92,2.6,3,1,1,4,4,7,320,8,17,0,0,33:27
+2017,4,Sun,October 1,L,0,Cleveland Browns,Cincinnati Bengals,7,31,25,30,264,4,0,3,22,9.5,8.0,83.3,142.9,30,86,2.9,0,1,1,4,4,4,191,6,11,0,0,35:02
+2017,5,Sun,October 8,L,0,Cleveland Browns,New York Jets,14,17,23,30,178,2,1,3,16,6.5,5.4,76.7,99.0,18,34,1.9,0,1,1,2,2,6,308,4,12,0,0,25:34
+2017,6,Sun,October 15,L,0,Cleveland Browns,Houston Texans,17,33,17,29,217,3,1,1,8,7.8,7.2,58.6,102.2,33,123,3.7,0,1,1,2,3,7,350,5,13,0,0,29:04
+2017,7,Sun,October 22,L,1,Cleveland Browns,Tennessee Titans,9,12,21,34,189,0,0,2,14,6.0,5.3,61.8,76.7,32,80,2.5,0,4,5,0,0,4,208,5,17,0,1,35:23
+2017,8,Sun,October 29,L,0,Cleveland Browns,Minnesota Vikings,16,33,27,43,287,2,1,1,1,6.7,6.5,62.8,88.0,34,88,2.6,1,4,4,1,2,6,221,6,16,0,0,37:52
+2017,10,Sun,November 12,L,0,Cleveland Browns,Detroit Lions,24,38,17,26,241,3,1,4,8,9.6,8.0,65.4,117.6,19,104,5.5,1,1,1,5,5,4,176,5,11,0,0,25:26
+2017,11,Sun,November 19,L,0,Cleveland Browns,Jacksonville Jaguars,7,19,17,30,145,1,0,2,9,5.1,4.5,56.7,80.6,44,139,3.2,0,2,3,1,1,9,354,6,20,1,1,36:55
+2017,12,Sun,November 26,L,0,Cleveland Browns,Cincinnati Bengals,16,30,18,28,209,2,0,1,5,7.6,7.2,64.3,110.6,30,152,5.1,1,3,3,3,3,2,73,4,10,0,0,30:32
+2017,13,Sun,December 3,L,0,Cleveland Browns,Los Angeles Chargers,10,19,31,43,335,1,0,1,9,8.0,7.6,72.1,102.4,25,94,3.8,0,4,5,1,1,2,73,8,15,1,1,34:57
+2017,14,Sun,December 10,L,1,Cleveland Browns,Green Bay Packers,21,27,35,46,256,3,0,1,9,5.8,5.4,76.1,110.4,27,85,3.1,1,0,0,3,3,4,191,8,16,2,3,36:17
+2017,15,Sun,December 17,L,0,Cleveland Browns,Baltimore Ravens,10,27,26,42,279,1,0,1,9,6.9,6.5,61.9,89.3,31,97,3.1,1,2,2,3,3,5,215,7,16,0,1,36:48
+2017,16,Sun,December 24,L,0,Cleveland Browns,Chicago Bears,3,20,14,23,161,0,0,5,32,8.4,5.8,60.9,82.0,31,97,3.1,3,0,0,2,3,8,361,7,16,1,1,33:14
+2017,17,Sun,December 31,L,0,Cleveland Browns,Pittsburgh Steelers,24,28,23,27,224,1,1,3,15,8.9,7.5,85.2,98.1,28,124,4.4,2,0,0,4,4,4,144,3,10,0,2,29:05
+2017,1,Sun,September 10,W,0,Dallas Cowboys,New York Giants,19,3,29,38,198,0,1,3,22,5.8,4.8,76.3,76.4,12,35,2.9,0,1,1,0,0,6,269,4,12,1,1,25:46
+2017,2,Sun,September 17,L,0,Dallas Cowboys,Denver Broncos,17,42,22,32,202,4,1,2,29,7.2,5.9,68.8,112.2,39,178,4.6,1,0,1,6,6,3,129,9,15,0,0,33:50
+2017,3,Mon,September 25,W,0,Dallas Cowboys,Arizona Cardinals,28,17,29,48,283,2,0,6,42,6.8,5.2,60.4,90.9,21,49,2.3,0,1,2,2,2,6,271,8,18,0,1,36:15
+2017,4,Sun,October 1,L,0,Dallas Cowboys,Los Angeles Rams,30,35,21,36,244,2,0,1,11,7.1,6.6,58.3,97.5,31,168,5.4,0,7,7,2,2,2,108,5,13,0,0,30:32
+2017,5,Sun,October 8,L,0,Dallas Cowboys,Green Bay Packers,31,35,19,29,182,3,0,4,39,7.6,5.5,65.5,117.3,25,160,6.4,1,1,1,2,4,2,97,3,7,1,1,24:54
+2017,7,Sun,October 22,W,0,Dallas Cowboys,San Francisco 49ers,40,10,22,38,187,0,0,5,48,6.2,4.3,57.9,70.8,22,103,4.7,1,1,1,1,1,4,180,6,13,0,2,27:10
+2017,8,Sun,October 29,W,0,Dallas Cowboys,Washington Redskins,33,19,26,39,236,1,1,4,27,6.7,5.5,66.7,80.7,15,49,3.3,1,2,3,1,2,3,140,4,13,1,1,26:41
+2017,9,Sun,November 5,W,0,Dallas Cowboys,Kansas City Chiefs,28,17,25,34,255,2,1,2,8,7.7,7.1,73.5,102.0,19,68,3.6,0,1,1,2,2,5,231,4,11,0,1,28:43
+2017,10,Sun,November 12,L,0,Dallas Cowboys,Atlanta Falcons,7,27,22,29,204,2,1,1,11,7.4,6.8,75.9,103.2,34,132,3.9,1,2,2,3,3,2,85,7,13,0,1,32:06
+2017,11,Sun,November 19,L,0,Dallas Cowboys,Philadelphia Eagles,9,37,14,27,168,2,0,0,0,6.2,6.2,51.9,95.9,33,215,6.5,2,0,1,1,1,6,275,5,14,1,1,29:29
+2017,12,Thu,November 23,L,0,Dallas Cowboys,Los Angeles Chargers,6,28,27,33,434,3,0,0,0,13.2,13.2,81.8,149.1,33,81,2.5,0,1,2,1,4,0,0,9,14,0,1,36:05
+2017,13,Thu,November 30,W,0,Dallas Cowboys,Washington Redskins,38,14,26,37,224,2,2,4,27,6.8,5.5,70.3,81.4,19,56,2.9,0,0,0,2,2,5,213,6,14,0,1,27:32
+2017,14,Sun,December 10,W,0,Dallas Cowboys,New York Giants,30,10,31,46,228,1,2,0,0,5.0,5.0,67.4,68.0,29,102,3.5,0,1,1,1,1,8,347,6,16,0,0,32:53
+2017,15,Sun,December 17,W,0,Dallas Cowboys,Oakland Raiders,20,17,21,38,171,2,0,0,0,4.5,4.5,55.3,84.4,23,122,5.3,0,1,2,2,2,4,182,8,15,0,0,27:40
+2017,16,Sun,December 24,L,0,Dallas Cowboys,Seattle Seahawks,12,21,14,21,60,2,0,3,33,4.4,2.5,66.7,101.9,30,76,2.5,0,0,0,3,3,7,323,4,11,0,0,27:10
+2017,17,Sun,December 31,W,0,Dallas Cowboys,Philadelphia Eagles,6,0,23,34,149,0,1,3,24,5.1,4.0,67.6,64.5,18,70,3.9,0,0,0,0,0,7,299,2,11,0,2,29:55
+2017,1,Mon,September 11,W,0,Denver Broncos,Los Angeles Chargers,24,21,22,33,185,3,1,1,7,5.8,5.4,66.7,98.7,22,64,2.9,0,0,1,3,3,5,230,3,12,1,2,25:47
+2017,2,Sun,September 17,W,0,Denver Broncos,Dallas Cowboys,42,17,30,50,228,2,2,2,10,4.8,4.4,60.0,67.7,14,40,2.9,0,1,1,2,2,5,249,3,14,2,5,26:10
+2017,3,Sun,September 24,L,0,Denver Broncos,Buffalo Bills,16,26,20,26,197,2,0,4,16,8.2,6.6,76.9,123.4,33,75,2.3,0,4,4,2,2,5,226,6,16,0,0,30:26
+2017,4,Sun,October 1,W,0,Denver Broncos,Oakland Raiders,16,10,21,35,230,1,1,3,19,7.1,6.1,60.0,77.1,15,24,1.6,0,1,1,1,1,6,306,2,12,0,3,27:03
+2017,6,Sun,October 15,L,0,Denver Broncos,New York Giants,10,23,11,19,118,1,0,3,10,6.7,5.4,57.9,93.7,32,148,4.6,0,3,4,2,2,6,299,4,14,0,0,30:36
+2017,7,Sun,October 22,L,0,Denver Broncos,Los Angeles Chargers,0,21,15,26,162,2,0,3,21,7.0,5.6,57.7,101.8,26,80,3.1,0,0,0,3,3,8,413,3,12,0,1,28:56
+2017,8,Mon,October 30,L,0,Denver Broncos,Kansas City Chiefs,19,29,14,32,197,1,1,1,5,6.3,6.0,43.8,61.6,26,79,3.0,0,5,5,2,2,5,209,2,12,0,0,28:37
+2017,9,Sun,November 5,L,0,Denver Broncos,Philadelphia Eagles,23,51,16,28,222,4,0,2,12,8.4,7.4,57.1,122.3,37,197,5.3,3,1,1,6,7,2,108,5,13,2,4,29:54
+2017,10,Sun,November 12,L,0,Denver Broncos,New England Patriots,16,41,28,37,297,3,0,1,6,8.2,7.8,75.7,125.6,29,99,3.4,1,2,2,5,5,1,43,4,11,1,3,29:43
+2017,11,Sun,November 19,L,0,Denver Broncos,Cincinnati Bengals,17,20,15,25,141,3,0,2,13,6.2,5.2,60.0,115.2,26,49,1.9,0,0,0,2,3,8,318,7,15,0,0,24:49
+2017,12,Sun,November 26,L,0,Denver Broncos,Oakland Raiders,14,21,18,24,244,2,0,2,9,10.5,9.4,75.0,134.7,37,104,2.8,1,0,1,3,3,6,261,5,13,0,0,35:54
+2017,13,Sun,December 3,L,0,Denver Broncos,Miami Dolphins,9,35,18,32,222,2,2,2,13,7.3,6.5,56.3,72.7,30,145,4.8,1,1,1,4,4,9,386,4,15,0,0,34:22
+2017,14,Sun,December 10,W,0,Denver Broncos,New York Jets,23,0,8,21,41,0,1,4,19,2.9,1.6,38.1,26.5,23,59,2.6,0,0,0,0,0,8,365,3,13,0,1,22:25
+2017,15,Thu,December 14,W,0,Denver Broncos,Indianapolis Colts,25,13,17,30,158,0,0,1,0,5.3,5.1,56.7,71.2,22,70,3.2,1,2,2,1,1,4,164,6,13,0,1,23:09
+2017,16,Sun,December 24,L,0,Denver Broncos,Washington Redskins,11,27,19,37,299,3,1,0,0,8.1,8.1,51.4,94.3,29,87,3.0,0,2,2,3,3,5,247,5,13,0,0,29:33
+2017,17,Sun,December 31,L,0,Denver Broncos,Kansas City Chiefs,24,27,22,36,269,0,1,2,15,7.9,7.1,61.1,72.6,27,110,4.1,2,2,2,3,3,5,256,4,11,1,1,29:03
+2017,1,Sun,September 10,W,0,Detroit Lions,Arizona Cardinals,35,23,27,48,263,1,3,1,5,5.6,5.4,56.3,52.7,18,45,2.5,1,1,2,2,2,4,184,6,15,1,1,26:40
+2017,2,Mon,September 18,W,0,Detroit Lions,New York Giants,24,10,22,32,208,1,1,5,31,7.5,5.6,68.8,83.9,18,62,3.4,0,1,1,1,1,5,239,4,12,0,2,27:13
+2017,3,Sun,September 24,L,0,Detroit Lions,Atlanta Falcons,26,30,24,35,277,2,3,2,17,8.4,7.5,68.6,75.5,28,151,5.4,1,3,3,3,3,2,91,4,9,0,0,32:35
+2017,4,Sun,October 1,W,0,Detroit Lions,Minnesota Vikings,14,7,16,30,197,0,0,2,22,7.3,6.2,53.3,73.9,22,87,4.0,1,0,1,1,1,5,201,3,10,0,1,23:33
+2017,5,Sun,October 8,L,0,Detroit Lions,Carolina Panthers,24,27,26,33,334,3,0,3,21,10.8,9.3,78.8,139.1,28,28,1.0,0,2,3,3,3,5,234,7,16,0,0,35:23
+2017,6,Sun,October 15,L,0,Detroit Lions,New Orleans Saints,38,52,20,30,186,2,2,0,0,6.2,6.2,66.7,77.9,37,193,5.2,2,1,1,7,7,7,344,2,12,1,1,32:11
+2017,8,Sun,October 29,L,0,Detroit Lions,Pittsburgh Steelers,15,20,17,31,317,1,1,0,0,10.2,10.2,54.8,87.7,29,75,2.6,1,2,2,2,2,4,188,7,14,0,0,28:23
+2017,9,Mon,November 6,W,0,Detroit Lions,Green Bay Packers,30,17,26,38,233,0,0,3,12,6.4,5.7,68.4,84.6,17,78,4.6,2,1,2,2,2,3,128,2,9,0,2,23:05
+2017,10,Sun,November 12,W,0,Detroit Lions,Cleveland Browns,38,24,22,40,212,1,1,4,25,5.9,4.8,55.0,67.9,33,201,6.1,2,1,1,3,3,5,241,5,15,4,4,34:34
+2017,11,Sun,November 19,W,0,Detroit Lions,Chicago Bears,27,24,18,30,176,1,0,1,3,6.0,5.7,60.0,87.6,30,222,7.4,2,1,2,3,3,4,186,3,9,1,1,29:24
+2017,12,Thu,November 23,L,0,Detroit Lions,Minnesota Vikings,23,30,21,30,272,2,0,2,10,9.4,8.5,70.0,120.4,41,136,3.3,2,1,2,3,4,4,171,6,13,0,0,34:57
+2017,13,Sun,December 3,L,0,Detroit Lions,Baltimore Ravens,20,44,23,36,269,2,0,0,0,7.5,7.5,63.9,105.0,27,101,3.7,2,3,3,5,5,5,209,5,12,0,0,29:51
+2017,14,Sun,December 10,W,0,Detroit Lions,Tampa Bay Buccaneers,24,21,26,38,267,2,2,3,18,7.5,6.5,68.4,84.0,28,133,4.8,1,0,0,3,3,3,148,4,8,0,0,30:13
+2017,15,Sat,December 16,W,0,Detroit Lions,Chicago Bears,20,10,31,46,306,1,3,2,8,6.8,6.4,67.4,66.0,15,43,2.9,0,1,1,1,1,5,225,5,12,0,1,30:55
+2017,16,Sun,December 24,L,0,Detroit Lions,Cincinnati Bengals,17,26,27,41,222,1,1,3,16,5.8,5.0,65.9,77.5,34,142,4.2,1,4,4,2,2,4,152,7,14,0,0,32:29
+2017,17,Sun,December 31,W,0,Detroit Lions,Green Bay Packers,35,11,20,32,153,1,2,4,40,6.0,4.3,62.5,58.5,27,103,3.8,0,1,1,0,0,6,269,4,14,1,2,31:47
+2017,1,Sun,September 10,W,0,Green Bay Packers,Seattle Seahawks,17,9,14,27,135,0,0,3,23,5.9,4.5,51.9,66.1,18,90,5.0,0,3,3,0,0,6,275,3,12,0,0,20:47
+2017,2,Sun,September 17,L,0,Green Bay Packers,Atlanta Falcons,23,34,19,28,223,1,0,3,29,9.0,7.2,67.9,103.7,27,141,5.2,2,2,2,4,4,4,165,5,11,0,0,28:37
+2017,3,Sun,September 24,W,1,Green Bay Packers,Cincinnati Bengals,27,24,21,27,191,2,0,3,21,7.9,6.4,77.8,120.8,30,110,3.7,0,1,2,3,3,6,296,4,12,0,0,34:17
+2017,4,Thu,September 28,W,0,Green Bay Packers,Chicago Bears,35,14,21,33,205,1,2,1,13,6.6,6.0,63.6,65.8,30,103,3.4,1,0,1,2,2,3,147,5,12,2,2,31:51
+2017,5,Sun,October 8,W,0,Green Bay Packers,Dallas Cowboys,35,31,25,36,245,3,1,1,6,7.0,6.6,69.4,104.5,35,163,4.7,1,1,1,4,4,1,38,7,12,3,3,35:06
+2017,6,Sun,October 15,L,0,Green Bay Packers,Minnesota Vikings,10,23,24,38,239,1,1,0,0,6.3,6.3,63.2,78.7,32,112,3.5,1,3,3,2,2,4,155,4,12,0,1,32:09
+2017,7,Sun,October 22,L,0,Green Bay Packers,New Orleans Saints,17,26,27,38,324,1,2,1,7,8.7,8.3,71.1,83.7,36,161,4.5,2,2,2,2,3,2,78,8,15,1,1,36:56
+2017,9,Mon,November 6,L,0,Green Bay Packers,Detroit Lions,17,30,26,33,353,2,0,1,8,10.9,10.4,78.8,131.4,33,64,1.9,1,3,4,3,3,0,0,8,13,0,0,36:55
+2017,10,Sun,November 12,W,0,Green Bay Packers,Chicago Bears,23,16,21,35,268,1,0,5,29,8.5,6.7,60.0,93.5,17,55,3.2,0,3,3,1,1,5,241,4,14,0,1,26:07
+2017,11,Sun,November 19,L,0,Green Bay Packers,Baltimore Ravens,0,23,22,28,161,1,1,3,22,6.5,5.2,78.6,87.6,26,58,2.2,1,3,3,2,2,7,290,3,14,1,1,30:03
+2017,12,Sun,November 26,L,0,Green Bay Packers,Pittsburgh Steelers,28,31,33,45,341,4,2,1,10,7.8,7.4,73.3,105.9,24,121,5.0,0,1,1,2,3,3,97,8,13,1,1,33:36
+2017,13,Sun,December 3,W,1,Green Bay Packers,Tampa Bay Buccaneers,26,20,21,32,230,2,0,7,40,8.4,5.9,65.6,107.6,35,165,4.7,0,2,2,2,2,5,176,9,16,0,0,37:17
+2017,14,Sun,December 10,W,1,Green Bay Packers,Cleveland Browns,27,21,20,28,209,3,2,2,5,7.6,7.0,71.4,98.7,27,136,5.0,0,0,0,3,3,4,209,7,13,0,0,28:38
+2017,15,Sun,December 17,L,0,Green Bay Packers,Carolina Panthers,24,31,20,31,236,4,0,1,6,7.8,7.4,64.5,127.2,38,151,4.0,0,1,1,4,4,4,174,6,12,0,0,33:57
+2017,16,Sat,December 23,L,0,Green Bay Packers,Minnesota Vikings,0,16,14,25,124,1,0,3,15,5.6,4.4,56.0,82.7,33,112,3.4,0,3,3,1,1,7,277,4,15,0,0,31:37
+2017,17,Sun,December 31,L,0,Green Bay Packers,Detroit Lions,11,35,20,29,305,3,0,2,18,11.1,9.8,69.0,137.9,23,51,2.2,1,2,2,3,3,6,266,4,12,0,0,28:13
+2017,1,Sun,September 10,L,0,Houston Texans,Jacksonville Jaguars,7,29,11,21,125,1,0,0,0,6.0,6.0,52.4,86.4,39,155,4.0,1,3,4,2,3,4,187,3,12,1,1,30:05
+2017,2,Thu,September 14,W,0,Houston Texans,Cincinnati Bengals,13,9,20,35,213,0,0,3,11,6.4,5.6,57.1,75.1,24,82,3.4,0,3,3,0,0,7,334,4,15,1,2,27:45
+2017,3,Sun,September 24,L,0,Houston Texans,New England Patriots,33,36,25,35,337,5,0,5,41,10.8,8.4,71.4,141.3,20,59,3.0,0,0,0,4,4,6,272,6,13,0,0,26:22
+2017,4,Sun,October 1,W,0,Houston Texans,Tennessee Titans,57,14,10,20,109,0,4,2,8,5.9,5.0,50.0,26.9,19,86,4.5,2,0,0,2,2,5,246,2,8,0,0,20:19
+2017,5,Sun,October 8,L,0,Houston Texans,Kansas City Chiefs,34,42,29,37,323,3,0,1,1,8.8,8.5,78.4,130.1,35,127,3.6,0,5,5,3,3,2,86,9,16,0,0,38:17
+2017,6,Sun,October 15,W,0,Houston Texans,Cleveland Browns,33,17,20,37,113,1,3,4,27,3.8,2.8,54.1,35.1,22,134,6.1,0,1,1,2,2,7,358,3,14,0,0,30:56
+2017,8,Sun,October 29,L,0,Houston Texans,Seattle Seahawks,38,41,26,41,446,4,1,2,6,11.0,10.4,63.4,122.6,21,33,1.6,0,2,2,5,5,5,237,5,12,0,0,29:38
+2017,9,Sun,November 5,L,0,Houston Texans,Indianapolis Colts,14,20,20,30,279,2,0,3,29,10.3,8.5,66.7,118.6,28,92,3.3,0,2,2,2,2,6,249,4,14,0,0,30:59
+2017,10,Sun,November 12,L,0,Houston Texans,Los Angeles Rams,7,33,26,38,339,3,0,3,22,9.5,8.3,68.4,122.6,25,104,4.2,0,4,4,3,3,4,205,6,16,0,1,31:31
+2017,11,Sun,November 19,W,0,Houston Texans,Arizona Cardinals,31,21,22,34,244,3,2,2,13,7.6,6.8,64.7,90.8,18,48,2.7,0,0,0,3,3,6,279,3,10,0,1,26:14
+2017,12,Mon,November 27,L,0,Houston Texans,Baltimore Ravens,16,23,21,33,155,0,0,1,8,4.9,4.6,63.6,74.7,31,139,4.5,2,3,3,2,2,6,308,3,14,2,2,29:44
+2017,13,Sun,December 3,L,0,Houston Texans,Tennessee Titans,13,24,15,23,146,1,0,2,4,6.5,5.8,65.2,97.4,25,198,7.9,2,1,2,3,3,4,199,5,11,1,1,26:11
+2017,14,Sun,December 10,L,0,Houston Texans,San Francisco 49ers,16,26,20,33,314,1,1,2,20,10.1,9.0,60.6,89.7,31,102,3.3,1,4,4,2,2,5,207,2,11,0,0,34:49
+2017,15,Sun,December 17,L,0,Houston Texans,Jacksonville Jaguars,7,45,21,29,326,3,0,1,0,11.2,10.9,72.4,143.7,38,138,3.6,3,1,1,6,6,6,283,3,10,0,0,33:18
+2017,16,Mon,December 25,L,0,Houston Texans,Pittsburgh Steelers,6,34,20,30,226,2,0,0,0,7.5,7.5,66.7,111.2,28,104,3.7,2,2,2,4,4,3,143,7,12,0,0,30:56
+2017,17,Sun,December 31,L,0,Houston Texans,Indianapolis Colts,13,22,15,25,104,1,0,1,10,4.6,4.0,60.0,82.7,36,146,4.1,1,2,2,2,2,5,235,6,13,0,0,31:13
+2017,1,Sun,September 10,L,0,Indianapolis Colts,Los Angeles Rams,9,46,22,30,310,1,0,1,8,10.6,10.0,73.3,117.4,33,63,1.9,2,3,3,5,5,5,218,5,14,0,0,34:25
+2017,2,Sun,September 17,L,1,Indianapolis Colts,Arizona Cardinals,13,16,19,36,306,1,1,4,26,9.2,7.7,52.8,79.2,25,83,3.3,0,3,4,1,1,5,232,6,15,0,1,28:49
+2017,3,Sun,September 24,W,0,Indianapolis Colts,Cleveland Browns,31,28,22,47,235,2,3,1,7,5.1,4.9,46.8,49.5,21,111,5.3,2,0,0,4,4,7,347,5,13,0,0,26:33
+2017,4,Sun,October 1,L,0,Indianapolis Colts,Seattle Seahawks,18,46,21,26,283,2,2,3,12,11.3,9.8,80.8,105.6,33,194,5.9,2,1,2,5,5,1,35,10,15,1,1,32:12
+2017,5,Sun,October 8,W,1,Indianapolis Colts,San Francisco 49ers,26,23,29,46,336,2,0,2,17,7.7,7.0,63.0,99.5,22,66,3.0,0,3,3,2,2,6,274,4,14,2,2,31:05
+2017,6,Mon,October 16,L,0,Indianapolis Colts,Tennessee Titans,22,36,23,32,305,1,1,1,1,9.6,9.2,71.9,99.1,34,168,4.9,2,5,5,3,3,1,44,6,13,1,1,35:53
+2017,7,Sun,October 22,L,0,Indianapolis Colts,Jacksonville Jaguars,0,27,18,27,330,1,0,1,0,12.2,11.8,66.7,120.9,37,188,5.1,2,2,2,3,3,2,107,8,14,0,1,32:47
+2017,8,Sun,October 29,L,0,Indianapolis Colts,Cincinnati Bengals,23,24,17,29,218,2,0,3,25,8.4,6.8,58.6,105.2,21,58,2.8,0,1,2,3,3,4,197,4,11,0,0,26:47
+2017,9,Sun,November 5,W,0,Indianapolis Colts,Houston Texans,20,14,19,44,194,1,0,2,25,5.0,4.2,43.2,64.0,21,94,4.5,0,0,1,2,2,8,390,4,14,0,1,29:01
+2017,10,Sun,November 12,L,0,Indianapolis Colts,Pittsburgh Steelers,17,20,19,31,228,2,1,1,8,7.6,7.1,61.3,91.9,30,88,2.9,0,2,3,0,1,6,297,5,13,0,0,29:58
+2017,12,Sun,November 26,L,0,Indianapolis Colts,Tennessee Titans,16,20,17,25,184,1,2,0,0,7.4,7.4,68.0,69.4,28,92,3.3,1,2,2,2,2,3,139,3,8,0,0,28:38
+2017,13,Sun,December 3,L,0,Indianapolis Colts,Jacksonville Jaguars,10,30,27,36,330,2,0,1,8,9.4,8.9,75.0,121.3,27,96,3.6,1,3,3,1,1,2,76,9,15,1,1,33:47
+2017,14,Sun,December 10,L,1,Indianapolis Colts,Buffalo Bills,7,13,7,16,92,1,1,0,0,5.8,5.8,43.8,57.3,51,227,4.5,1,0,0,1,1,6,230,10,18,0,2,32:25
+2017,15,Thu,December 14,L,0,Indianapolis Colts,Denver Broncos,13,25,17,26,251,2,1,2,10,10.0,9.0,65.4,106.4,46,211,4.6,1,1,2,2,2,1,52,7,15,1,3,36:51
+2017,16,Sat,December 23,L,0,Indianapolis Colts,Baltimore Ravens,16,23,29,38,220,2,0,1,17,6.2,5.6,76.3,107.3,32,103,3.2,0,3,3,2,2,3,71,6,14,1,1,35:48
+2017,17,Sun,December 31,W,0,Indianapolis Colts,Houston Texans,22,13,14,24,124,0,1,2,13,5.7,4.8,58.3,54.9,27,85,3.1,1,2,2,1,1,4,201,5,11,0,0,28:47
+2017,1,Sun,September 10,W,0,Jacksonville Jaguars,Houston Texans,29,7,19,36,110,1,1,10,54,4.6,2.4,52.8,56.5,23,93,4.0,0,0,0,1,1,5,216,5,12,0,1,29:55
+2017,2,Sun,September 17,L,0,Jacksonville Jaguars,Tennessee Titans,16,37,15,27,211,1,1,1,4,8.0,7.5,55.6,77.9,36,179,5.0,3,3,3,4,4,3,125,6,13,0,0,30:46
+2017,3,Sun,September 24,W,0,Jacksonville Jaguars,Baltimore Ravens,44,7,14,27,52,1,2,2,12,2.4,1.8,51.9,39.3,25,134,5.4,0,0,0,1,1,7,311,3,11,0,1,25:57
+2017,4,Sun,October 1,L,1,Jacksonville Jaguars,New York Jets,20,23,23,32,215,0,1,5,40,8.0,5.8,71.9,77.0,32,256,8.0,2,3,4,2,2,6,262,6,17,1,1,34:24
+2017,5,Sun,October 8,W,0,Jacksonville Jaguars,Pittsburgh Steelers,30,9,33,55,301,0,5,2,11,5.7,5.3,60.0,37.0,20,70,3.5,0,3,3,0,0,3,134,7,15,0,0,31:08
+2017,6,Sun,October 15,L,0,Jacksonville Jaguars,Los Angeles Rams,17,27,11,21,107,1,0,3,17,5.9,4.5,52.4,82.8,32,142,4.4,0,2,2,3,3,7,322,4,13,0,0,28:01
+2017,7,Sun,October 22,W,0,Jacksonville Jaguars,Indianapolis Colts,27,0,22,37,136,0,0,10,64,5.4,2.9,59.5,66.9,20,96,4.8,0,0,0,0,0,7,314,5,15,0,3,27:13
+2017,9,Sun,November 5,W,0,Jacksonville Jaguars,Cincinnati Bengals,23,7,10,18,119,0,0,2,17,7.6,6.0,55.6,75.9,17,29,1.7,1,0,0,1,1,7,336,1,8,0,0,19:46
+2017,10,Sun,November 12,W,1,Jacksonville Jaguars,Los Angeles Chargers,20,17,21,37,235,2,1,0,0,6.4,6.4,56.8,82.6,30,87,2.9,0,1,1,2,2,10,485,3,15,0,0,31:47
+2017,11,Sun,November 19,W,0,Jacksonville Jaguars,Cleveland Browns,19,7,16,32,134,1,2,5,45,5.6,3.6,50.0,45.6,18,50,2.8,0,0,0,1,1,8,376,3,13,0,1,23:05
+2017,12,Sun,November 26,L,0,Jacksonville Jaguars,Arizona Cardinals,24,27,22,38,236,2,1,1,5,6.3,6.1,57.9,82.8,31,108,3.5,0,4,4,1,1,6,274,7,17,0,0,34:39
+2017,13,Sun,December 3,W,0,Jacksonville Jaguars,Indianapolis Colts,30,10,21,36,149,1,2,4,25,4.8,3.7,58.3,54.1,26,141,5.4,0,1,1,1,1,4,187,5,15,4,4,26:13
+2017,14,Sun,December 10,W,0,Jacksonville Jaguars,Seattle Seahawks,30,24,17,31,260,3,3,2,11,8.7,7.9,54.8,75.4,24,141,5.9,0,1,2,3,3,4,181,2,9,0,1,26:59
+2017,15,Sun,December 17,W,0,Jacksonville Jaguars,Houston Texans,45,7,12,31,99,1,1,4,29,4.1,2.8,38.7,45.0,21,87,4.1,0,0,0,1,1,11,518,4,16,0,0,26:42
+2017,16,Sun,December 24,L,0,Jacksonville Jaguars,San Francisco 49ers,33,44,21,30,238,2,1,1,4,8.1,7.7,70.0,101.8,35,131,3.7,3,1,1,5,6,3,131,10,15,0,0,29:11
+2017,17,Sun,December 31,L,0,Jacksonville Jaguars,Tennessee Titans,10,15,12,21,116,1,0,3,18,6.4,4.8,57.1,88.6,39,116,3.0,0,3,3,0,1,9,383,3,16,1,1,33:27
+2017,1,Thu,September 7,W,0,Kansas City Chiefs,New England Patriots,42,27,16,36,247,0,0,3,20,7.4,6.3,44.4,67.7,35,124,3.5,3,2,2,3,3,6,242,5,15,0,2,29:46
+2017,2,Sun,September 17,W,0,Kansas City Chiefs,Philadelphia Eagles,27,20,25,46,299,2,1,6,34,7.2,5.8,54.3,79.9,17,107,6.3,0,2,3,2,2,4,169,8,15,0,0,30:49
+2017,3,Sun,September 24,W,0,Kansas City Chiefs,Los Angeles Chargers,24,10,20,40,226,0,3,2,11,5.9,5.4,50.0,36.0,26,104,4.0,1,1,1,1,1,5,250,5,13,0,0,29:34
+2017,4,Mon,October 2,W,0,Kansas City Chiefs,Washington Redskins,29,20,14,24,220,2,0,0,0,9.2,9.2,58.3,116.7,26,111,4.3,0,2,2,2,2,4,169,4,11,1,1,22:51
+2017,5,Sun,October 8,W,0,Kansas City Chiefs,Houston Texans,42,34,16,31,248,5,0,3,13,8.4,7.3,51.6,118.0,23,144,6.3,0,0,0,2,2,5,240,3,10,1,1,21:43
+2017,6,Sun,October 15,L,0,Kansas City Chiefs,Pittsburgh Steelers,13,19,17,25,245,1,1,1,7,10.1,9.4,68.0,96.2,37,194,5.2,1,1,1,2,2,5,207,4,11,0,0,36:39
+2017,7,Thu,October 19,L,0,Kansas City Chiefs,Oakland Raiders,30,31,29,52,417,3,0,0,0,8.0,8.0,55.8,101.2,21,88,4.2,1,1,3,4,4,3,146,6,13,1,1,29:24
+2017,8,Mon,October 30,W,0,Kansas City Chiefs,Denver Broncos,29,19,19,36,187,1,3,3,11,5.5,4.8,52.8,42.2,31,177,5.7,1,2,2,1,1,4,162,5,13,0,1,31:23
+2017,9,Sun,November 5,L,0,Kansas City Chiefs,Dallas Cowboys,17,28,21,33,244,2,0,1,5,7.5,7.2,63.6,106.1,31,131,4.2,2,0,0,4,4,5,195,7,12,0,0,31:17
+2017,11,Sun,November 19,L,1,Kansas City Chiefs,New York Giants,9,12,19,36,205,0,1,0,0,5.7,5.7,52.8,58.2,32,112,3.5,1,2,2,0,1,6,272,3,13,2,3,30:50
+2017,12,Sun,November 26,L,0,Kansas City Chiefs,Buffalo Bills,10,16,19,29,164,1,0,2,19,6.3,5.3,65.5,91.7,37,104,2.8,0,3,4,1,1,7,288,6,17,0,0,33:18
+2017,13,Sun,December 3,L,0,Kansas City Chiefs,New York Jets,31,38,26,36,331,1,0,0,0,9.2,9.2,72.2,109.8,49,157,3.2,3,3,3,3,3,2,73,13,20,1,1,42:49
+2017,14,Sun,December 10,W,0,Kansas City Chiefs,Oakland Raiders,26,15,24,41,198,1,2,3,13,5.1,4.5,58.5,58.8,11,70,6.4,1,0,0,1,1,7,286,5,13,1,1,23:20
+2017,15,Sat,December 16,W,0,Kansas City Chiefs,Los Angeles Chargers,30,13,20,36,209,1,3,2,18,6.3,5.5,55.6,47.1,22,98,4.5,1,0,0,1,2,3,149,4,11,1,2,26:39
+2017,16,Sun,December 24,W,0,Kansas City Chiefs,Miami Dolphins,29,13,19,38,286,1,0,0,0,7.5,7.5,50.0,83.9,16,59,3.7,0,2,3,1,1,2,59,0,8,0,2,22:07
+2017,17,Sun,December 31,W,0,Kansas City Chiefs,Denver Broncos,27,24,21,31,226,2,2,5,28,8.2,6.3,67.7,83.5,29,110,3.8,0,1,1,3,3,4,157,5,12,1,2,30:57
+2017,1,Sun,September 10,W,0,Las Vegas Raiders,Tennessee Titans,26,16,25,41,255,0,0,1,1,6.2,6.1,61.0,78.8,21,95,4.5,1,3,4,1,1,4,188,7,14,0,0,28:21
+2017,2,Sun,September 17,W,0,Las Vegas Raiders,New York Jets,45,20,16,24,145,2,0,4,21,6.9,5.2,66.7,110.6,25,126,5.0,0,2,2,2,2,3,119,7,12,0,0,28:58
+2017,3,Sun,September 24,L,0,Las Vegas Raiders,Washington Redskins,10,27,25,30,356,3,0,1,9,12.2,11.5,83.3,149.4,34,116,3.4,0,2,3,3,3,5,221,7,15,0,0,38:06
+2017,4,Sun,October 1,L,0,Las Vegas Raiders,Denver Broncos,10,16,16,26,155,1,0,4,24,6.9,5.2,61.5,91.0,32,143,4.5,0,3,4,1,1,6,271,5,16,0,0,32:57
+2017,5,Sun,October 8,L,0,Las Vegas Raiders,Baltimore Ravens,17,30,19,26,222,0,0,0,0,8.5,8.5,73.1,98.6,39,143,3.7,2,3,3,3,3,3,117,7,14,0,0,33:43
+2017,6,Sun,October 15,L,0,Las Vegas Raiders,Los Angeles Chargers,16,17,25,36,263,1,0,1,5,7.4,7.1,69.4,99.7,28,80,2.9,1,1,2,2,2,4,223,6,14,1,2,32:03
+2017,7,Thu,October 19,W,0,Las Vegas Raiders,Kansas City Chiefs,31,30,25,36,331,3,0,1,11,9.5,8.9,69.4,126.0,23,94,4.1,0,3,3,3,3,3,137,8,15,0,0,30:36
+2017,8,Sun,October 29,L,0,Las Vegas Raiders,Buffalo Bills,14,34,20,27,165,1,0,0,0,6.1,6.1,74.1,101.6,37,166,4.5,2,2,2,4,4,5,226,6,15,1,1,35:37
+2017,9,Sun,November 5,W,0,Las Vegas Raiders,Miami Dolphins,27,24,34,42,309,3,0,1,2,7.4,7.2,81.0,121.1,18,86,4.8,0,1,1,1,2,5,221,5,12,0,1,29:04
+2017,11,Sun,November 19,L,0,Las Vegas Raiders,New England Patriots,8,33,30,37,332,3,0,1,8,9.2,8.7,81.1,131.1,20,89,4.5,0,4,4,3,3,2,95,5,10,0,0,27:37
+2017,12,Sun,November 26,W,0,Las Vegas Raiders,Denver Broncos,21,14,20,35,160,2,1,5,30,5.4,4.0,57.1,75.9,17,56,3.3,0,0,0,2,2,8,362,5,14,1,1,24:06
+2017,13,Sun,December 3,W,0,Las Vegas Raiders,New York Giants,24,17,21,34,200,1,0,3,12,6.2,5.4,61.8,87.9,24,65,2.7,1,1,1,2,2,7,339,5,14,0,0,28:41
+2017,14,Sun,December 10,L,0,Las Vegas Raiders,Kansas City Chiefs,15,26,20,34,243,0,1,4,25,7.9,6.4,58.8,68.6,33,165,5.0,2,4,4,2,2,3,103,5,13,0,0,36:40
+2017,15,Sun,December 17,L,0,Las Vegas Raiders,Dallas Cowboys,17,20,18,27,204,0,2,2,8,7.9,7.0,66.7,58.3,31,126,4.1,2,2,2,2,2,2,86,2,10,2,2,32:20
+2017,16,Mon,December 25,L,0,Las Vegas Raiders,Philadelphia Eagles,10,19,19,38,138,1,1,2,25,4.3,3.5,50.0,56.7,21,78,3.7,0,2,3,1,1,8,334,1,14,2,2,25:39
+2017,17,Sun,December 31,L,0,Las Vegas Raiders,Los Angeles Chargers,10,30,28,37,380,3,0,1,7,10.5,10.0,75.7,135.0,30,115,3.8,0,1,2,3,4,2,63,7,13,0,1,33:20
+2017,1,Mon,September 11,L,0,Los Angeles Chargers,Denver Broncos,21,24,17,28,181,2,1,4,38,7.8,5.7,60.7,88.5,36,140,3.9,1,1,2,3,3,3,144,8,15,0,0,34:13
+2017,2,Sun,September 17,L,0,Los Angeles Chargers,Miami Dolphins,17,19,24,34,225,1,0,2,5,6.8,6.3,70.6,98.3,32,111,3.5,0,4,4,1,1,3,130,5,13,0,1,33:22
+2017,3,Sun,September 24,L,0,Los Angeles Chargers,Kansas City Chiefs,10,24,16,21,122,2,0,5,33,7.4,4.7,76.2,121.5,25,189,7.6,1,1,1,3,3,5,249,4,12,0,1,30:26
+2017,4,Sun,October 1,L,0,Los Angeles Chargers,Philadelphia Eagles,24,26,17,31,240,1,0,1,2,7.8,7.5,54.8,90.8,42,214,5.1,1,4,4,2,2,2,95,9,16,1,1,39:18
+2017,5,Sun,October 8,W,0,Los Angeles Chargers,New York Giants,27,22,21,36,183,2,1,5,42,6.3,4.5,58.3,78.8,25,152,6.1,1,0,0,2,2,8,353,5,15,0,1,28:15
+2017,6,Sun,October 15,W,0,Los Angeles Chargers,Oakland Raiders,17,16,21,30,165,1,2,1,6,5.7,5.3,70.0,66.7,22,109,5.0,1,1,1,1,2,4,226,6,12,0,1,27:57
+2017,7,Sun,October 22,W,0,Los Angeles Chargers,Denver Broncos,21,0,25,35,182,0,1,5,25,5.9,4.6,71.4,71.4,19,69,3.6,0,0,0,0,0,8,349,3,14,0,2,31:04
+2017,8,Sun,October 29,L,0,Los Angeles Chargers,New England Patriots,13,21,32,47,317,1,0,3,16,7.1,6.3,68.1,94.0,32,97,3.0,0,4,6,1,1,3,130,9,19,1,1,36:59
+2017,10,Sun,November 12,L,1,Los Angeles Chargers,Jacksonville Jaguars,17,20,28,51,263,1,2,3,10,5.4,4.9,54.9,59.5,27,135,5.0,1,2,2,0,1,9,431,5,18,1,2,35:01
+2017,11,Sun,November 19,W,0,Los Angeles Chargers,Buffalo Bills,54,24,21,39,220,1,5,1,4,5.7,5.5,53.8,39.4,22,173,7.9,2,1,1,3,3,3,120,6,14,1,2,23:55
+2017,12,Thu,November 23,W,0,Los Angeles Chargers,Dallas Cowboys,28,6,20,27,168,0,2,2,11,6.6,5.8,74.1,58.9,20,79,4.0,1,0,0,0,0,5,208,6,11,0,0,23:55
+2017,13,Sun,December 3,W,0,Los Angeles Chargers,Cleveland Browns,19,10,15,32,202,1,1,3,13,6.7,5.8,46.9,64.8,22,89,4.0,0,1,1,1,1,3,117,5,11,0,1,25:03
+2017,14,Sun,December 10,W,0,Los Angeles Chargers,Washington Redskins,30,13,15,27,136,1,1,2,15,5.6,4.7,55.6,66.3,21,65,3.1,0,0,0,1,2,8,345,2,12,1,2,24:40
+2017,15,Sat,December 16,L,0,Los Angeles Chargers,Kansas City Chiefs,13,30,23,30,223,2,0,1,8,7.7,7.2,76.7,119.2,32,174,5.4,1,3,4,3,3,3,129,6,14,1,1,33:21
+2017,16,Sun,December 24,W,0,Los Angeles Chargers,New York Jets,14,7,15,28,98,0,1,3,21,4.3,3.2,53.6,46.4,30,197,6.6,1,0,0,1,1,9,421,3,14,0,1,27:02
+2017,17,Sun,December 31,W,0,Los Angeles Chargers,Oakland Raiders,30,10,19,28,231,1,1,2,12,8.7,7.7,67.9,90.0,23,105,4.6,0,1,1,1,1,3,136,4,11,0,3,26:40
+2017,1,Sun,September 10,W,0,Los Angeles Rams,Indianapolis Colts,46,9,11,21,150,0,2,4,29,8.5,6.0,52.4,35.9,24,75,3.1,1,1,2,0,1,6,302,0,10,0,1,25:35
+2017,2,Sun,September 17,L,0,Los Angeles Rams,Washington Redskins,20,27,18,27,156,1,0,2,23,6.6,5.4,66.7,94.1,39,229,5.9,2,2,3,3,3,4,204,5,13,0,0,36:19
+2017,3,Thu,September 21,W,0,Los Angeles Rams,San Francisco 49ers,41,39,23,37,308,2,1,4,24,9.0,7.5,62.2,95.3,33,113,3.4,3,2,2,3,4,2,83,9,18,2,3,30:17
+2017,4,Sun,October 1,W,0,Los Angeles Rams,Dallas Cowboys,35,30,20,36,251,3,1,2,1,7.0,6.6,55.6,93.6,27,189,7.0,1,1,1,3,3,3,141,7,14,1,2,29:28
+2017,5,Sun,October 8,L,0,Los Angeles Rams,Seattle Seahawks,10,16,24,38,179,1,2,3,19,5.2,4.4,63.2,61.2,25,62,2.5,0,3,3,1,1,6,237,8,17,0,0,31:16
+2017,6,Sun,October 15,W,0,Los Angeles Rams,Jacksonville Jaguars,27,17,23,35,220,1,1,5,21,6.9,5.5,65.7,80.7,26,169,6.5,1,1,3,2,2,8,274,4,15,1,1,31:59
+2017,7,Sun,October 22,W,0,Los Angeles Rams,Arizona Cardinals,33,0,15,32,171,0,2,3,17,5.9,4.9,46.9,37.4,12,25,2.1,0,0,1,0,0,6,263,3,12,1,2,20:59
+2017,9,Sun,November 5,W,0,Los Angeles Rams,New York Giants,51,17,20,38,208,2,1,2,12,5.8,5.2,52.6,75.3,26,111,4.3,0,1,2,2,2,5,213,8,16,0,0,29:30
+2017,10,Sun,November 12,W,0,Los Angeles Rams,Houston Texans,33,7,18,36,194,1,2,3,27,6.1,5.0,50.0,52.3,25,89,3.6,0,0,1,1,1,6,281,4,12,0,1,28:29
+2017,11,Sun,November 19,L,0,Los Angeles Rams,Minnesota Vikings,7,24,27,38,280,1,0,0,0,7.4,7.4,71.1,100.8,35,171,4.9,2,1,3,3,3,3,137,7,14,1,1,37:22
+2017,12,Sun,November 26,W,0,Los Angeles Rams,New Orleans Saints,26,20,22,32,223,1,0,3,23,7.7,6.4,68.8,98.8,17,123,7.2,1,2,2,2,2,7,371,3,13,1,1,24:34
+2017,13,Sun,December 3,W,0,Los Angeles Rams,Arizona Cardinals,32,16,18,32,187,1,2,7,34,6.9,4.8,56.3,57.7,24,118,4.9,1,1,2,1,2,5,254,7,15,0,0,31:02
+2017,14,Sun,December 10,L,0,Los Angeles Rams,Philadelphia Eagles,35,43,29,51,316,4,1,2,17,6.5,6.0,56.9,93.3,32,139,4.3,0,3,3,4,4,4,142,8,20,2,2,39:12
+2017,15,Sun,December 17,W,0,Los Angeles Rams,Seattle Seahawks,42,7,14,30,71,1,0,7,71,4.7,1.9,46.7,64.6,17,78,4.6,0,0,0,1,1,9,427,4,14,0,0,23:14
+2017,16,Sun,December 24,W,0,Los Angeles Rams,Tennessee Titans,27,23,22,39,269,0,1,1,6,7.1,6.7,56.4,67.1,26,97,3.7,1,3,4,2,2,4,145,3,12,0,1,29:56
+2017,17,Sun,December 31,L,0,Los Angeles Rams,San Francisco 49ers,13,34,20,33,292,2,2,0,0,8.8,8.8,60.6,84.4,30,169,5.6,2,2,2,4,4,2,87,6,12,0,0,29:09
+2017,2,Sun,September 17,W,0,Miami Dolphins,Los Angeles Chargers,19,17,31,39,323,1,0,1,8,8.5,8.1,79.5,109.7,14,44,3.1,1,1,3,2,2,4,170,2,8,0,0,26:38
+2017,3,Sun,September 24,L,0,Miami Dolphins,New York Jets,6,20,18,23,233,1,0,2,16,10.8,9.3,78.3,123.4,34,103,3.0,1,2,3,2,2,5,243,4,13,0,0,36:08
+2017,4,Sun,October 1,L,0,Miami Dolphins,New Orleans Saints,0,20,29,41,261,2,0,1,7,6.5,6.2,70.7,103.8,28,86,3.1,0,2,3,2,2,3,141,6,13,1,2,34:28
+2017,5,Sun,October 8,W,0,Miami Dolphins,Tennessee Titans,16,10,21,32,119,1,0,6,22,4.4,3.1,65.6,82.7,20,69,3.5,0,1,1,1,1,10,549,2,13,0,0,30:15
+2017,6,Sun,October 15,W,0,Miami Dolphins,Atlanta Falcons,20,17,24,35,239,1,1,2,9,7.1,6.5,68.6,85.3,19,100,5.3,1,1,2,2,2,3,118,6,11,0,1,25:36
+2017,7,Sun,October 22,W,0,Miami Dolphins,New York Jets,31,28,17,27,180,3,1,3,29,7.7,6.0,63.0,103.9,22,92,4.2,1,0,0,4,4,7,321,4,11,0,0,28:02
+2017,8,Thu,October 26,L,0,Miami Dolphins,Baltimore Ravens,0,40,13,22,121,2,0,0,0,5.5,5.5,59.1,104.5,40,174,4.4,0,2,3,4,4,5,225,3,13,0,0,31:14
+2017,9,Sun,November 5,L,0,Miami Dolphins,Oakland Raiders,24,27,21,30,295,1,1,1,5,10.0,9.5,70.0,98.6,27,84,3.1,2,2,2,3,3,3,140,8,15,0,0,30:56
+2017,10,Mon,November 13,L,0,Miami Dolphins,Carolina Panthers,21,45,21,35,254,4,0,0,0,7.3,7.3,60.0,120.4,36,294,8.2,2,1,1,6,6,2,85,11,14,0,0,35:39
+2017,11,Sun,November 19,L,0,Miami Dolphins,Tampa Bay Buccaneers,20,30,22,37,268,2,0,1,7,7.4,7.1,59.5,99.8,24,53,2.2,0,3,4,3,3,6,249,3,13,0,0,31:49
+2017,12,Sun,November 26,L,0,Miami Dolphins,New England Patriots,17,35,18,28,221,4,1,1,6,8.1,7.6,64.3,113.2,38,196,5.2,1,0,0,5,5,3,122,5,12,1,2,32:41
+2017,13,Sun,December 3,W,0,Miami Dolphins,Denver Broncos,35,9,19,41,167,0,3,3,33,4.9,3.8,46.3,27.2,23,103,4.5,0,1,1,0,0,8,340,1,13,0,1,25:38
+2017,14,Mon,December 11,W,0,Miami Dolphins,New England Patriots,27,20,24,43,223,1,2,2,10,5.4,5.0,55.8,58.6,10,25,2.5,1,2,2,2,2,7,334,0,11,0,0,23:51
+2017,15,Sun,December 17,L,0,Miami Dolphins,Buffalo Bills,16,24,17,29,212,1,0,2,12,7.7,6.8,58.6,92.9,30,116,3.9,2,1,1,3,3,5,205,7,15,0,1,27:35
+2017,16,Sun,December 24,L,0,Miami Dolphins,Kansas City Chiefs,13,29,25,39,301,1,0,1,3,7.8,7.5,64.1,96.2,34,103,3.0,1,5,6,2,2,1,49,8,16,0,1,37:53
+2017,17,Sun,December 31,L,0,Miami Dolphins,Buffalo Bills,16,22,19,27,186,1,0,4,18,7.6,6.0,70.4,101.8,32,126,3.9,1,3,3,1,1,4,186,5,12,0,0,31:04
+2017,1,Mon,September 11,W,0,Minnesota Vikings,New Orleans Saints,29,19,27,37,284,1,0,1,7,7.9,7.5,73.0,103.9,21,60,2.9,0,4,4,1,1,3,171,4,11,0,0,28:44
+2017,2,Sun,September 17,L,0,Minnesota Vikings,Pittsburgh Steelers,9,26,23,35,233,2,0,2,10,6.9,6.3,65.7,103.6,32,102,3.2,0,4,4,2,2,5,193,3,13,0,0,34:22
+2017,3,Sun,September 24,W,0,Minnesota Vikings,Tampa Bay Buccaneers,34,17,28,40,316,2,3,2,12,8.2,7.5,70.0,78.7,9,26,2.9,0,1,1,2,2,4,163,1,6,0,0,22:14
+2017,4,Sun,October 1,L,0,Minnesota Vikings,Detroit Lions,7,14,19,31,154,0,0,6,55,6.7,4.2,61.3,73.9,31,97,3.1,1,2,3,0,0,7,325,3,13,0,0,36:27
+2017,5,Mon,October 9,W,0,Minnesota Vikings,Chicago Bears,20,17,13,26,159,2,1,1,7,6.4,5.9,50.0,78.8,29,115,4.0,0,0,0,1,1,7,307,3,12,1,1,28:36
+2017,6,Sun,October 15,W,0,Minnesota Vikings,Green Bay Packers,23,10,20,37,155,1,3,4,20,4.7,3.8,54.1,39.8,24,72,3.0,0,1,1,1,1,6,263,4,17,2,3,27:51
+2017,7,Sun,October 22,W,0,Minnesota Vikings,Baltimore Ravens,24,16,27,39,144,1,0,5,42,4.8,3.3,69.2,83.7,20,64,3.2,0,3,3,1,1,6,289,6,16,1,1,27:59
+2017,8,Sun,October 29,W,0,Minnesota Vikings,Cleveland Browns,33,16,18,34,161,0,0,3,18,5.3,4.4,52.9,65.9,22,115,5.2,2,1,2,1,2,6,279,4,13,0,1,22:08
+2017,10,Sun,November 12,W,0,Minnesota Vikings,Washington Redskins,38,30,26,45,313,1,1,1,14,7.3,6.8,57.8,77.4,27,81,3.0,2,3,3,3,3,1,52,5,14,3,5,31:06
+2017,11,Sun,November 19,W,0,Minnesota Vikings,Los Angeles Rams,24,7,23,37,209,0,0,2,16,6.1,5.4,62.2,77.4,17,45,2.6,1,0,0,1,1,6,254,3,11,0,1,22:38
+2017,12,Thu,November 23,W,0,Minnesota Vikings,Detroit Lions,30,23,20,35,236,2,1,3,14,7.1,6.2,57.1,84.9,15,53,3.5,0,3,3,2,2,4,180,3,11,0,1,25:03
+2017,13,Sun,December 3,W,0,Minnesota Vikings,Atlanta Falcons,14,9,16,29,173,0,0,0,0,6.0,6.0,55.2,72.9,22,102,4.6,0,3,4,0,0,4,197,1,10,1,1,25:58
+2017,14,Sun,December 10,L,0,Minnesota Vikings,Carolina Panthers,24,31,13,25,129,1,1,2,8,5.5,4.8,52.0,63.6,36,216,6.0,3,1,1,4,4,6,260,5,15,0,0,31:18
+2017,15,Sun,December 17,W,0,Minnesota Vikings,Cincinnati Bengals,34,7,14,28,115,0,2,3,17,4.7,3.7,50.0,31.1,20,46,2.3,1,0,0,1,1,8,365,1,13,1,3,24:08
+2017,16,Sat,December 23,W,0,Minnesota Vikings,Green Bay Packers,16,0,17,40,126,0,2,1,4,3.3,3.1,42.5,29.8,24,113,4.7,0,0,0,0,0,6,231,4,15,0,4,28:23
+2017,17,Sun,December 31,W,0,Minnesota Vikings,Chicago Bears,23,10,20,37,171,0,0,1,7,4.8,4.5,54.1,66.4,15,30,2.0,0,1,1,1,1,7,363,1,12,0,2,24:05
+2017,1,Thu,September 7,L,0,New England Patriots,Kansas City Chiefs,27,42,28,35,352,4,0,3,16,10.5,9.3,80.0,146.7,27,185,6.9,2,0,0,6,6,6,262,4,11,0,0,30:14
+2017,2,Sun,September 17,W,0,New England Patriots,New Orleans Saints,36,20,27,45,348,2,0,1,8,7.9,7.6,60.0,99.1,17,81,4.8,0,2,3,2,2,3,121,4,12,1,2,24:54
+2017,3,Sun,September 24,W,0,New England Patriots,Houston Texans,36,33,22,33,292,2,2,2,9,9.1,8.3,66.7,89.5,32,125,3.9,0,4,4,3,3,4,234,6,14,0,0,33:38
+2017,4,Sun,October 1,L,0,New England Patriots,Carolina Panthers,30,33,22,29,304,3,1,2,12,10.9,9.8,75.9,129.1,29,140,4.8,1,2,2,3,4,1,35,6,9,0,0,28:53
+2017,5,Thu,October 5,W,0,New England Patriots,Tampa Bay Buccaneers,19,14,26,46,319,1,0,2,15,7.3,6.6,56.5,85.3,20,90,4.5,1,0,3,2,2,6,271,4,13,0,0,29:10
+2017,6,Sun,October 15,W,0,New England Patriots,New York Jets,24,17,31,47,334,2,2,4,20,7.5,6.5,66.0,83.1,24,74,3.1,0,1,1,2,2,4,187,9,17,1,3,33:40
+2017,7,Sun,October 22,W,0,New England Patriots,Atlanta Falcons,23,7,23,33,223,1,0,1,10,7.1,6.6,69.7,98.4,22,120,5.5,0,0,2,1,1,2,84,2,9,1,3,25:55
+2017,8,Sun,October 29,W,0,New England Patriots,Los Angeles Chargers,21,13,17,30,192,1,1,1,20,7.1,6.2,56.7,73.2,21,157,7.5,1,0,1,1,1,5,225,3,10,1,1,23:01
+2017,10,Sun,November 12,W,0,New England Patriots,Denver Broncos,41,16,18,33,221,1,1,0,0,6.7,6.7,54.5,72.9,28,118,4.2,0,3,3,1,1,3,95,8,15,0,0,30:17
+2017,11,Sun,November 19,W,0,New England Patriots,Oakland Raiders,33,8,28,49,235,1,1,1,2,4.8,4.7,57.1,68.0,21,109,5.2,0,0,0,0,0,3,137,7,15,2,4,32:23
+2017,12,Sun,November 26,W,0,New England Patriots,Miami Dolphins,35,17,23,34,154,1,2,7,61,6.3,3.8,67.6,62.6,19,67,3.5,0,1,1,2,2,5,208,2,11,2,3,27:19
+2017,13,Sun,December 3,W,0,New England Patriots,Buffalo Bills,23,3,15,34,85,0,1,4,30,3.4,2.2,44.1,39.1,26,183,7.0,0,1,1,0,0,4,195,5,13,0,3,25:59
+2017,14,Mon,December 11,L,0,New England Patriots,Miami Dolphins,20,27,25,38,242,3,0,2,21,6.9,6.1,65.8,109.8,30,120,4.0,0,2,2,3,3,7,315,4,14,1,1,36:09
+2017,15,Sun,December 17,W,0,New England Patriots,Pittsburgh Steelers,27,24,22,30,270,2,1,2,11,9.4,8.4,73.3,109.0,31,143,4.6,1,1,1,3,3,4,171,10,16,0,0,35:07
+2017,16,Sun,December 24,W,0,New England Patriots,Buffalo Bills,37,16,21,38,242,0,0,6,39,7.4,5.5,55.3,74.7,24,84,3.5,0,3,4,1,1,3,144,8,17,0,2,28:16
+2017,17,Sun,December 31,W,0,New England Patriots,New York Jets,26,6,19,36,207,0,0,4,25,6.4,5.2,52.8,70.0,19,40,2.1,0,2,3,0,0,7,324,0,12,1,1,25:11
+2017,1,Mon,September 11,L,0,New Orleans Saints,Minnesota Vikings,19,29,27,32,341,3,0,1,5,10.8,10.3,84.4,142.3,30,129,4.3,0,3,3,2,3,2,87,9,14,0,0,31:16
+2017,2,Sun,September 17,L,0,New Orleans Saints,New England Patriots,20,36,30,39,436,3,0,2,11,11.5,10.6,76.9,138.4,31,119,3.8,1,3,3,3,4,3,111,6,12,0,0,35:06
+2017,3,Sun,September 24,W,0,New Orleans Saints,Carolina Panthers,34,13,19,33,156,0,3,4,28,5.6,4.2,57.6,31.9,22,132,6.0,1,2,2,1,1,3,129,7,14,0,0,28:51
+2017,4,Sun,October 1,W,0,New Orleans Saints,Miami Dolphins,20,0,20,28,128,0,1,4,36,5.9,4.0,71.4,65.8,15,58,3.9,0,0,0,0,0,6,263,1,8,0,1,25:32
+2017,6,Sun,October 15,W,0,New Orleans Saints,Detroit Lions,52,38,25,52,281,3,3,5,31,6.0,4.9,48.1,59.9,19,66,3.5,0,1,2,5,5,5,243,9,18,0,1,27:49
+2017,7,Sun,October 22,W,0,New Orleans Saints,Green Bay Packers,26,17,12,25,79,0,1,1,8,3.5,3.0,48.0,38.6,24,181,7.5,2,1,2,2,2,5,238,4,11,0,0,23:04
+2017,8,Sun,October 29,W,0,New Orleans Saints,Chicago Bears,20,12,14,32,150,0,1,2,14,5.1,4.4,43.8,45.1,31,157,5.1,1,2,3,0,0,5,270,8,17,0,1,28:37
+2017,9,Sun,November 5,W,0,New Orleans Saints,Tampa Bay Buccaneers,30,10,15,28,113,1,0,4,22,4.8,3.5,53.6,75.4,25,87,3.5,0,1,2,1,1,7,239,4,13,0,0,27:42
+2017,10,Sun,November 12,W,0,New Orleans Saints,Buffalo Bills,47,10,16,28,129,1,1,2,6,4.8,4.3,57.1,65.9,15,69,4.6,0,1,1,1,1,6,272,2,11,0,1,18:37
+2017,11,Sun,November 19,W,1,New Orleans Saints,Washington Redskins,34,31,22,32,300,3,0,2,22,10.1,8.8,68.8,129.7,33,156,4.7,1,1,1,4,4,5,248,4,12,2,2,32:11
+2017,12,Sun,November 26,L,0,New Orleans Saints,Los Angeles Rams,20,26,28,44,327,2,1,4,27,8.0,6.8,63.6,91.8,25,88,3.5,0,4,5,2,2,3,138,3,14,0,0,35:26
+2017,13,Sun,December 3,W,0,New Orleans Saints,Carolina Panthers,31,21,17,28,167,2,0,2,16,6.5,5.6,60.7,101.3,23,112,4.9,1,0,0,3,3,5,215,3,10,0,2,26:39
+2017,14,Thu,December 7,L,0,New Orleans Saints,Atlanta Falcons,17,20,15,27,211,1,3,1,10,8.2,7.5,55.6,53.7,37,132,3.6,1,2,2,2,2,2,83,7,12,0,0,34:41
+2017,15,Sun,December 17,W,0,New Orleans Saints,New York Jets,31,19,19,39,170,1,2,1,9,4.6,4.3,48.7,48.0,28,124,4.4,1,2,2,1,1,7,316,5,15,0,1,30:50
+2017,16,Sun,December 24,W,0,New Orleans Saints,Atlanta Falcons,23,13,22,36,264,1,1,5,24,8.0,6.4,61.1,81.3,20,67,3.4,0,2,2,1,1,5,234,2,13,1,2,26:12
+2017,17,Sun,December 31,L,0,New Orleans Saints,Tampa Bay Buccaneers,24,31,28,51,345,1,3,2,18,7.1,6.5,54.9,58.0,28,110,3.9,2,1,1,2,3,2,100,13,18,1,1,31:33
+2017,1,Sun,September 10,L,0,New York Giants,Dallas Cowboys,3,19,24,39,263,1,0,1,5,6.9,6.6,61.5,90.0,31,129,4.2,0,4,4,1,1,4,139,8,15,0,0,34:14
+2017,2,Mon,September 18,L,0,New York Giants,Detroit Lions,10,24,15,21,119,2,0,3,3,5.8,5.0,71.4,117.0,32,138,4.3,0,1,1,3,3,5,209,7,15,0,1,32:47
+2017,3,Sun,September 24,L,0,New York Giants,Philadelphia Eagles,24,27,21,31,161,1,0,3,15,5.7,4.7,67.7,90.9,39,193,4.9,2,2,3,3,3,4,182,5,14,2,3,37:32
+2017,4,Sun,October 1,L,0,New York Giants,Tampa Bay Buccaneers,23,25,22,38,323,3,0,1,9,8.7,8.3,57.9,112.1,23,111,4.8,0,2,4,1,2,4,199,3,11,0,1,25:47
+2017,5,Sun,October 8,L,0,New York Giants,Los Angeles Chargers,22,27,21,44,258,3,1,0,0,5.9,5.9,47.7,79.5,29,124,4.3,0,2,2,3,3,6,333,8,18,0,0,31:45
+2017,6,Sun,October 15,W,0,New York Giants,Denver Broncos,23,10,31,54,366,1,2,4,28,7.3,6.3,57.4,68.9,17,46,2.7,0,1,3,1,1,3,153,5,17,0,2,29:24
+2017,7,Sun,October 22,L,0,New York Giants,Seattle Seahawks,7,24,27,39,321,3,0,1,13,8.6,8.0,69.2,119.7,31,104,3.4,0,1,1,3,3,5,190,6,13,0,1,35:26
+2017,9,Sun,November 5,L,0,New York Giants,Los Angeles Rams,17,51,14,22,311,4,0,0,0,14.1,14.1,63.6,146.8,39,162,4.2,2,3,3,6,6,2,75,6,12,0,1,30:30
+2017,10,Sun,November 12,L,0,New York Giants,San Francisco 49ers,21,31,19,25,288,2,1,0,0,11.5,11.5,76.0,123.4,33,186,5.6,2,1,1,4,4,1,45,8,12,0,1,29:00
+2017,11,Sun,November 19,W,1,New York Giants,Kansas City Chiefs,12,9,27,41,229,0,3,1,1,5.6,5.5,65.9,49.7,29,134,4.6,0,3,3,0,0,5,215,3,11,1,1,37:16
+2017,12,Thu,November 23,L,0,New York Giants,Washington Redskins,10,20,19,31,201,2,1,6,41,7.8,5.4,61.3,88.2,31,122,3.9,0,2,2,2,2,7,308,4,15,0,1,34:37
+2017,13,Sun,December 3,L,0,New York Giants,Oakland Raiders,17,24,22,36,282,1,0,1,5,8.0,7.6,61.1,94.9,29,119,4.1,2,1,1,3,3,4,200,6,15,1,3,31:19
+2017,14,Sun,December 10,L,0,New York Giants,Dallas Cowboys,10,30,20,30,332,3,0,0,0,11.1,11.1,66.7,137.1,31,122,3.9,1,1,3,3,4,4,190,7,14,0,0,27:07
+2017,15,Sun,December 17,L,0,New York Giants,Philadelphia Eagles,29,34,24,38,233,4,0,1,4,6.2,6.0,63.2,115.4,27,108,4.0,0,2,2,4,4,4,187,6,13,0,1,30:53
+2017,16,Sun,December 24,L,0,New York Giants,Arizona Cardinals,0,23,21,35,215,2,2,2,15,6.6,5.8,60.0,72.9,27,74,2.7,0,1,1,2,3,7,329,5,14,0,0,33:13
+2017,17,Sun,December 31,W,0,New York Giants,Washington Redskins,18,10,20,37,136,0,3,3,22,4.3,3.4,54.1,28.7,16,61,3.8,1,1,2,1,1,9,426,1,13,1,1,28:07
+2017,1,Sun,September 10,L,0,New York Jets,Buffalo Bills,12,21,16,28,218,2,1,2,6,8.0,7.3,57.1,91.1,42,190,4.5,1,0,1,3,3,6,257,8,17,0,0,33:04
+2017,2,Sun,September 17,L,0,New York Jets,Oakland Raiders,20,45,23,28,230,3,0,0,0,8.2,8.2,82.1,136.6,27,180,6.7,3,1,1,6,6,3,166,8,12,0,0,31:02
+2017,3,Sun,September 24,W,0,New York Jets,Miami Dolphins,20,6,26,45,195,1,2,3,25,4.9,4.1,57.8,57.2,15,30,2.0,0,0,0,0,1,7,333,1,12,0,3,23:52
+2017,4,Sun,October 1,W,1,New York Jets,Jacksonville Jaguars,23,20,15,35,136,1,1,1,4,4.0,3.8,42.9,51.6,39,175,4.5,0,2,3,2,2,8,361,4,15,0,0,35:08
+2017,5,Sun,October 8,W,0,New York Jets,Cleveland Browns,17,14,24,36,279,2,2,1,2,7.8,7.5,66.7,85.3,33,140,4.2,0,0,2,2,2,2,113,6,14,1,2,34:26
+2017,6,Sun,October 15,L,0,New York Jets,New England Patriots,17,24,20,38,257,2,1,0,0,6.8,6.8,52.6,80.7,25,118,4.7,1,1,2,3,3,4,160,7,13,0,0,26:20
+2017,7,Sun,October 22,L,0,New York Jets,Miami Dolphins,28,31,25,37,304,4,2,3,22,8.8,7.6,67.6,106.1,25,53,2.1,0,1,1,4,4,6,267,5,13,0,0,31:58
+2017,8,Sun,October 29,L,0,New York Jets,Atlanta Falcons,20,25,18,29,246,2,0,1,8,8.8,8.2,62.1,112.1,32,140,4.4,0,4,4,1,1,5,214,5,14,0,0,28:19
+2017,9,Thu,November 2,W,0,New York Jets,Buffalo Bills,34,21,29,40,244,2,0,7,41,7.1,5.2,72.5,104.6,22,63,2.9,1,0,0,3,3,6,278,6,16,0,1,26:30
+2017,10,Sun,November 12,L,0,New York Jets,Tampa Bay Buccaneers,10,15,17,34,181,1,1,1,6,5.5,5.2,50.0,63.5,31,90,2.9,0,3,3,0,0,6,260,7,16,0,0,31:54
+2017,12,Sun,November 26,L,0,New York Jets,Carolina Panthers,27,35,11,28,154,0,0,3,14,6.0,5.0,39.3,57.7,33,145,4.4,2,3,3,0,1,6,284,3,14,1,1,31:50
+2017,13,Sun,December 3,W,0,New York Jets,Kansas City Chiefs,38,31,19,33,362,4,0,2,4,11.1,10.3,57.6,135.4,11,112,10.2,0,1,2,4,4,2,98,3,8,0,1,17:11
+2017,14,Sun,December 10,L,0,New York Jets,Denver Broncos,0,23,19,31,189,1,0,2,11,6.5,5.7,61.3,89.3,35,84,2.4,1,3,4,2,2,5,247,7,17,1,1,37:35
+2017,15,Sun,December 17,L,0,New York Jets,New Orleans Saints,19,31,26,36,281,2,1,0,0,7.8,7.8,72.2,101.7,28,131,4.7,2,1,1,4,4,4,187,3,10,1,1,29:10
+2017,16,Sun,December 24,L,0,New York Jets,Los Angeles Chargers,7,14,22,40,290,1,0,0,0,7.3,7.3,55.0,86.5,30,89,3.0,1,0,1,2,2,9,416,5,15,0,0,32:58
+2017,17,Sun,December 31,L,0,New York Jets,New England Patriots,6,26,19,40,183,2,0,2,12,4.9,4.4,47.5,77.4,38,147,3.9,1,1,1,3,3,8,338,4,15,1,1,34:49
+2017,1,Sun,September 10,W,0,Philadelphia Eagles,Washington Redskins,30,17,23,40,200,1,1,4,40,6.0,4.5,57.5,68.7,17,64,3.8,0,1,1,2,2,4,162,3,11,0,1,25:44
+2017,2,Sun,September 17,L,0,Philadelphia Eagles,Kansas City Chiefs,20,27,21,28,232,1,0,4,19,9.0,7.3,75.0,111.0,19,112,5.9,2,2,2,3,3,5,227,5,12,0,0,29:11
+2017,3,Sun,September 24,W,0,Philadelphia Eagles,New York Giants,27,24,35,47,366,3,2,0,0,7.8,7.8,74.5,100.1,17,49,2.9,0,1,1,3,3,4,154,3,10,0,2,22:28
+2017,4,Sun,October 1,W,0,Philadelphia Eagles,Los Angeles Chargers,26,24,22,38,342,2,0,2,5,9.1,8.6,57.9,105.4,13,58,4.5,1,1,1,3,3,4,191,5,10,0,0,20:42
+2017,5,Sun,October 8,W,0,Philadelphia Eagles,Arizona Cardinals,34,7,28,44,276,1,0,2,15,6.6,6.0,63.6,88.8,14,31,2.2,0,0,1,1,1,7,347,4,14,2,3,24:13
+2017,6,Thu,October 12,W,0,Philadelphia Eagles,Carolina Panthers,28,23,28,52,225,1,3,2,14,4.6,4.2,53.8,47.4,25,80,3.2,1,3,3,2,2,3,136,4,16,1,3,31:26
+2017,7,Mon,October 23,W,0,Philadelphia Eagles,Washington Redskins,34,24,30,40,269,3,1,4,34,7.6,6.1,75.0,107.2,18,75,4.2,0,1,1,3,3,5,239,4,12,0,1,30:15
+2017,8,Sun,October 29,W,0,Philadelphia Eagles,San Francisco 49ers,33,10,17,36,144,1,2,4,23,4.6,3.6,47.2,44.2,24,94,3.9,0,1,2,1,1,8,364,3,15,0,0,27:03
+2017,9,Sun,November 5,W,0,Philadelphia Eagles,Denver Broncos,51,23,19,38,191,1,2,3,17,5.5,4.7,50.0,51.5,19,35,1.8,0,3,3,2,2,6,302,3,13,1,1,30:06
+2017,11,Sun,November 19,W,0,Philadelphia Eagles,Dallas Cowboys,37,9,18,32,113,0,3,4,32,4.5,3.1,56.3,24.6,27,112,4.1,0,3,3,0,0,5,234,3,14,0,1,30:31
+2017,12,Sun,November 26,W,0,Philadelphia Eagles,Chicago Bears,31,3,17,33,134,0,2,2,13,4.5,3.8,51.5,36.7,14,6,0.4,0,1,2,0,0,6,251,3,13,0,2,22:52
+2017,13,Sun,December 3,L,0,Philadelphia Eagles,Seattle Seahawks,10,24,20,31,209,3,0,2,18,7.3,6.3,64.5,116.2,25,101,4.0,0,1,1,3,3,5,199,6,12,0,0,28:06
+2017,14,Sun,December 10,W,0,Philadelphia Eagles,Los Angeles Rams,43,35,16,26,198,2,0,2,1,7.7,7.1,61.5,110.7,17,109,6.4,2,0,0,5,5,5,282,2,7,0,0,20:48
+2017,15,Sun,December 17,W,0,Philadelphia Eagles,New York Giants,34,29,37,57,429,3,1,1,5,7.6,7.4,64.9,97.8,23,75,3.3,1,1,2,2,3,3,74,10,18,0,1,29:07
+2017,16,Mon,December 25,W,0,Philadelphia Eagles,Oakland Raiders,19,10,15,29,137,1,2,1,3,4.8,4.6,51.7,47.6,33,137,4.2,0,1,2,1,1,5,207,3,13,0,2,34:21
+2017,17,Sun,December 31,L,0,Philadelphia Eagles,Dallas Cowboys,0,6,17,30,172,1,0,1,7,6.0,5.5,56.7,84.3,32,129,4.0,0,0,1,0,1,8,356,5,15,0,1,30:05
+2017,1,Sun,September 10,W,0,Pittsburgh Steelers,Cleveland Browns,21,18,20,30,180,1,1,7,42,7.4,4.9,66.7,79.9,25,57,2.3,1,1,1,1,1,6,242,3,12,2,2,31:10
+2017,2,Sun,September 17,W,0,Pittsburgh Steelers,Minnesota Vikings,26,9,20,38,146,0,0,2,21,4.4,3.7,52.6,62.0,20,91,4.6,1,1,1,0,1,6,264,5,15,0,3,25:38
+2017,3,Sun,September 24,L,1,Pittsburgh Steelers,Chicago Bears,17,23,15,22,84,1,1,2,17,4.6,3.5,68.2,71.0,38,222,5.8,2,1,2,2,2,6,267,4,12,0,0,33:59
+2017,4,Sun,October 1,W,0,Pittsburgh Steelers,Baltimore Ravens,26,9,31,49,206,1,2,4,29,4.8,3.9,63.3,62.1,15,82,5.5,0,1,2,0,0,5,222,5,13,0,2,24:31
+2017,5,Sun,October 8,L,0,Pittsburgh Steelers,Jacksonville Jaguars,9,30,8,14,82,0,1,2,13,6.8,5.1,57.1,44.3,37,231,6.2,2,1,1,3,4,5,190,6,12,0,0,28:52
+2017,6,Sun,October 15,W,0,Pittsburgh Steelers,Kansas City Chiefs,19,13,19,34,223,1,0,3,23,7.2,6.0,55.9,85.8,15,28,1.9,0,2,2,1,1,4,190,3,11,0,2,23:21
+2017,7,Sun,October 22,W,0,Pittsburgh Steelers,Cincinnati Bengals,29,14,17,30,108,2,2,4,32,4.7,3.2,56.7,58.7,17,71,4.2,0,0,0,2,2,5,250,3,11,1,2,24:45
+2017,8,Sun,October 29,W,0,Pittsburgh Steelers,Detroit Lions,20,15,27,45,411,0,0,2,12,9.4,8.7,60.0,90.1,22,71,3.2,0,5,5,0,0,3,119,2,12,0,2,31:37
+2017,10,Sun,November 12,W,0,Pittsburgh Steelers,Indianapolis Colts,20,17,14,24,196,2,1,3,26,9.3,7.3,58.3,95.1,29,71,2.4,0,1,1,2,2,7,328,6,15,0,0,30:02
+2017,11,Thu,November 16,W,0,Pittsburgh Steelers,Tennessee Titans,40,17,22,34,264,1,4,5,42,9.0,6.8,64.7,58.6,21,52,2.5,1,1,2,2,2,3,142,5,13,1,2,28:20
+2017,12,Sun,November 26,W,0,Pittsburgh Steelers,Green Bay Packers,31,28,17,26,227,3,0,4,18,9.4,7.6,65.4,131.4,24,80,3.3,1,0,1,4,4,5,241,6,13,1,1,26:24
+2017,13,Mon,December 4,W,0,Pittsburgh Steelers,Cincinnati Bengals,23,20,21,36,223,2,0,2,11,6.5,5.9,58.3,95.0,22,130,5.9,0,2,2,2,2,5,246,7,14,0,0,30:11
+2017,14,Sun,December 10,W,0,Pittsburgh Steelers,Baltimore Ravens,39,38,20,35,261,2,1,1,8,7.7,7.3,57.1,87.9,26,152,5.8,3,1,1,5,5,3,125,4,10,0,0,26:10
+2017,15,Sun,December 17,L,0,Pittsburgh Steelers,New England Patriots,24,27,22,35,283,1,1,2,15,8.5,7.6,62.9,85.8,19,77,4.1,2,2,2,1,2,2,96,3,9,1,1,24:53
+2017,16,Mon,December 25,W,0,Pittsburgh Steelers,Houston Texans,34,6,8,17,51,1,1,7,42,5.5,2.1,47.1,48.9,28,176,6.3,0,0,0,0,0,7,342,3,12,0,1,29:04
+2017,17,Sun,December 31,W,0,Pittsburgh Steelers,Cleveland Browns,28,24,16,30,272,2,1,6,42,10.5,7.6,53.3,92.6,27,102,3.8,1,1,1,3,3,5,205,7,15,0,1,30:55
+2017,1,Sun,September 10,L,0,San Francisco 49ers,Carolina Panthers,3,23,14,25,171,2,1,0,0,6.8,6.8,56.0,87.2,38,116,3.1,0,3,3,2,2,3,155,7,13,0,0,34:21
+2017,2,Sun,September 17,L,0,San Francisco 49ers,Seattle Seahawks,9,12,23,39,181,1,0,3,17,5.1,4.3,59.0,79.1,37,131,3.5,0,2,2,0,1,7,309,8,19,1,1,36:58
+2017,3,Thu,September 21,L,0,San Francisco 49ers,Los Angeles Rams,39,41,22,28,292,3,0,0,0,10.4,10.4,78.6,145.8,32,126,3.9,2,2,2,5,5,2,113,8,12,0,0,29:43
+2017,4,Sun,October 1,L,1,San Francisco 49ers,Arizona Cardinals,15,18,33,51,317,1,1,6,40,7.0,5.6,64.7,80.3,22,51,2.3,0,4,4,0,0,6,293,5,16,0,0,36:15
+2017,5,Sun,October 8,L,1,San Francisco 49ers,Indianapolis Colts,23,26,22,34,288,0,1,4,26,9.2,7.6,64.7,79.0,35,159,4.5,2,4,4,2,2,4,191,8,16,0,0,37:17
+2017,6,Sun,October 15,L,0,San Francisco 49ers,Washington Redskins,24,26,25,37,325,2,1,1,5,8.9,8.6,67.6,101.7,33,94,2.8,1,2,2,2,3,4,181,7,14,0,0,36:52
+2017,7,Sun,October 22,L,0,San Francisco 49ers,Dallas Cowboys,10,40,17,27,236,3,0,0,0,8.7,8.7,63.0,128.0,43,265,6.2,3,0,0,4,5,3,142,7,11,0,1,32:50
+2017,8,Sun,October 29,L,0,San Francisco 49ers,Philadelphia Eagles,10,33,18,32,192,2,1,3,19,6.6,5.5,56.3,81.8,31,112,3.6,1,2,2,1,3,6,275,4,14,1,1,32:57
+2017,9,Sun,November 5,L,0,San Francisco 49ers,Arizona Cardinals,10,20,15,30,201,2,1,0,0,6.7,6.7,50.0,80.0,43,167,3.9,0,2,3,2,2,6,270,7,16,0,0,36:22
+2017,10,Sun,November 12,W,0,San Francisco 49ers,New York Giants,31,21,28,37,260,2,0,3,13,7.4,6.5,75.7,112.4,23,114,5.0,0,2,3,1,1,3,124,5,14,3,3,31:00
+2017,12,Sun,November 26,L,0,San Francisco 49ers,Seattle Seahawks,13,24,20,34,228,2,1,0,0,6.7,6.7,58.8,86.4,30,90,3.0,1,1,2,3,3,6,288,5,13,0,0,29:31
+2017,13,Sun,December 3,W,0,San Francisco 49ers,Chicago Bears,15,14,12,15,85,1,0,2,17,6.8,5.0,80.0,112.5,19,62,3.3,0,0,0,2,2,5,199,5,10,0,0,21:13
+2017,14,Sun,December 10,W,0,San Francisco 49ers,Houston Texans,26,16,20,38,221,2,0,3,17,6.3,5.4,52.6,87.7,23,90,3.9,0,1,2,1,2,6,314,3,13,1,2,25:11
+2017,15,Sun,December 17,W,0,San Francisco 49ers,Tennessee Titans,25,23,23,33,238,2,0,1,3,7.3,7.0,69.7,110.4,28,90,3.2,0,3,3,2,2,2,111,6,12,1,1,27:25
+2017,16,Sun,December 24,W,0,San Francisco 49ers,Jacksonville Jaguars,44,33,32,50,380,2,3,1,2,7.6,7.5,64.0,75.4,28,92,3.3,2,1,1,2,3,4,156,5,13,2,2,30:49
+2017,17,Sun,December 31,W,0,San Francisco 49ers,Los Angeles Rams,34,13,20,34,149,0,0,3,20,5.0,4.0,58.8,69.4,26,102,3.9,1,2,2,1,1,7,341,5,15,1,1,30:51
+2017,1,Sun,September 10,L,0,Seattle Seahawks,Green Bay Packers,9,17,28,42,286,1,1,4,25,7.4,6.2,66.7,84.0,28,84,3.0,1,1,1,2,2,5,219,9,16,0,0,39:13
+2017,2,Sun,September 17,W,0,Seattle Seahawks,San Francisco 49ers,12,9,15,27,89,0,1,2,10,3.7,3.1,55.6,46.7,19,159,8.4,0,3,3,0,0,7,307,2,12,0,0,23:02
+2017,3,Sun,September 24,L,0,Seattle Seahawks,Tennessee Titans,27,33,20,32,225,2,0,0,0,7.0,7.0,62.5,104.3,35,195,5.6,1,4,4,3,3,6,341,4,14,0,0,32:41
+2017,4,Sun,October 1,W,0,Seattle Seahawks,Indianapolis Colts,46,18,16,29,139,1,1,3,18,5.4,4.3,55.2,65.2,25,98,3.9,1,1,1,1,1,6,250,6,14,0,0,27:48
+2017,5,Sun,October 8,W,0,Seattle Seahawks,Los Angeles Rams,16,10,22,47,275,0,2,2,13,6.1,5.6,46.8,47.7,22,100,4.5,1,1,2,1,1,3,136,8,15,0,1,28:44
+2017,7,Sun,October 22,W,0,Seattle Seahawks,New York Giants,24,7,19,39,131,1,0,1,3,3.4,3.3,48.7,65.2,17,46,2.7,0,0,1,1,1,7,304,2,12,0,1,24:34
+2017,8,Sun,October 29,W,0,Seattle Seahawks,Houston Texans,41,38,19,30,367,4,3,5,35,13.4,10.5,63.3,105.8,34,142,4.2,1,1,1,5,5,5,265,2,10,1,1,30:22
+2017,9,Sun,November 5,L,0,Seattle Seahawks,Washington Redskins,14,17,21,31,193,0,0,6,54,8.0,5.2,67.7,84.5,23,51,2.2,2,1,1,2,2,8,320,4,13,0,0,27:41
+2017,10,Thu,November 9,W,0,Seattle Seahawks,Arizona Cardinals,22,16,24,47,256,1,0,2,17,5.8,5.2,51.1,74.4,24,34,1.4,1,1,1,1,2,5,230,6,15,1,3,29:07
+2017,11,Mon,November 20,L,0,Seattle Seahawks,Atlanta Falcons,31,34,19,27,190,2,0,1,5,7.2,6.8,70.4,114.7,30,89,3.0,1,2,2,4,4,3,116,9,14,0,0,30:21
+2017,12,Sun,November 26,W,0,Seattle Seahawks,San Francisco 49ers,24,13,24,40,196,1,1,3,23,5.5,4.6,60.0,70.4,24,84,3.5,0,2,2,1,1,9,342,5,16,1,1,30:29
+2017,13,Sun,December 3,W,0,Seattle Seahawks,Philadelphia Eagles,24,10,29,45,327,1,1,3,21,7.7,6.8,64.4,84.2,26,98,3.8,0,1,1,1,1,3,123,8,16,2,4,31:54
+2017,14,Sun,December 10,L,0,Seattle Seahawks,Jacksonville Jaguars,24,30,18,27,268,2,0,0,0,9.9,9.9,66.7,123.7,39,156,4.0,1,3,3,3,3,5,194,4,13,0,0,33:01
+2017,15,Sun,December 17,L,0,Seattle Seahawks,Los Angeles Rams,7,42,15,23,108,2,1,2,16,5.4,4.3,65.2,86.9,43,244,5.7,3,2,2,4,5,5,213,6,16,1,3,36:46
+2017,16,Sun,December 24,W,0,Seattle Seahawks,Dallas Cowboys,21,12,21,34,154,0,2,4,27,5.3,4.1,61.8,47.9,30,128,4.3,0,4,6,0,0,2,100,6,13,1,1,32:50
+2017,17,Sun,December 31,L,0,Seattle Seahawks,Arizona Cardinals,24,26,15,34,143,1,1,1,2,4.3,4.1,44.1,53.9,33,116,3.5,1,4,4,2,2,6,319,4,14,0,0,32:16
+2017,2,Sun,September 17,W,0,Tampa Bay Buccaneers,Chicago Bears,29,7,31,45,290,1,2,1,11,6.7,6.3,68.9,75.2,16,20,1.3,0,0,0,1,1,3,168,7,14,0,2,26:49
+2017,3,Sun,September 24,L,0,Tampa Bay Buccaneers,Minnesota Vikings,17,34,25,33,369,3,0,0,0,11.2,11.2,75.8,142.1,37,125,3.4,1,2,2,4,4,3,121,7,13,0,0,37:46
+2017,4,Sun,October 1,W,0,Tampa Bay Buccaneers,New York Giants,25,23,30,49,288,2,0,0,0,5.9,5.9,61.2,91.2,28,91,3.3,1,1,2,2,2,5,205,8,17,0,1,34:13
+2017,5,Thu,October 5,L,0,Tampa Bay Buccaneers,New England Patriots,14,19,30,40,289,1,1,3,14,7.6,6.7,75.0,92.6,23,113,4.9,0,4,4,1,1,4,188,4,12,0,0,30:50
+2017,6,Sun,October 15,L,0,Tampa Bay Buccaneers,Arizona Cardinals,33,38,18,22,272,3,1,2,11,12.9,11.3,81.8,138.8,35,160,4.6,2,1,1,5,5,2,93,4,9,0,1,32:23
+2017,7,Sun,October 22,L,0,Tampa Bay Buccaneers,Buffalo Bills,27,30,20,33,261,1,0,1,7,8.1,7.7,60.6,95.6,33,173,5.2,2,3,4,3,3,2,101,10,16,0,0,26:50
+2017,8,Sun,October 29,L,0,Tampa Bay Buccaneers,Carolina Panthers,3,17,18,32,154,1,1,0,0,4.8,4.8,56.3,66.4,31,100,3.2,1,1,1,2,2,7,353,8,17,0,0,32:11
+2017,9,Sun,November 5,L,0,Tampa Bay Buccaneers,New Orleans Saints,10,30,22,27,256,2,0,1,7,9.7,9.1,81.5,130.9,32,151,4.7,1,1,2,3,4,2,91,7,13,0,0,32:18
+2017,10,Sun,November 12,W,0,Tampa Bay Buccaneers,New York Jets,15,10,23,39,219,1,1,6,43,6.7,4.9,59.0,72.5,19,56,2.9,0,1,1,1,1,7,354,3,15,1,2,28:06
+2017,11,Sun,November 19,W,0,Tampa Bay Buccaneers,Miami Dolphins,30,20,23,40,365,2,3,1,0,9.1,8.9,57.5,73.4,19,83,4.4,0,2,2,2,2,2,106,6,13,0,1,28:11
+2017,12,Sun,November 26,L,0,Tampa Bay Buccaneers,Atlanta Falcons,20,34,27,36,368,2,0,0,0,10.2,10.2,75.0,125.7,28,148,5.3,2,2,2,4,4,2,104,11,14,0,0,30:06
+2017,13,Sun,December 3,L,1,Tampa Bay Buccaneers,Green Bay Packers,20,26,13,22,77,0,1,2,7,3.8,3.2,59.1,47.0,29,199,6.9,2,2,2,2,2,4,181,5,12,0,0,26:44
+2017,14,Sun,December 10,L,0,Tampa Bay Buccaneers,Detroit Lions,21,24,36,44,381,1,2,0,0,8.7,8.7,81.8,91.4,18,53,2.9,2,1,1,3,3,5,207,5,11,0,0,29:47
+2017,15,Mon,December 18,L,0,Tampa Bay Buccaneers,Atlanta Falcons,21,24,17,31,209,1,0,1,3,6.8,6.5,54.8,86.6,35,201,5.7,1,1,2,3,3,4,161,9,15,0,0,33:15
+2017,16,Sun,December 24,L,0,Tampa Bay Buccaneers,Carolina Panthers,19,22,16,26,140,0,1,2,20,6.2,5.0,61.5,59.8,31,115,3.7,1,3,3,1,2,3,119,4,13,1,1,30:30
+2017,17,Sun,December 31,W,0,Tampa Bay Buccaneers,New Orleans Saints,31,24,22,30,231,1,0,2,14,8.2,7.2,73.3,106.4,26,92,3.5,1,1,1,3,3,4,185,6,12,0,1,28:27
+2017,1,Sun,September 10,L,0,Tennessee Titans,Oakland Raiders,16,26,22,32,250,2,0,2,12,8.2,7.4,68.8,112.8,29,109,3.8,0,4,4,2,2,3,158,5,12,1,1,31:39
+2017,2,Sun,September 17,W,0,Tennessee Titans,Jacksonville Jaguars,37,16,20,34,211,1,2,2,12,6.6,5.9,58.8,62.3,25,99,4.0,1,1,1,1,1,5,246,6,13,0,0,29:14
+2017,3,Sun,September 24,W,0,Tennessee Titans,Seattle Seahawks,33,27,29,49,364,4,0,1,9,7.6,7.3,59.2,109.6,22,69,3.1,0,0,0,3,3,8,388,4,14,1,2,27:19
+2017,4,Sun,October 1,L,0,Tennessee Titans,Houston Texans,14,57,25,34,272,4,1,2,11,8.3,7.6,73.5,123.7,42,173,4.1,2,3,3,6,7,2,122,6,12,1,1,39:41
+2017,5,Sun,October 8,L,0,Tennessee Titans,Miami Dolphins,10,16,12,27,78,1,1,1,14,3.4,2.8,44.4,48.5,31,100,3.2,0,1,1,1,2,9,459,5,15,0,0,29:45
+2017,6,Mon,October 16,W,0,Tennessee Titans,Indianapolis Colts,36,22,21,37,212,1,0,1,0,5.7,5.6,56.8,82.3,19,85,4.5,0,3,3,1,2,3,160,2,9,0,1,24:07
+2017,7,Sun,October 22,W,1,Tennessee Titans,Cleveland Browns,12,9,22,39,218,0,3,2,17,6.0,5.3,56.4,40.3,26,66,2.5,0,3,3,0,0,4,178,3,13,1,2,32:42
+2017,9,Sun,November 5,W,0,Tennessee Titans,Baltimore Ravens,23,20,35,53,268,2,2,2,9,5.2,4.9,66.0,75.0,22,73,3.3,0,2,2,2,2,4,180,6,16,3,4,32:22
+2017,10,Sun,November 12,W,0,Tennessee Titans,Cincinnati Bengals,24,20,20,35,255,2,0,1,10,7.6,7.1,57.1,99.1,14,53,3.8,1,0,0,2,3,7,351,1,10,1,1,19:51
+2017,11,Thu,November 16,L,0,Tennessee Titans,Pittsburgh Steelers,17,40,30,45,284,4,0,3,15,6.6,5.9,66.7,113.6,21,65,3.1,0,4,4,4,4,3,152,4,12,0,1,31:40
+2017,12,Sun,November 26,W,0,Tennessee Titans,Indianapolis Colts,20,16,17,29,165,0,0,8,31,6.8,4.5,58.6,74.6,24,89,3.7,1,3,3,1,1,5,235,6,14,0,0,31:22
+2017,13,Sun,December 3,W,0,Tennessee Titans,Houston Texans,24,13,31,49,331,1,1,4,34,7.4,6.2,63.3,81.2,22,53,2.4,0,2,4,1,1,3,139,8,16,1,1,33:49
+2017,14,Sun,December 10,L,0,Tennessee Titans,Arizona Cardinals,7,12,17,26,125,0,0,8,53,6.8,3.7,65.4,76.6,29,136,4.7,0,4,5,0,0,6,270,3,14,0,0,33:49
+2017,15,Sun,December 17,L,0,Tennessee Titans,San Francisco 49ers,23,25,31,43,363,1,0,3,18,8.9,7.9,72.1,105.1,22,51,2.3,0,6,6,1,1,1,43,7,14,0,0,32:35
+2017,16,Sun,December 24,L,0,Tennessee Titans,Los Angeles Rams,23,27,22,39,286,4,0,1,15,7.7,7.2,56.4,113.8,26,116,4.5,0,0,1,3,4,4,200,6,14,1,2,30:04
+2017,17,Sun,December 31,W,0,Tennessee Titans,Jacksonville Jaguars,15,10,15,34,146,0,2,2,12,4.6,4.1,44.1,32.2,24,83,3.5,0,1,1,1,1,8,336,6,16,0,0,26:33
+2017,1,Sun,September 10,L,0,Washington Commanders,Philadelphia Eagles,17,30,26,39,298,2,1,2,9,7.9,7.3,66.7,95.9,24,58,2.4,0,3,3,1,2,4,170,8,14,0,0,34:16
+2017,2,Sun,September 17,W,0,Washington Commanders,Los Angeles Rams,27,20,15,25,235,1,1,2,12,9.9,8.7,60.0,87.9,22,97,4.4,1,2,2,2,2,4,182,5,12,1,1,23:41
+2017,3,Sun,September 24,W,0,Washington Commanders,Oakland Raiders,27,10,19,31,96,1,2,4,22,3.8,2.7,61.3,49.9,13,32,2.5,0,1,1,1,1,7,369,0,11,1,2,21:54
+2017,4,Mon,October 2,L,0,Washington Commanders,Kansas City Chiefs,20,29,27,37,261,1,0,4,32,7.9,6.4,73.0,101.3,31,168,5.4,1,3,4,2,2,3,105,8,13,0,0,37:09
+2017,6,Sun,October 15,W,0,Washington Commanders,San Francisco 49ers,26,24,23,47,250,1,1,3,29,5.9,5.0,48.9,63.3,20,85,4.3,2,1,2,3,3,6,254,6,17,1,2,23:08
+2017,7,Mon,October 23,L,0,Washington Commanders,Philadelphia Eagles,24,34,17,25,244,4,1,3,24,10.7,8.7,68.0,122.3,33,127,3.8,0,2,3,4,4,3,153,6,12,0,0,29:45
+2017,8,Sun,October 29,L,0,Washington Commanders,Dallas Cowboys,19,33,14,22,138,0,0,2,5,6.5,5.8,63.6,81.2,39,169,4.3,2,4,5,3,3,3,137,5,14,1,1,33:19
+2017,9,Sun,November 5,W,0,Washington Commanders,Seattle Seahawks,17,14,24,45,289,2,2,2,8,6.6,6.1,53.3,69.6,28,148,5.3,0,0,3,0,0,6,263,5,14,0,0,32:19
+2017,10,Sun,November 12,L,0,Washington Commanders,Minnesota Vikings,30,38,21,29,304,4,2,0,0,10.5,10.5,72.4,117.0,31,102,3.3,1,1,1,5,5,2,79,8,12,0,0,28:54
+2017,11,Sun,November 19,L,1,Washington Commanders,New Orleans Saints,31,34,29,41,375,2,1,2,10,9.4,8.7,70.7,105.2,23,160,7.0,1,4,4,2,2,3,119,4,12,1,1,30:24
+2017,12,Thu,November 23,W,0,Washington Commanders,New York Giants,20,10,13,27,86,0,1,4,27,4.2,2.8,48.1,40.0,24,84,3.5,0,1,1,1,1,9,371,2,14,1,2,25:23
+2017,13,Thu,November 30,L,0,Washington Commanders,Dallas Cowboys,14,38,11,22,93,2,0,1,9,4.6,4.0,50.0,91.7,42,182,4.3,2,1,1,5,5,5,211,7,14,0,1,32:28
+2017,14,Sun,December 10,L,0,Washington Commanders,Los Angeles Chargers,13,30,19,34,314,2,1,2,8,9.5,8.7,55.9,94.5,35,174,5.0,1,3,3,3,3,5,264,6,15,0,0,35:20
+2017,15,Sun,December 17,W,0,Washington Commanders,Arizona Cardinals,20,15,16,41,145,0,1,5,44,4.6,3.2,39.0,39.2,34,141,4.1,0,5,5,0,0,5,251,4,19,2,3,36:16
+2017,16,Sun,December 24,W,0,Washington Commanders,Denver Broncos,27,11,22,38,171,0,1,4,22,5.1,4.1,57.9,58.1,29,159,5.5,1,1,1,0,0,6,247,5,17,1,2,30:27
+2017,17,Sun,December 31,L,0,Washington Commanders,New York Giants,10,18,10,28,121,1,1,2,11,4.7,4.0,35.7,46.9,44,260,5.9,1,2,2,0,1,9,363,4,16,0,0,31:53

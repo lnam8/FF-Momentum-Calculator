@@ -1,0 +1,513 @@
+Year,Week,Day,Date,Win/Loss,OT,Team,Opponent,Team_Score,Opponent_Score,Passing_Complete,Passing_Attempts,Passing_Yards,Passing_TD,Passing_Int,Sacks_Allowed,Sacks_Yards_Allowed,Passing_Y/A,Passing_Net_Y/A,Passing_Completion%,QB_Rating,Rushing_Attempts,Rushing_Yards,Rushing_Y/A,Rushing_TD,Field_Goals_Made,Field_Goals_Attempted,Extra_Points_Made,Extra_Points_Attempted,Number_of_Punts,Punting_Yards,Third_Down_Conversions,Third_Down_Attempts,Fourth_Down_Conversions,Fourth_Down_Attempts,Time_of_Possession
+2006,1,Sun,September 10,W,0,Arizona Cardinals,San Francisco 49ers,34,27,23,40,286,1,0,1,2,7.2,7.0,57.5,88.1,18,107,5.9,2,2,3,3,3,4,58,1,9,1,1,24:58
+2006,2,Sun,September 17,L,0,Arizona Cardinals,Seattle Seahawks,10,21,12,27,195,1,2,3,26,8.2,6.5,44.4,50.7,36,146,4.1,2,0,1,3,3,5,96,6,13,0,0,31:53
+2006,3,Sun,September 24,L,0,Arizona Cardinals,St. Louis Rams,14,16,21,31,301,1,0,1,8,10.0,9.4,67.7,109.7,28,63,2.3,0,3,3,1,1,3,34,6,13,0,1,30:07
+2006,4,Sun,October 1,L,0,Arizona Cardinals,Atlanta Falcons,10,32,13,22,143,0,1,2,10,7.0,6.0,59.1,59.5,40,262,6.6,1,6,6,2,2,2,186,4,14,1,1,31:27
+2006,5,Sun,October 8,L,0,Arizona Cardinals,Kansas City Chiefs,20,23,26,38,262,2,0,3,26,7.6,6.4,68.4,105.4,22,39,1.8,0,3,3,2,2,6,182,5,14,0,0,29:31
+2006,6,Mon,October 16,L,0,Arizona Cardinals,Chicago Bears,23,24,14,37,130,0,4,2,14,3.9,3.3,37.8,8.7,16,38,2.4,0,1,1,3,3,6,179,4,14,0,1,20:17
+2006,7,Sun,October 22,L,0,Arizona Cardinals,Oakland Raiders,9,22,19,35,258,1,2,5,21,8.0,6.5,54.3,63.7,37,137,3.7,1,2,2,2,2,3,40,13,20,0,1,37:01
+2006,8,Sun,October 29,L,0,Arizona Cardinals,Green Bay Packers,14,31,17,25,180,1,0,0,0,7.2,7.2,68.0,102.1,39,203,5.2,3,1,1,4,4,2,21,2,7,1,2,33:39
+2006,10,Sun,November 12,L,0,Arizona Cardinals,Dallas Cowboys,10,27,20,29,308,2,0,0,0,10.6,10.6,69.0,126.8,34,126,3.7,1,2,2,3,3,2,23,9,14,0,2,32:15
+2006,11,Sun,November 19,W,0,Arizona Cardinals,Detroit Lions,17,10,23,38,213,0,1,4,35,6.5,5.1,60.5,64.9,20,68,3.4,1,1,2,1,1,5,110,4,12,0,0,29:17
+2006,12,Sun,November 26,L,0,Arizona Cardinals,Minnesota Vikings,26,31,27,41,255,3,0,2,16,6.6,5.9,65.9,107.3,33,157,4.8,1,1,1,4,4,5,107,7,15,2,2,36:32
+2006,13,Sun,December 3,W,0,Arizona Cardinals,St. Louis Rams,34,20,27,45,287,2,3,4,27,7.0,5.9,60.0,65.7,23,107,4.7,0,2,2,2,2,3,294,5,13,1,2,28:19
+2006,14,Sun,December 10,W,0,Arizona Cardinals,Seattle Seahawks,27,21,20,28,228,3,0,3,15,8.7,7.4,71.4,131.2,29,120,4.1,0,0,0,3,3,4,80,5,12,0,1,25:21
+2006,15,Sun,December 17,L,0,Arizona Cardinals,Denver Broncos,20,37,21,31,256,2,1,1,5,8.4,8.0,67.7,101.0,38,106,2.8,2,3,3,4,4,1,34,6,12,0,0,33:52
+2006,16,Sun,December 24,W,0,Arizona Cardinals,San Francisco 49ers,26,20,18,29,174,0,1,4,16,6.6,5.3,62.1,64.4,12,49,4.1,2,2,2,2,2,4,79,2,9,1,1,22:20
+2006,17,Sun,December 31,L,0,Arizona Cardinals,San Diego Chargers,20,27,20,26,218,2,1,3,17,9.0,7.5,76.9,110.7,33,169,5.1,0,2,2,3,3,3,38,4,10,0,0,33:32
+2006,1,Sun,September 10,W,0,Atlanta Falcons,Carolina Panthers,20,6,21,39,150,0,1,4,36,4.8,3.5,53.8,52.3,16,65,4.1,0,2,2,0,0,6,185,2,12,0,2,23:32
+2006,2,Sun,September 17,W,0,Atlanta Falcons,Tampa Bay Buccaneers,14,3,28,53,311,0,3,1,2,5.9,5.8,52.8,47.0,16,40,2.5,0,1,3,0,0,4,68,7,14,0,0,25:51
+2006,3,Mon,September 25,L,0,Atlanta Falcons,New Orleans Saints,3,23,20,28,180,0,0,1,11,6.8,6.2,71.4,88.4,34,146,4.3,1,3,3,2,2,6,147,4,12,0,0,32:40
+2006,4,Sun,October 1,W,0,Atlanta Falcons,Arizona Cardinals,32,10,17,29,161,0,2,4,21,6.3,4.9,58.6,45.3,24,26,1.1,0,1,1,1,1,5,102,4,12,1,1,28:33
+2006,6,Sun,October 15,L,0,Atlanta Falcons,New York Giants,14,27,17,30,165,2,2,2,15,6.0,5.2,56.7,66.7,38,259,6.8,1,2,2,3,3,4,57,4,11,0,0,34:18
+2006,7,Sun,October 22,W,1,Atlanta Falcons,Pittsburgh Steelers,41,38,24,35,418,5,0,3,15,12.4,11.0,68.6,148.6,26,55,2.1,0,1,1,5,5,3,36,7,11,0,0,30:53
+2006,8,Sun,October 29,W,0,Atlanta Falcons,Cincinnati Bengals,29,27,24,36,258,2,0,2,8,7.4,6.8,66.7,106.0,18,73,4.1,1,2,2,3,3,4,72,4,10,0,0,22:52
+2006,9,Sun,November 5,L,0,Atlanta Falcons,Detroit Lions,14,30,20,32,308,1,1,3,13,10.0,8.8,62.5,91.7,27,127,4.7,2,3,3,3,3,2,166,6,12,0,1,32:56
+2006,10,Sun,November 12,L,0,Atlanta Falcons,Cleveland Browns,13,17,16,22,145,1,0,5,20,7.5,5.4,72.7,105.3,27,91,3.4,1,1,1,2,2,10,462,2,14,1,1,31:38
+2006,11,Sun,November 19,L,0,Atlanta Falcons,Baltimore Ravens,10,24,24,34,225,0,0,2,11,6.9,6.3,70.6,88.5,31,103,3.3,3,1,2,3,3,4,58,8,16,2,2,36:43
+2006,12,Sun,November 26,L,0,Atlanta Falcons,New Orleans Saints,13,31,21,30,332,2,0,2,17,11.6,10.4,70.0,128.7,25,95,3.8,2,1,1,4,4,6,159,6,13,0,0,25:41
+2006,13,Sun,December 3,W,0,Atlanta Falcons,Washington Redskins,24,14,18,38,204,1,2,1,13,5.7,5.2,47.4,50.8,35,177,5.1,1,0,1,2,2,5,102,6,14,0,2,31:38
+2006,14,Sun,December 10,W,0,Atlanta Falcons,Tampa Bay Buccaneers,17,6,22,37,192,0,0,1,12,5.5,5.1,59.5,73.3,29,80,2.8,0,2,3,0,0,4,73,8,17,0,1,29:31
+2006,15,Sat,December 16,L,0,Atlanta Falcons,Dallas Cowboys,28,38,22,29,258,2,1,3,20,9.6,8.1,75.9,111.0,27,94,3.5,2,1,1,5,5,3,48,7,12,0,0,33:21
+2006,16,Sun,December 24,L,0,Atlanta Falcons,Carolina Panthers,3,10,4,7,11,1,0,3,21,4.6,1.1,57.1,101.8,52,183,3.5,0,1,1,1,1,6,176,8,16,0,0,41:47
+2006,17,Sun,December 31,L,0,Atlanta Falcons,Philadelphia Eagles,17,24,23,36,350,3,0,0,0,9.7,9.7,63.9,123.6,17,43,2.5,0,1,2,3,3,5,108,4,11,0,0,24:42
+2006,1,Sun,September 10,W,0,Baltimore Ravens,Tampa Bay Buccaneers,27,0,18,34,116,0,3,3,21,4.0,3.1,52.9,23.7,13,26,2.0,0,0,0,0,0,8,298,3,12,0,1,24:11
+2006,2,Sun,September 17,W,0,Baltimore Ravens,Oakland Raiders,28,6,10,27,123,0,3,6,39,6.0,3.7,37.0,12.3,26,39,1.5,0,2,2,0,0,4,86,2,12,1,2,27:59
+2006,3,Sun,September 24,W,0,Baltimore Ravens,Cleveland Browns,15,14,21,33,250,1,1,7,48,9.0,6.3,63.6,84.2,19,38,2.0,1,0,0,2,2,8,286,6,14,0,0,28:09
+2006,4,Sun,October 1,W,0,Baltimore Ravens,San Diego Chargers,16,13,13,23,134,1,1,1,11,6.3,5.6,56.5,69.8,40,150,3.8,0,2,3,1,1,5,134,2,13,1,3,33:42
+2006,5,Mon,October 9,L,0,Baltimore Ravens,Denver Broncos,3,13,13,24,106,1,1,1,0,4.4,4.2,54.2,62.2,28,116,4.1,0,2,2,1,1,4,68,6,12,0,0,28:22
+2006,6,Sun,October 15,L,0,Baltimore Ravens,Carolina Panthers,21,23,24,39,356,2,2,1,9,9.4,8.9,61.5,87.1,30,58,1.9,0,3,3,2,2,3,35,7,15,0,0,33:49
+2006,8,Sun,October 29,W,0,Baltimore Ravens,New Orleans Saints,35,22,24,46,368,3,4,2,15,8.3,7.7,52.2,64.4,14,35,2.5,0,0,0,2,2,2,178,6,14,2,4,23:14
+2006,9,Sun,November 5,W,0,Baltimore Ravens,Cincinnati Bengals,26,20,12,26,182,1,2,2,12,7.5,6.5,46.2,50.5,22,93,4.2,1,2,2,2,2,4,77,1,10,1,2,22:36
+2006,10,Sun,November 12,W,0,Baltimore Ravens,Tennessee Titans,27,26,13,25,205,0,1,2,6,8.4,7.6,52.0,62.9,38,162,4.3,3,1,3,3,3,5,128,5,15,0,1,30:44
+2006,11,Sun,November 19,W,0,Baltimore Ravens,Atlanta Falcons,24,10,11,21,82,1,0,5,45,6.0,3.2,52.4,77.9,25,104,4.2,0,1,1,1,1,6,145,2,11,0,2,23:17
+2006,12,Sun,November 26,W,0,Baltimore Ravens,Pittsburgh Steelers,27,0,22,42,151,0,2,9,73,5.3,3.0,52.4,40.9,11,21,1.9,0,0,0,0,0,7,195,1,12,1,3,25:14
+2006,13,Thu,November 30,L,0,Baltimore Ravens,Cincinnati Bengals,7,13,21,32,227,1,0,2,7,7.3,6.7,65.6,96.7,23,67,2.9,0,2,3,1,1,6,166,4,13,0,0,29:11
+2006,14,Sun,December 10,W,0,Baltimore Ravens,Kansas City Chiefs,20,10,15,27,141,1,2,5,37,6.6,4.4,55.6,51.6,30,135,4.5,0,1,2,1,1,3,32,8,17,0,0,26:31
+2006,15,Sun,December 17,W,0,Baltimore Ravens,Cleveland Browns,27,17,23,33,168,2,2,6,55,6.8,4.3,69.7,76.3,16,68,4.3,0,1,2,2,2,7,217,0,11,0,1,29:48
+2006,16,Sun,December 24,W,0,Baltimore Ravens,Pittsburgh Steelers,31,7,19,42,188,1,2,5,17,4.9,4.0,45.2,46.5,18,63,3.5,0,0,0,1,1,7,217,2,14,2,3,24:38
+2006,17,Sun,December 31,W,0,Baltimore Ravens,Buffalo Bills,19,7,20,35,214,1,2,3,23,6.8,5.6,57.1,60.9,14,39,2.8,0,0,0,1,1,7,211,5,13,1,1,23:39
+2006,1,Sun,September 10,L,0,Buffalo Bills,New England Patriots,17,19,11,23,136,2,1,3,27,7.1,5.2,47.8,77.4,41,183,4.5,0,1,1,2,2,4,73,5,13,2,2,32:55
+2006,2,Sun,September 17,W,0,Buffalo Bills,Miami Dolphins,16,6,23,32,190,1,1,7,60,7.8,4.9,71.9,84.1,20,92,4.6,0,0,1,0,0,7,198,6,15,1,1,29:01
+2006,3,Sun,September 24,L,0,Buffalo Bills,New York Jets,20,28,19,29,182,1,0,1,1,6.3,6.1,65.5,94.3,24,74,3.1,2,0,0,4,4,7,237,4,12,1,1,26:47
+2006,4,Sun,October 1,W,0,Buffalo Bills,Minnesota Vikings,17,12,25,44,267,1,2,0,0,6.1,6.1,56.8,63.4,16,63,3.9,0,2,2,0,0,6,117,2,13,2,2,24:03
+2006,5,Sun,October 8,L,0,Buffalo Bills,Chicago Bears,7,40,19,31,195,2,0,3,16,6.8,5.7,61.3,100.9,38,156,4.1,2,4,4,4,4,3,36,7,14,0,0,37:31
+2006,6,Sun,October 15,L,0,Buffalo Bills,Detroit Lions,17,20,24,36,262,1,1,3,16,7.7,6.7,66.7,85.6,27,135,5.0,1,2,3,2,2,5,110,3,12,0,1,31:41
+2006,7,Sun,October 22,L,0,Buffalo Bills,New England Patriots,6,28,18,27,171,2,0,4,24,7.2,5.5,66.7,108.7,27,94,3.5,2,0,0,4,4,6,171,8,15,0,0,31:40
+2006,9,Sun,November 5,W,0,Buffalo Bills,Green Bay Packers,24,10,28,47,280,1,2,2,7,6.1,5.7,59.6,65.9,30,147,4.9,0,1,1,1,1,6,140,7,16,0,1,34:21
+2006,10,Sun,November 12,L,0,Buffalo Bills,Indianapolis Colts,16,17,27,39,236,1,0,0,0,6.1,6.1,69.2,93.5,29,148,5.1,1,1,1,2,2,3,43,3,8,0,0,33:48
+2006,11,Sun,November 19,W,0,Buffalo Bills,Houston Texans,24,21,25,30,206,0,1,3,17,7.4,6.2,83.3,81.4,26,188,7.2,2,0,0,3,3,6,147,6,13,1,1,32:25
+2006,12,Sun,November 26,W,0,Buffalo Bills,Jacksonville Jaguars,27,24,16,22,116,2,0,3,16,6.0,4.6,72.7,115.0,35,207,5.9,1,1,2,3,3,6,139,1,11,2,2,32:10
+2006,13,Sun,December 3,L,0,Buffalo Bills,San Diego Chargers,21,24,17,29,138,1,0,3,22,5.5,4.3,58.6,82.3,35,197,5.6,2,1,2,3,3,6,150,4,13,0,0,34:23
+2006,14,Sun,December 10,W,0,Buffalo Bills,New York Jets,31,13,22,35,143,1,2,5,39,5.2,3.6,62.9,57.2,30,132,4.4,0,2,2,1,1,5,106,7,16,0,2,32:08
+2006,15,Sun,December 17,W,0,Buffalo Bills,Miami Dolphins,21,0,14,33,100,0,2,2,18,3.6,2.9,42.4,24.8,28,112,4.0,0,0,0,0,0,8,295,4,16,1,3,28:20
+2006,16,Sun,December 24,L,0,Buffalo Bills,Tennessee Titans,29,30,13,20,181,2,0,1,2,9.2,8.6,65.0,127.3,40,215,5.4,1,3,3,3,3,4,47,6,15,1,1,33:18
+2006,17,Sun,December 31,L,0,Buffalo Bills,Baltimore Ravens,7,19,23,36,216,0,1,0,0,6.0,6.0,63.9,68.8,30,111,3.7,0,4,4,1,1,4,61,6,14,0,0,36:21
+2006,1,Sun,September 10,L,0,Carolina Panthers,Atlanta Falcons,6,20,10,22,133,2,0,1,7,6.4,5.8,45.5,95.5,47,252,5.4,0,2,4,2,2,4,67,4,13,0,1,36:28
+2006,2,Sun,September 17,L,1,Carolina Panthers,Minnesota Vikings,13,16,20,32,225,1,1,5,34,8.1,6.1,62.5,80.9,33,140,4.2,0,3,4,1,1,7,227,2,15,3,3,37:40
+2006,3,Sun,September 24,W,0,Carolina Panthers,Tampa Bay Buccaneers,26,24,14,25,145,1,1,1,10,6.2,5.6,56.0,69.6,25,64,2.6,2,1,1,3,3,6,164,4,12,1,1,25:37
+2006,4,Sun,October 1,W,0,Carolina Panthers,New Orleans Saints,21,18,28,38,344,1,0,1,5,9.2,8.8,73.7,110.0,23,63,2.7,1,1,2,1,1,5,115,4,11,0,0,29:39
+2006,5,Sun,October 8,W,0,Carolina Panthers,Cleveland Browns,20,12,26,43,157,0,2,2,16,4.0,3.5,60.5,48.3,23,91,4.0,0,4,4,0,0,7,231,2,14,0,0,31:15
+2006,6,Sun,October 15,W,0,Carolina Panthers,Baltimore Ravens,23,21,19,35,212,3,2,3,18,6.6,5.6,54.3,77.3,22,80,3.6,0,0,0,3,3,5,108,5,15,2,2,26:11
+2006,7,Sun,October 22,L,0,Carolina Panthers,Cincinnati Bengals,14,17,23,39,230,2,0,2,10,6.2,5.6,59.0,92.9,30,112,3.7,0,1,1,2,2,8,241,6,16,1,1,34:32
+2006,8,Sun,October 29,L,0,Carolina Panthers,Dallas Cowboys,14,35,24,36,258,1,1,2,12,7.5,6.8,66.7,85.2,38,156,4.1,3,2,3,3,3,4,77,6,14,0,0,38:16
+2006,10,Mon,November 13,W,0,Carolina Panthers,Tampa Bay Buccaneers,24,10,17,32,153,1,2,3,20,5.4,4.4,53.1,50.7,22,69,3.1,0,1,1,1,1,6,155,3,13,0,1,26:44
+2006,11,Sun,November 19,W,0,Carolina Panthers,St. Louis Rams,15,0,19,34,80,0,1,7,62,4.2,2.0,55.9,48.9,8,31,3.9,0,0,0,0,0,9,374,2,12,0,0,21:17
+2006,12,Sun,November 26,L,0,Carolina Panthers,Washington Redskins,13,17,11,23,110,2,1,1,8,5.1,4.6,47.8,72.7,37,143,3.9,0,1,2,2,2,8,256,4,15,0,0,29:14
+2006,13,Mon,December 4,L,0,Carolina Panthers,Philadelphia Eagles,24,27,21,39,304,3,0,1,8,8.0,7.6,53.8,105.1,27,98,3.6,0,2,2,3,3,7,210,7,17,0,0,32:23
+2006,14,Sun,December 10,L,0,Carolina Panthers,New York Giants,13,27,17,33,172,3,0,1,0,5.2,5.1,51.5,97.0,35,135,3.9,0,2,2,3,3,9,332,4,18,2,2,30:25
+2006,15,Sun,December 17,L,0,Carolina Panthers,Pittsburgh Steelers,3,37,13,20,147,1,0,3,22,8.5,6.4,65.0,103.5,43,159,3.7,2,3,3,4,4,3,40,10,17,1,1,37:13
+2006,16,Sun,December 24,W,0,Carolina Panthers,Atlanta Falcons,10,3,9,20,94,0,2,3,15,5.5,4.1,45.0,19.6,19,83,4.4,0,1,1,0,0,5,118,3,10,0,1,18:13
+2006,17,Sun,December 31,W,0,Carolina Panthers,New Orleans Saints,31,21,20,29,236,1,1,5,18,8.8,6.9,69.0,90.6,17,61,3.6,2,0,0,3,3,5,112,4,10,1,1,25:21
+2006,1,Sun,September 10,W,0,Chicago Bears,Green Bay Packers,26,0,16,30,164,0,2,3,22,6.2,5.0,53.3,41.5,23,103,4.5,0,0,1,0,0,6,162,1,11,2,3,25:55
+2006,2,Sun,September 17,W,0,Chicago Bears,Detroit Lions,34,7,23,30,199,0,0,6,31,7.7,5.5,76.7,93.6,14,46,3.3,1,0,1,1,1,6,155,1,9,1,1,27:00
+2006,3,Sun,September 24,W,0,Chicago Bears,Minnesota Vikings,19,16,21,31,189,0,0,1,5,6.3,5.9,67.7,83.9,24,97,4.0,0,3,3,1,1,4,64,5,15,0,1,31:39
+2006,4,Sun,October 1,W,0,Chicago Bears,Seattle Seahawks,37,6,17,37,153,0,2,5,49,5.5,3.6,45.9,35.1,19,77,4.1,0,2,2,0,0,8,276,4,16,0,0,24:28
+2006,5,Sun,October 8,W,0,Chicago Bears,Buffalo Bills,40,7,14,27,87,1,3,3,28,4.3,2.9,51.9,31.5,18,58,3.2,0,0,0,1,1,6,208,2,11,0,1,22:29
+2006,6,Mon,October 16,W,0,Chicago Bears,Arizona Cardinals,24,23,24,42,220,2,0,1,12,5.5,5.1,57.1,87.4,38,66,1.7,0,3,5,2,2,8,303,6,20,0,0,39:43
+2006,8,Sun,October 29,W,0,Chicago Bears,San Francisco 49ers,41,10,14,25,121,1,2,2,14,5.4,4.5,56.0,48.9,19,127,6.7,0,1,1,1,1,4,62,3,10,0,1,22:55
+2006,9,Sun,November 5,L,0,Chicago Bears,Miami Dolphins,13,31,16,32,137,3,2,0,0,4.3,4.3,50.0,66.8,35,161,4.6,0,1,2,4,4,6,157,7,17,0,0,29:54
+2006,10,Sun,November 12,W,0,Chicago Bears,New York Giants,38,20,14,32,99,0,2,2,22,3.8,2.9,43.8,25.4,22,150,6.8,2,2,4,2,2,5,101,2,12,0,0,27:14
+2006,11,Sun,November 19,W,0,Chicago Bears,New York Jets,10,0,19,35,156,0,2,2,6,4.6,4.2,54.3,42.1,30,108,3.6,0,0,0,0,0,7,217,6,17,1,2,31:54
+2006,12,Sun,November 26,L,0,Chicago Bears,New England Patriots,13,17,22,33,267,1,2,0,0,8.1,8.1,66.7,76.2,34,85,2.5,1,1,1,2,2,3,34,7,16,0,0,28:58
+2006,13,Sun,December 3,W,0,Chicago Bears,Minnesota Vikings,23,13,21,39,156,0,4,5,22,4.6,3.5,53.8,24.0,33,190,5.8,1,2,2,1,1,8,199,4,17,1,1,39:21
+2006,14,Mon,December 11,W,0,Chicago Bears,St. Louis Rams,42,27,34,55,332,3,1,3,24,6.5,5.7,61.8,89.4,22,101,4.6,1,0,1,3,3,6,165,6,17,3,3,33:21
+2006,15,Sun,December 17,W,1,Chicago Bears,Tampa Bay Buccaneers,34,31,25,46,300,3,1,2,5,6.6,6.3,54.3,87.2,19,57,3.0,1,1,1,4,4,11,561,6,18,0,0,29:27
+2006,16,Sun,December 24,W,0,Chicago Bears,Detroit Lions,26,21,27,45,260,3,0,3,23,6.3,5.4,60.0,98.4,18,67,3.7,0,0,0,3,3,7,234,3,13,2,3,25:17
+2006,17,Sun,December 31,L,0,Chicago Bears,Green Bay Packers,7,26,21,42,276,1,1,2,9,6.8,6.3,50.0,69.1,34,97,2.9,0,2,3,2,3,5,100,11,20,0,0,36:56
+2006,1,Sun,September 10,W,0,Cincinnati Bengals,Kansas City Chiefs,23,10,23,35,176,1,1,7,54,6.6,4.2,65.7,75.4,25,113,4.5,0,1,2,1,1,4,66,5,15,3,4,31:57
+2006,2,Sun,September 17,W,0,Cincinnati Bengals,Cleveland Browns,34,17,20,33,244,0,2,0,0,7.4,7.4,60.6,58.1,20,57,2.9,2,1,1,2,2,6,157,2,10,0,1,25:55
+2006,3,Sun,September 24,W,0,Cincinnati Bengals,Pittsburgh Steelers,28,20,18,39,195,0,3,3,13,5.3,4.6,46.2,29.3,38,170,4.5,2,2,3,2,2,2,168,7,16,3,3,33:51
+2006,4,Sun,October 1,L,0,Cincinnati Bengals,New England Patriots,13,38,15,26,188,2,1,0,0,7.2,7.2,57.7,89.9,41,236,5.8,3,1,2,5,5,3,38,6,13,1,1,33:56
+2006,6,Sun,October 15,L,0,Cincinnati Bengals,Tampa Bay Buccaneers,13,14,25,44,174,2,1,2,10,4.2,3.8,56.8,71.6,25,126,5.0,0,0,1,2,2,7,230,6,16,1,1,35:07
+2006,7,Sun,October 22,W,0,Cincinnati Bengals,Carolina Panthers,17,14,20,34,217,2,1,3,21,7.0,5.9,58.8,85.0,16,60,3.8,0,0,0,2,2,8,262,2,11,0,0,25:28
+2006,8,Sun,October 29,L,0,Cincinnati Bengals,Atlanta Falcons,27,29,19,27,277,3,0,2,14,10.8,9.6,70.4,140.5,38,143,3.8,0,3,3,2,2,3,50,7,13,0,0,37:08
+2006,9,Sun,November 5,L,0,Cincinnati Bengals,Baltimore Ravens,20,26,21,31,245,0,0,0,0,7.9,7.9,67.7,91.5,38,129,3.4,1,4,4,2,2,4,73,6,15,0,1,37:24
+2006,10,Sun,November 12,L,0,Cincinnati Bengals,San Diego Chargers,41,49,24,36,324,3,0,3,14,9.4,8.3,66.7,122.9,26,107,4.1,4,0,0,7,7,5,93,9,14,0,0,28:42
+2006,11,Sun,November 19,W,0,Cincinnati Bengals,New Orleans Saints,31,16,37,52,504,2,3,2,6,9.8,9.3,71.2,90.5,23,91,4.0,0,1,1,1,2,5,93,6,12,0,0,33:33
+2006,12,Sun,November 26,W,0,Cincinnati Bengals,Cleveland Browns,30,0,18,29,152,0,4,4,34,6.4,4.6,62.1,36.1,14,51,3.6,0,0,1,0,0,4,75,4,12,0,2,22:10
+2006,13,Thu,November 30,W,0,Cincinnati Bengals,Baltimore Ravens,13,7,26,43,227,1,0,0,0,5.3,5.3,60.5,82.2,20,89,4.5,0,0,1,1,1,7,231,5,16,2,3,30:49
+2006,14,Sun,December 10,W,0,Cincinnati Bengals,Oakland Raiders,27,10,23,39,178,1,1,4,21,5.1,4.1,59.0,68.1,16,45,2.8,0,1,2,1,1,2,20,7,14,1,3,24:15
+2006,15,Mon,December 18,L,0,Cincinnati Bengals,Indianapolis Colts,16,34,29,36,282,4,0,1,0,7.8,7.6,80.6,136.3,29,112,3.9,0,2,2,4,4,2,200,5,10,0,1,33:04
+2006,16,Sun,December 24,L,0,Cincinnati Bengals,Denver Broncos,23,24,12,23,160,2,1,3,19,7.8,6.2,52.2,85.4,34,127,3.7,1,1,1,3,3,6,154,5,13,0,1,29:51
+2006,17,Sun,December 31,L,1,Cincinnati Bengals,Pittsburgh Steelers,17,23,19,28,275,1,1,1,5,10.0,9.5,67.9,96.6,45,207,4.6,2,1,1,2,2,4,58,6,11,0,0,40:41
+2006,1,Sun,September 10,L,0,Cleveland Browns,New Orleans Saints,14,19,16,30,170,1,1,0,0,5.7,5.7,53.3,67.4,41,156,3.8,0,4,4,1,1,3,40,9,18,0,1,32:46
+2006,2,Sun,September 17,L,0,Cleveland Browns,Cincinnati Bengals,17,34,24,40,321,2,2,4,31,8.8,7.3,60.0,81.4,32,160,5.0,2,2,3,4,4,4,77,8,15,0,0,34:05
+2006,3,Sun,September 24,L,0,Cleveland Browns,Baltimore Ravens,14,15,23,41,254,1,0,2,10,6.4,5.9,56.1,82.8,27,86,3.2,0,3,3,0,0,6,141,7,17,0,1,31:51
+2006,4,Sun,October 1,W,0,Cleveland Browns,Oakland Raiders,24,21,9,24,46,1,1,4,22,2.8,1.6,37.5,42.4,24,194,8.1,1,0,0,3,3,6,175,4,12,0,1,22:54
+2006,5,Sun,October 8,L,0,Cleveland Browns,Carolina Panthers,12,20,20,29,169,1,0,1,1,5.9,5.6,69.0,95.3,28,119,4.3,0,2,3,2,2,9,369,0,11,0,0,28:45
+2006,7,Sun,October 22,L,0,Cleveland Browns,Denver Broncos,7,17,20,41,197,1,2,2,12,5.1,4.6,48.8,50.6,37,150,4.1,1,1,2,2,2,6,126,9,20,1,1,37:15
+2006,8,Sun,October 29,W,0,Cleveland Browns,New York Jets,20,13,11,28,105,0,2,1,3,3.9,3.6,39.3,20.7,27,88,3.3,0,2,3,1,1,3,46,5,13,0,1,24:49
+2006,9,Sun,November 5,L,0,Cleveland Browns,San Diego Chargers,25,32,19,28,191,0,0,3,20,7.5,6.2,67.9,87.1,23,190,8.3,3,1,1,3,3,6,175,3,10,0,0,27:06
+2006,10,Sun,November 12,W,0,Cleveland Browns,Atlanta Falcons,17,13,16,41,194,1,2,1,3,4.8,4.6,39.0,42.1,29,149,5.1,0,2,2,1,1,8,230,6,17,0,1,28:22
+2006,11,Sun,November 19,L,0,Cleveland Browns,Pittsburgh Steelers,20,24,25,44,261,2,3,2,11,6.2,5.7,56.8,60.9,20,77,3.9,1,1,1,3,3,4,64,6,12,0,0,27:47
+2006,12,Sun,November 26,L,0,Cleveland Browns,Cincinnati Bengals,0,30,27,34,300,3,1,1,0,8.8,8.6,79.4,120.6,37,88,2.4,1,1,1,3,4,4,74,7,14,1,1,37:50
+2006,13,Sun,December 3,W,1,Cleveland Browns,Kansas City Chiefs,31,28,24,32,293,4,1,2,4,9.3,8.6,75.0,129.3,32,124,3.9,0,0,0,4,4,3,40,9,13,1,1,32:41
+2006,14,Thu,December 7,L,0,Cleveland Browns,Pittsburgh Steelers,7,27,11,21,225,1,0,0,0,10.7,10.7,52.4,106.2,52,303,5.8,2,2,3,3,3,2,132,10,16,0,0,38:47
+2006,15,Sun,December 17,L,0,Cleveland Browns,Baltimore Ravens,17,27,13,25,231,2,1,1,7,9.5,8.9,52.0,93.9,35,142,4.1,1,2,2,3,3,5,100,7,15,0,0,30:12
+2006,16,Sun,December 24,L,0,Cleveland Browns,Tampa Bay Buccaneers,7,22,16,26,202,0,1,3,10,8.2,7.0,61.5,69.7,44,153,3.5,1,3,3,1,2,2,166,8,17,1,2,37:16
+2006,17,Sun,December 31,L,0,Cleveland Browns,Houston Texans,6,14,9,15,83,0,1,1,3,5.7,5.2,60.0,47.4,26,94,3.6,1,0,0,2,2,6,163,2,8,0,0,21:54
+2006,1,Sun,September 10,L,0,Dallas Cowboys,Jacksonville Jaguars,17,24,23,34,229,1,1,1,8,7.0,6.5,67.6,84.1,32,78,2.4,2,1,2,3,3,6,158,5,13,0,0,34:12
+2006,2,Sun,September 17,W,0,Dallas Cowboys,Washington Redskins,27,10,18,32,152,0,1,6,45,6.2,4.0,56.3,55.7,20,93,4.7,0,1,1,1,1,8,330,2,14,0,1,28:05
+2006,4,Sun,October 1,W,0,Dallas Cowboys,Tennessee Titans,45,14,14,29,151,1,2,2,4,5.3,4.9,48.3,46.8,27,78,2.9,0,2,2,0,0,4,55,6,12,0,1,27:26
+2006,5,Sun,October 8,L,0,Dallas Cowboys,Philadelphia Eagles,24,38,18,33,331,2,0,3,23,10.7,9.2,54.5,109.5,18,52,2.9,2,1,1,5,5,8,261,2,12,0,0,23:01
+2006,6,Sun,October 15,W,0,Dallas Cowboys,Houston Texans,34,6,23,38,198,0,2,0,0,5.2,5.2,60.5,52.3,17,34,2.0,0,2,2,0,0,6,140,3,13,1,1,24:46
+2006,7,Mon,October 23,L,0,Dallas Cowboys,New York Giants,22,36,12,26,173,2,1,2,16,7.3,6.2,46.2,77.9,39,155,4.0,1,2,2,4,4,3,44,9,16,1,1,32:29
+2006,8,Sun,October 29,W,0,Dallas Cowboys,Carolina Panthers,35,14,17,31,128,0,1,3,21,4.8,3.8,54.8,51.5,17,76,4.5,2,0,1,2,2,6,153,3,9,0,0,21:44
+2006,9,Sun,November 5,L,0,Dallas Cowboys,Washington Redskins,19,22,14,23,183,1,0,1,9,8.3,7.6,60.9,100.5,32,117,3.7,1,2,3,2,2,4,68,5,13,0,1,28:32
+2006,10,Sun,November 12,W,0,Dallas Cowboys,Arizona Cardinals,27,10,20,38,209,0,2,1,7,5.7,5.4,52.6,46.9,21,86,4.1,1,1,1,1,1,3,32,7,15,2,3,27:45
+2006,11,Sun,November 19,W,0,Dallas Cowboys,Indianapolis Colts,21,14,20,39,247,2,2,2,7,6.5,6.0,51.3,66.9,23,88,3.8,0,0,0,2,2,3,44,7,13,0,1,26:18
+2006,12,Thu,November 23,W,0,Dallas Cowboys,Tampa Bay Buccaneers,38,10,10,20,110,0,2,1,10,6.0,5.2,50.0,27.1,24,101,4.2,1,1,1,1,1,4,71,5,10,0,0,22:43
+2006,13,Sun,December 3,W,0,Dallas Cowboys,New York Giants,23,20,24,36,270,2,0,0,0,7.5,7.5,66.7,107.4,29,126,4.3,0,2,2,2,2,3,291,6,12,0,1,33:21
+2006,14,Sun,December 10,L,0,Dallas Cowboys,New Orleans Saints,17,42,26,38,377,5,0,1,7,10.1,9.7,68.4,140.0,36,159,4.4,1,0,0,6,6,4,76,9,15,1,2,37:11
+2006,15,Sat,December 16,W,0,Dallas Cowboys,Atlanta Falcons,38,28,19,29,249,4,2,4,21,9.3,7.5,65.5,103.3,27,127,4.7,0,0,0,4,4,4,69,6,12,1,2,26:39
+2006,16,Mon,December 25,L,0,Dallas Cowboys,Philadelphia Eagles,7,23,15,23,222,1,1,2,16,10.3,8.9,65.2,93.0,42,204,4.9,1,3,3,2,2,3,37,9,16,1,1,37:06
+2006,17,Sun,December 31,L,0,Dallas Cowboys,Detroit Lions,31,39,28,42,277,4,1,5,29,7.3,5.9,66.7,106.9,25,85,3.4,0,4,4,3,3,3,42,9,17,1,1,32:07
+2006,1,Sun,September 10,L,0,Denver Broncos,St. Louis Rams,10,18,18,34,195,0,0,3,22,6.4,5.3,52.9,70.1,28,125,4.5,0,6,7,0,0,3,45,3,15,0,0,32:49
+2006,2,Sun,September 17,W,1,Denver Broncos,Kansas City Chiefs,9,6,17,23,131,0,0,1,2,5.8,5.5,73.9,87.4,34,145,4.3,0,2,2,0,0,6,169,5,13,0,0,30:47
+2006,3,Sun,September 24,W,0,Denver Broncos,New England Patriots,17,7,31,55,320,1,0,0,0,5.8,5.8,56.4,79.4,21,50,2.4,0,0,1,1,1,7,214,4,16,1,3,28:15
+2006,5,Mon,October 9,W,0,Denver Broncos,Baltimore Ravens,13,3,20,34,154,0,3,2,11,4.9,4.3,58.8,33.2,25,103,4.1,0,1,1,0,0,6,152,6,15,0,0,31:38
+2006,6,Sun,October 15,W,0,Denver Broncos,Oakland Raiders,13,3,13,26,159,0,1,4,30,7.3,5.3,50.0,53.2,30,85,2.8,0,1,2,0,0,4,88,4,13,1,2,31:36
+2006,7,Sun,October 22,W,0,Denver Broncos,Cleveland Browns,17,7,19,33,131,1,1,5,18,4.5,3.4,57.6,64.1,13,34,2.6,0,0,0,1,1,6,146,1,11,0,3,22:45
+2006,8,Sun,October 29,L,0,Denver Broncos,Indianapolis Colts,31,34,32,39,345,3,0,0,0,8.8,8.8,82.1,129.2,21,92,4.4,0,4,4,2,2,1,33,7,11,0,0,28:57
+2006,9,Sun,November 5,W,0,Denver Broncos,Pittsburgh Steelers,31,20,38,54,403,1,3,4,30,8.0,6.9,70.4,74.8,19,96,5.1,1,2,3,2,2,2,160,4,13,0,2,34:33
+2006,10,Sun,November 12,W,0,Denver Broncos,Oakland Raiders,17,13,18,33,198,0,0,3,16,6.5,5.5,54.5,72.5,26,46,1.8,1,2,3,1,1,8,285,5,16,0,0,29:45
+2006,11,Sun,November 19,L,0,Denver Broncos,San Diego Chargers,27,35,19,26,217,2,2,1,5,8.5,8.0,73.1,91.3,29,125,4.3,3,0,0,5,5,3,33,8,12,0,0,29:11
+2006,12,Thu,November 23,L,0,Denver Broncos,Kansas City Chiefs,10,19,13,22,159,0,1,1,2,7.3,6.9,59.1,62.5,41,223,5.4,1,4,4,1,1,2,150,4,10,0,0,35:02
+2006,13,Sun,December 3,L,0,Denver Broncos,Seattle Seahawks,20,23,16,28,162,0,1,1,6,6.0,5.6,57.1,58.9,31,108,3.5,1,3,5,2,2,8,246,3,16,0,0,30:31
+2006,14,Sun,December 10,L,0,Denver Broncos,San Diego Chargers,20,48,15,23,276,2,0,1,3,12.1,11.5,65.2,135.4,36,143,4.0,4,2,2,6,6,3,40,8,13,0,0,30:46
+2006,15,Sun,December 17,W,0,Denver Broncos,Arizona Cardinals,37,20,20,35,195,0,2,3,19,6.1,5.1,57.1,49.1,20,100,5.0,1,2,3,2,2,3,47,4,12,1,1,26:08
+2006,16,Sun,December 24,W,0,Denver Broncos,Cincinnati Bengals,24,23,21,40,194,2,2,2,15,5.2,4.6,52.5,61.9,34,149,4.4,1,1,1,2,2,5,114,6,15,1,1,30:09
+2006,17,Sun,December 31,L,1,Denver Broncos,San Francisco 49ers,23,26,17,33,171,1,1,4,23,5.9,4.6,51.5,64.1,38,189,5.0,0,4,4,2,2,7,215,9,20,1,2,38:58
+2006,1,Sun,September 10,L,0,Detroit Lions,Seattle Seahawks,6,9,25,30,173,0,0,5,37,7.0,4.9,83.3,90.7,26,91,3.5,0,3,5,0,0,5,132,2,11,0,0,32:25
+2006,2,Sun,September 17,L,0,Detroit Lions,Chicago Bears,7,34,21,28,294,4,0,0,0,10.5,10.5,75.0,147.9,34,89,2.6,0,2,2,4,4,3,40,6,12,0,0,33:00
+2006,3,Sun,September 24,L,0,Detroit Lions,Green Bay Packers,24,31,25,36,340,3,0,0,0,9.4,9.4,69.4,127.1,27,60,2.2,0,1,1,4,4,5,124,7,15,0,0,30:40
+2006,4,Sun,October 1,L,0,Detroit Lions,St. Louis Rams,34,41,26,42,321,3,0,1,7,7.8,7.5,61.9,109.3,27,106,3.9,1,4,5,3,3,4,70,4,13,0,0,30:06
+2006,5,Sun,October 8,L,0,Detroit Lions,Minnesota Vikings,17,26,26,34,201,1,1,0,0,5.9,5.9,76.5,88.0,30,135,4.5,0,2,2,2,3,4,67,5,13,0,0,36:39
+2006,6,Sun,October 15,W,0,Detroit Lions,Buffalo Bills,20,17,21,34,157,2,1,5,50,6.1,4.0,61.8,80.1,21,85,4.0,0,1,1,2,2,7,202,3,11,0,0,28:19
+2006,7,Sun,October 22,L,0,Detroit Lions,New York Jets,24,31,16,22,177,1,1,2,12,8.6,7.4,72.7,92.4,42,221,5.3,3,1,1,4,4,2,136,8,12,0,0,34:14
+2006,9,Sun,November 5,W,0,Detroit Lions,Atlanta Falcons,30,14,17,32,154,1,2,2,9,5.1,4.5,53.1,50.8,26,165,6.3,1,0,0,2,2,6,143,3,11,1,1,27:04
+2006,10,Sun,November 12,L,0,Detroit Lions,San Francisco 49ers,13,19,14,21,117,0,0,3,19,6.5,4.9,66.7,80.9,44,198,4.5,1,4,4,1,1,3,32,10,19,0,0,38:49
+2006,11,Sun,November 19,L,0,Detroit Lions,Arizona Cardinals,10,17,19,29,228,1,0,1,5,8.0,7.6,65.5,100.9,29,110,3.8,1,1,1,2,2,5,98,5,12,0,0,30:43
+2006,12,Thu,November 23,L,0,Detroit Lions,Miami Dolphins,10,27,19,29,209,3,1,1,4,7.3,7.0,65.5,106.8,35,186,5.3,0,2,2,3,3,5,106,7,14,0,0,34:04
+2006,13,Sun,December 3,L,0,Detroit Lions,New England Patriots,21,28,27,38,284,0,1,2,21,8.0,7.1,71.1,81.5,24,79,3.3,3,2,2,2,2,2,160,4,9,1,1,29:17
+2006,14,Sun,December 10,L,0,Detroit Lions,Minnesota Vikings,20,30,14,22,156,0,1,1,3,7.2,6.8,63.6,65.7,44,172,3.9,4,1,1,3,3,4,85,7,13,1,1,35:31
+2006,15,Sun,December 17,L,0,Detroit Lions,Green Bay Packers,9,17,20,37,164,0,3,1,10,4.7,4.3,54.1,31.8,32,139,4.3,2,1,1,2,2,5,105,7,15,0,0,33:34
+2006,16,Sun,December 24,L,0,Detroit Lions,Chicago Bears,21,26,26,45,238,1,0,2,10,5.5,5.1,57.8,79.7,30,116,3.9,1,4,4,2,2,6,172,6,17,1,1,34:43
+2006,17,Sun,December 31,W,0,Detroit Lions,Dallas Cowboys,39,31,23,32,307,2,1,4,14,10.0,8.5,71.9,109.8,21,58,2.8,1,1,1,4,4,2,21,6,10,0,1,27:53
+2006,1,Sun,September 10,L,0,Green Bay Packers,Chicago Bears,0,26,19,27,252,1,1,1,6,9.6,9.0,70.4,96.5,36,109,3.0,0,4,4,2,2,4,76,4,14,1,1,34:05
+2006,2,Sun,September 17,L,0,Green Bay Packers,New Orleans Saints,27,34,26,41,332,2,1,4,21,8.6,7.4,63.4,94.8,22,48,2.2,2,2,2,4,4,4,74,6,15,1,1,28:04
+2006,3,Sun,September 24,W,0,Green Bay Packers,Detroit Lions,31,24,25,40,319,2,1,3,23,8.6,7.4,62.5,93.6,23,105,4.6,1,1,1,3,3,5,107,3,12,1,3,29:20
+2006,4,Mon,October 2,L,0,Green Bay Packers,Philadelphia Eagles,9,31,17,32,267,2,0,4,32,9.3,7.4,53.1,102.0,27,131,4.9,2,1,1,4,4,5,116,4,11,0,1,27:17
+2006,5,Sun,October 8,L,0,Green Bay Packers,St. Louis Rams,20,23,18,28,209,2,0,2,11,7.9,7.0,64.3,110.6,30,118,3.9,0,3,3,2,2,5,110,5,13,0,0,30:43
+2006,7,Sun,October 22,W,0,Green Bay Packers,Miami Dolphins,34,24,33,62,381,2,3,4,33,6.7,5.8,53.2,62.6,17,67,3.9,0,3,4,1,1,4,63,7,18,3,3,32:01
+2006,8,Sun,October 29,W,0,Green Bay Packers,Arizona Cardinals,31,14,14,35,132,1,1,4,25,4.5,3.4,40.0,48.8,25,86,3.4,1,0,0,2,2,6,169,6,14,1,2,26:21
+2006,9,Sun,November 5,L,0,Green Bay Packers,Buffalo Bills,10,24,8,15,64,1,0,5,38,6.8,3.2,53.3,86.5,28,120,4.3,1,1,1,3,3,8,303,2,11,0,0,25:39
+2006,10,Sun,November 12,W,0,Green Bay Packers,Minnesota Vikings,23,17,18,30,222,1,1,4,35,8.6,6.5,60.0,80.1,23,90,3.9,0,1,1,2,2,7,235,6,15,1,1,26:21
+2006,11,Sun,November 19,L,0,Green Bay Packers,New England Patriots,0,35,20,31,235,4,0,2,9,7.9,7.1,64.5,127.0,40,122,3.1,1,0,0,5,5,6,128,8,17,2,2,39:10
+2006,12,Mon,November 27,L,0,Green Bay Packers,Seattle Seahawks,24,34,17,36,147,3,3,1,10,4.4,4.0,47.2,51.5,48,235,4.9,0,4,4,2,2,3,40,4,14,1,1,36:07
+2006,13,Sun,December 3,L,0,Green Bay Packers,New York Jets,10,38,25,35,263,2,2,0,0,7.5,7.5,71.4,88.2,31,178,5.7,3,1,1,5,5,1,51,6,10,0,1,31:27
+2006,14,Sun,December 10,W,0,Green Bay Packers,San Francisco 49ers,30,19,12,29,194,1,2,1,7,6.9,6.5,41.4,47.2,25,146,5.8,1,2,2,1,1,5,114,3,12,1,1,26:29
+2006,15,Sun,December 17,W,0,Green Bay Packers,Detroit Lions,17,9,16,26,84,0,2,6,51,5.2,2.6,61.5,34.8,20,58,2.9,0,3,3,0,0,5,120,2,12,0,2,26:26
+2006,16,Thu,December 21,W,0,Green Bay Packers,Minnesota Vikings,9,7,10,20,27,0,1,3,23,2.5,1.2,50.0,35.4,22,77,3.5,0,0,0,1,1,10,434,2,14,0,1,25:21
+2006,17,Sun,December 31,W,0,Green Bay Packers,Chicago Bears,26,7,8,28,181,1,5,2,13,6.9,6.0,28.6,26.3,24,135,5.6,0,0,0,1,1,5,104,2,13,1,1,23:04
+2006,1,Sun,September 10,L,0,Houston Texans,Philadelphia Eagles,10,24,24,35,311,3,1,1,3,9.0,8.6,68.6,112.9,30,130,4.3,0,1,1,3,3,3,32,8,13,0,0,32:51
+2006,2,Sun,September 17,L,0,Houston Texans,Indianapolis Colts,24,43,26,38,390,3,0,2,10,10.5,9.8,68.4,128.2,35,125,3.6,2,3,3,4,5,1,45,9,12,0,0,34:56
+2006,3,Sun,September 24,L,0,Houston Texans,Washington Redskins,15,31,24,27,261,1,0,0,0,9.7,9.7,88.9,119.3,41,234,5.7,3,1,1,4,4,2,22,9,13,0,0,38:27
+2006,4,Sun,October 1,W,0,Houston Texans,Miami Dolphins,17,15,23,39,219,1,0,5,30,6.4,5.0,59.0,83.2,14,70,5.0,0,3,3,0,0,5,108,3,12,1,1,26:05
+2006,6,Sun,October 15,L,0,Houston Texans,Dallas Cowboys,6,34,19,30,184,3,0,2,19,6.8,5.8,63.3,113.7,37,170,4.6,1,2,2,4,4,4,91,8,16,1,2,35:14
+2006,7,Sun,October 22,W,0,Houston Texans,Jacksonville Jaguars,27,7,14,28,118,0,0,1,7,4.5,4.1,50.0,61.3,25,102,4.1,1,0,0,1,1,7,206,3,12,0,2,26:30
+2006,8,Sun,October 29,L,0,Houston Texans,Tennessee Titans,22,28,7,15,86,1,0,1,1,5.8,5.4,46.7,87.1,27,111,4.1,1,0,0,4,4,8,314,2,10,0,0,23:39
+2006,9,Sun,November 5,L,0,Houston Texans,New York Giants,10,14,17,29,163,1,1,2,16,6.2,5.3,58.6,71.5,28,122,4.4,1,0,0,2,2,3,33,6,11,0,1,31:05
+2006,10,Sun,November 12,W,0,Houston Texans,Jacksonville Jaguars,13,10,15,34,204,0,4,2,10,6.3,5.7,44.1,24.3,19,118,6.2,1,1,1,1,1,4,58,5,10,0,0,22:27
+2006,11,Sun,November 19,L,0,Houston Texans,Buffalo Bills,21,24,26,38,333,3,1,2,7,8.9,8.3,68.4,111.0,21,70,3.3,0,1,1,3,3,7,230,4,14,1,1,27:35
+2006,12,Sun,November 26,L,0,Houston Texans,New York Jets,11,26,24,32,277,1,0,1,9,8.9,8.4,75.0,111.1,26,27,1.0,1,4,4,2,2,4,79,4,13,1,1,29:09
+2006,13,Sun,December 3,W,0,Houston Texans,Oakland Raiders,23,14,25,42,189,0,2,5,49,5.7,4.0,59.5,50.6,26,113,4.3,1,0,3,2,2,4,91,4,12,0,0,33:32
+2006,14,Sun,December 10,L,1,Houston Texans,Tennessee Titans,20,26,19,29,200,0,1,2,18,7.5,6.5,65.5,71.0,33,218,6.6,3,2,2,2,2,5,105,5,13,0,0,34:37
+2006,15,Sun,December 17,L,0,Houston Texans,New England Patriots,7,40,19,27,125,2,0,1,4,4.8,4.5,70.4,104.7,38,105,2.8,1,4,4,4,4,4,64,7,17,1,2,35:53
+2006,16,Sun,December 24,W,0,Houston Texans,Indianapolis Colts,27,24,21,27,205,3,0,0,0,7.6,7.6,77.8,135.3,18,114,6.3,0,1,1,3,3,1,55,6,8,0,0,24:01
+2006,17,Sun,December 31,W,0,Houston Texans,Cleveland Browns,14,6,25,35,179,0,1,1,8,5.3,5.0,71.4,71.0,28,127,4.5,0,2,3,0,0,3,37,5,12,0,1,38:06
+2006,1,Sun,September 10,W,0,Indianapolis Colts,New York Giants,26,21,20,34,247,2,1,0,0,7.3,7.3,58.8,88.7,28,186,6.6,1,0,1,3,3,1,49,4,8,0,1,30:03
+2006,2,Sun,September 17,W,0,Indianapolis Colts,Houston Texans,43,24,22,26,191,3,0,4,28,8.4,6.4,84.6,135.7,23,108,4.7,0,1,1,3,3,4,66,4,9,0,0,25:04
+2006,3,Sun,September 24,W,0,Indianapolis Colts,Jacksonville Jaguars,21,14,16,28,106,1,2,1,1,3.8,3.7,57.1,47.6,40,191,4.8,1,0,2,2,2,4,74,9,16,1,1,39:24
+2006,4,Sun,October 1,W,0,Indianapolis Colts,New York Jets,31,28,17,23,186,1,1,3,21,9.0,7.2,73.9,93.8,37,135,3.6,2,0,0,4,4,3,44,7,13,1,2,31:57
+2006,5,Sun,October 8,W,0,Indianapolis Colts,Tennessee Titans,14,13,10,21,63,0,1,0,0,3.0,3.0,47.6,34.4,31,214,6.9,1,2,2,1,1,6,153,2,10,0,0,26:05
+2006,7,Sun,October 22,W,0,Indianapolis Colts,Washington Redskins,36,22,27,37,211,2,0,2,15,6.1,5.4,73.0,104.7,24,114,4.8,0,0,2,2,2,4,62,6,14,2,2,30:54
+2006,8,Sun,October 29,W,0,Indianapolis Colts,Denver Broncos,34,31,13,21,169,1,0,1,5,8.3,7.7,61.9,103.1,36,227,6.3,3,1,1,4,4,2,200,7,11,0,0,31:03
+2006,9,Sun,November 5,W,0,Indianapolis Colts,New England Patriots,27,20,20,35,201,0,4,0,0,5.7,5.7,57.1,34.0,33,148,4.5,2,2,3,2,2,1,46,7,13,2,2,30:34
+2006,10,Sun,November 12,W,0,Indianapolis Colts,Buffalo Bills,17,16,8,12,51,0,0,4,32,6.9,3.2,66.7,75.3,31,111,3.6,0,3,4,1,1,4,79,5,14,1,1,26:12
+2006,11,Sun,November 19,L,0,Indianapolis Colts,Dallas Cowboys,14,21,19,23,225,0,1,1,1,9.8,9.4,82.6,89.3,36,117,3.3,2,0,2,3,3,3,42,4,11,1,1,33:42
+2006,12,Sun,November 26,W,0,Indianapolis Colts,Philadelphia Eagles,45,21,23,29,151,2,1,2,10,5.6,4.9,79.3,97.0,25,149,6.0,1,0,1,3,3,3,40,5,10,1,1,29:42
+2006,13,Sun,December 3,L,0,Indianapolis Colts,Tennessee Titans,17,20,15,25,163,2,2,0,0,6.5,6.5,60.0,72.6,35,219,6.3,0,2,2,2,2,3,34,8,13,0,0,29:05
+2006,14,Sun,December 10,L,0,Indianapolis Colts,Jacksonville Jaguars,17,44,8,14,72,0,1,1,7,5.6,4.8,57.1,41.4,42,375,8.9,4,3,4,5,5,1,20,2,9,0,1,31:37
+2006,15,Mon,December 18,W,0,Indianapolis Colts,Cincinnati Bengals,34,16,14,28,145,0,0,4,31,6.3,4.5,50.0,65.3,30,133,4.4,1,3,3,1,1,4,69,2,11,1,1,26:56
+2006,16,Sun,December 24,L,0,Indianapolis Colts,Houston Texans,24,27,16,23,163,1,0,0,0,7.1,7.1,69.6,104.1,42,191,4.5,2,2,2,3,3,2,160,10,14,1,1,35:59
+2006,17,Sun,December 31,W,0,Indianapolis Colts,Miami Dolphins,27,22,18,36,204,1,1,2,6,5.8,5.4,50.0,65.0,26,150,5.8,0,5,5,1,1,2,162,8,15,0,0,29:12
+2006,1,Sun,September 10,W,0,Jacksonville Jaguars,Dallas Cowboys,24,17,16,33,235,1,3,2,11,7.5,6.7,48.5,44.4,22,88,4.0,1,1,2,2,2,5,133,6,15,1,1,25:48
+2006,2,Mon,September 18,W,0,Jacksonville Jaguars,Pittsburgh Steelers,9,0,17,32,127,0,2,2,14,4.4,3.7,53.1,36.8,14,26,1.9,0,0,0,0,0,8,286,3,13,0,1,22:35
+2006,3,Sun,September 24,L,0,Jacksonville Jaguars,Indianapolis Colts,14,21,14,31,209,1,0,2,10,7.1,6.3,45.2,78.6,20,63,3.2,1,0,0,3,3,7,212,6,13,0,0,20:36
+2006,4,Sun,October 1,L,1,Jacksonville Jaguars,Washington Redskins,30,36,18,30,329,3,1,0,0,11.0,11.0,60.0,117.2,40,152,3.8,1,3,3,3,3,5,77,7,14,0,0,36:32
+2006,5,Sun,October 8,W,0,Jacksonville Jaguars,New York Jets,41,0,10,18,45,0,3,6,26,3.9,1.9,55.6,21.3,34,132,3.9,0,0,0,0,0,6,147,3,14,0,2,27:58
+2006,7,Sun,October 22,L,0,Jacksonville Jaguars,Houston Texans,7,27,25,34,218,2,0,1,6,6.6,6.2,73.5,109.7,34,131,3.9,1,2,3,3,3,5,108,5,14,0,0,33:30
+2006,8,Sun,October 29,W,0,Jacksonville Jaguars,Philadelphia Eagles,13,6,18,34,142,0,0,4,19,4.7,3.7,52.9,63.6,20,85,4.3,0,2,2,0,0,7,216,4,14,0,1,23:09
+2006,9,Sun,November 5,W,0,Jacksonville Jaguars,Tennessee Titans,37,7,15,36,154,1,3,1,9,4.5,4.2,41.7,29.2,32,108,3.4,0,0,0,1,1,7,229,5,18,1,2,29:49
+2006,10,Sun,November 12,L,0,Jacksonville Jaguars,Houston Texans,10,13,17,35,158,0,0,3,18,5.0,4.2,48.6,61.4,42,148,3.5,1,2,4,1,1,5,86,8,19,1,1,37:33
+2006,11,Mon,November 20,W,0,Jacksonville Jaguars,New York Giants,26,10,19,41,222,1,2,1,8,5.6,5.3,46.3,51.1,14,25,1.8,0,1,1,1,1,6,145,4,13,0,1,19:41
+2006,12,Sun,November 26,L,0,Jacksonville Jaguars,Buffalo Bills,24,27,21,28,169,0,1,0,0,6.0,6.0,75.0,74.9,23,72,3.1,2,2,2,3,3,6,159,3,10,0,0,27:50
+2006,13,Sun,December 3,W,0,Jacksonville Jaguars,Miami Dolphins,24,10,27,42,241,1,2,4,26,6.4,5.2,64.3,67.7,19,68,3.6,0,1,2,1,1,3,37,7,14,0,1,29:04
+2006,14,Sun,December 10,W,0,Jacksonville Jaguars,Indianapolis Colts,44,17,25,50,305,0,1,2,8,6.3,5.9,50.0,60.8,20,34,1.7,2,1,1,2,2,6,116,7,16,0,2,28:23
+2006,15,Sun,December 17,L,0,Jacksonville Jaguars,Tennessee Titans,17,24,8,15,57,0,0,3,28,5.7,3.2,53.3,62.4,16,41,2.6,0,1,2,3,3,5,110,0,8,0,1,15:38
+2006,16,Sun,December 24,L,0,Jacksonville Jaguars,New England Patriots,21,24,28,39,242,1,0,1,7,6.4,6.1,71.8,96.3,30,117,3.9,2,1,2,3,3,5,88,8,16,0,0,37:13
+2006,17,Sun,December 31,L,0,Jacksonville Jaguars,Kansas City Chiefs,30,35,16,25,225,1,2,3,10,9.4,8.0,64.0,72.9,40,170,4.3,3,0,0,5,5,4,63,7,16,1,1,30:38
+2006,1,Sun,September 10,L,0,Kansas City Chiefs,Cincinnati Bengals,10,23,13,19,120,0,0,1,7,6.7,6.0,68.4,85.4,34,116,3.4,2,3,3,2,2,5,106,4,13,0,0,28:03
+2006,2,Sun,September 17,L,1,Kansas City Chiefs,Denver Broncos,6,9,16,30,173,0,1,0,0,5.8,5.8,53.3,56.7,36,145,4.0,0,3,4,0,0,5,130,3,14,1,1,34:23
+2006,4,Sun,October 1,W,0,Kansas City Chiefs,San Francisco 49ers,41,0,13,25,76,0,2,4,16,3.7,2.6,52.0,24.7,22,89,4.0,0,0,1,0,0,7,221,3,13,0,0,24:45
+2006,5,Sun,October 8,W,0,Kansas City Chiefs,Arizona Cardinals,23,20,22,35,222,2,1,4,31,7.2,5.7,62.9,88.0,26,76,2.9,0,2,3,2,2,8,239,3,14,1,1,30:29
+2006,6,Sun,October 15,L,0,Kansas City Chiefs,Pittsburgh Steelers,7,45,17,20,238,2,0,1,6,12.2,11.3,85.0,149.6,42,219,5.2,3,1,2,6,6,3,41,8,13,1,1,34:31
+2006,7,Sun,October 22,W,0,Kansas City Chiefs,San Diego Chargers,30,27,26,44,252,3,1,4,15,6.1,5.3,59.1,88.4,23,97,4.2,0,2,3,3,3,3,36,6,15,1,1,31:02
+2006,8,Sun,October 29,W,0,Kansas City Chiefs,Seattle Seahawks,35,28,15,30,190,3,2,2,8,6.6,5.9,50.0,75.7,17,50,2.9,0,0,0,4,4,4,79,4,10,0,1,17:45
+2006,9,Sun,November 5,W,0,Kansas City Chiefs,St. Louis Rams,31,17,31,42,337,1,0,2,17,8.4,7.7,73.8,105.0,28,115,4.1,1,1,1,2,2,4,70,4,11,2,3,34:40
+2006,10,Sun,November 12,L,0,Kansas City Chiefs,Miami Dolphins,10,13,19,36,189,0,0,1,12,5.6,5.1,52.8,67.9,36,117,3.3,1,2,3,1,1,6,134,7,17,0,1,35:50
+2006,11,Sun,November 19,W,0,Kansas City Chiefs,Oakland Raiders,17,13,15,25,193,1,1,1,1,7.8,7.4,60.0,80.9,34,133,3.9,0,2,2,1,1,4,72,8,14,0,0,32:34
+2006,12,Thu,November 23,W,0,Kansas City Chiefs,Denver Broncos,19,10,25,39,206,1,1,2,10,5.5,5.0,64.1,75.4,16,38,2.4,0,1,1,1,1,5,110,4,12,0,1,24:58
+2006,13,Sun,December 3,L,1,Kansas City Chiefs,Cleveland Browns,28,31,23,34,288,3,1,1,5,8.6,8.2,67.6,110.9,29,150,5.2,1,1,1,4,4,3,34,7,11,1,1,34:54
+2006,14,Sun,December 10,L,0,Kansas City Chiefs,Baltimore Ravens,10,20,21,27,283,1,0,0,0,10.5,10.5,77.8,122.7,34,93,2.7,1,2,2,2,2,4,65,6,13,0,0,33:29
+2006,15,Sun,December 17,L,0,Kansas City Chiefs,San Diego Chargers,9,20,8,23,88,0,2,2,9,4.2,3.5,34.8,10.8,38,265,7.0,2,2,2,2,2,6,104,2,13,1,1,28:14
+2006,16,Sat,December 23,W,0,Kansas City Chiefs,Oakland Raiders,20,9,27,37,195,0,2,4,31,6.1,4.8,73.0,62.3,24,112,4.7,0,3,3,0,0,2,158,8,15,0,1,29:44
+2006,17,Sun,December 31,W,0,Kansas City Chiefs,Jacksonville Jaguars,35,30,23,40,284,1,1,3,22,7.7,6.6,57.5,77.5,22,113,5.1,3,1,1,3,3,6,115,6,14,0,0,29:22
+2006,1,Mon,September 11,L,0,Las Vegas Raiders,San Diego Chargers,0,27,8,11,108,1,0,0,0,9.8,9.8,72.7,133.9,48,194,4.0,2,2,2,3,3,5,110,7,16,1,1,35:48
+2006,2,Sun,September 17,L,0,Las Vegas Raiders,Baltimore Ravens,6,28,16,33,126,1,1,2,17,4.3,3.6,48.5,55.9,31,138,4.5,1,4,4,2,2,7,212,6,18,0,0,32:01
+2006,4,Sun,October 1,L,0,Las Vegas Raiders,Cleveland Browns,21,24,22,32,179,3,2,2,13,6.0,5.3,68.8,87.9,35,104,3.0,0,1,2,3,3,2,158,8,15,2,2,37:06
+2006,5,Sun,October 8,L,0,Las Vegas Raiders,San Francisco 49ers,20,34,15,19,165,3,1,0,0,8.7,8.7,78.9,120.5,41,165,4.0,0,2,3,4,4,1,30,5,11,0,2,35:13
+2006,6,Sun,October 15,L,0,Las Vegas Raiders,Denver Broncos,3,13,11,18,91,0,0,2,11,5.7,4.6,61.1,74.1,31,144,4.6,1,2,2,1,1,4,60,5,11,0,0,28:24
+2006,7,Sun,October 22,W,0,Las Vegas Raiders,Arizona Cardinals,22,9,13,32,174,0,2,3,29,6.3,5.0,40.6,32.6,20,50,2.5,0,3,4,0,0,4,70,1,11,0,1,22:59
+2006,8,Sun,October 29,W,0,Las Vegas Raiders,Pittsburgh Steelers,20,13,25,37,271,1,4,5,30,8.1,6.5,67.6,58.3,28,89,3.2,0,2,2,1,1,4,64,7,19,1,3,35:30
+2006,9,Mon,November 6,L,0,Las Vegas Raiders,Seattle Seahawks,0,16,18,30,164,1,0,3,12,5.9,5.0,60.0,86.0,39,207,5.3,0,3,3,1,1,8,271,4,16,0,0,35:39
+2006,10,Sun,November 12,L,0,Las Vegas Raiders,Denver Broncos,13,17,20,31,201,2,3,2,9,6.8,6.1,64.5,64.8,26,63,2.4,0,1,1,2,2,7,164,3,14,1,2,30:15
+2006,11,Sun,November 19,L,0,Las Vegas Raiders,Kansas City Chiefs,13,17,9,16,92,0,0,2,10,6.4,5.1,56.3,72.9,37,200,5.4,2,1,2,2,2,3,37,5,11,1,1,27:26
+2006,12,Sun,November 26,L,0,Las Vegas Raiders,San Diego Chargers,14,21,15,32,150,1,1,1,2,4.8,4.5,46.9,58.1,25,110,4.4,2,0,0,3,3,5,97,2,11,1,2,27:35
+2006,13,Sun,December 3,L,0,Las Vegas Raiders,Houston Texans,14,23,7,14,-5,0,0,5,37,2.3,-0.3,50.0,56.2,32,129,4.0,1,3,4,2,2,5,101,2,12,0,0,26:28
+2006,14,Sun,December 10,L,0,Las Vegas Raiders,Cincinnati Bengals,10,27,21,29,303,2,3,0,0,10.4,10.4,72.4,89.4,39,136,3.5,2,0,0,3,4,0,0,7,11,0,0,35:45
+2006,15,Sun,December 17,L,0,Las Vegas Raiders,St. Louis Rams,0,20,11,22,103,0,0,4,34,6.2,4.0,50.0,63.3,35,148,4.2,2,2,2,2,2,6,166,3,14,1,2,31:14
+2006,16,Sat,December 23,L,0,Las Vegas Raiders,Kansas City Chiefs,9,20,12,24,142,1,1,2,6,6.2,5.5,50.0,64.9,38,150,3.9,1,2,3,2,2,3,48,4,14,2,3,30:16
+2006,17,Sun,December 31,L,0,Las Vegas Raiders,New York Jets,3,23,22,30,149,1,0,1,8,5.2,4.8,73.3,95.0,37,117,3.2,1,3,3,2,2,4,70,10,17,0,0,36:49
+2006,1,Mon,September 11,W,0,Los Angeles Chargers,Oakland Raiders,27,0,8,19,42,0,0,9,54,5.1,1.5,42.1,49.7,20,87,4.4,0,0,0,0,0,9,378,2,12,0,1,24:12
+2006,2,Sun,September 17,W,0,Los Angeles Chargers,Tennessee Titans,40,7,13,39,163,1,2,0,0,4.2,4.2,33.3,34.5,19,55,2.9,0,0,0,1,1,7,201,2,12,2,3,21:25
+2006,4,Sun,October 1,L,0,Los Angeles Chargers,Baltimore Ravens,13,16,17,30,150,2,2,2,8,5.3,4.7,56.7,64.6,21,56,2.7,0,0,0,2,2,7,235,4,11,0,0,26:18
+2006,5,Sun,October 8,W,0,Los Angeles Chargers,Pittsburgh Steelers,23,13,20,31,197,0,2,5,23,7.1,5.5,64.5,55.4,18,68,3.8,1,2,2,1,1,3,43,3,9,0,2,26:08
+2006,6,Sun,October 15,W,0,Los Angeles Chargers,San Francisco 49ers,48,19,20,31,182,2,1,5,32,6.9,5.1,64.5,88.4,14,92,6.6,0,1,1,2,2,4,77,4,11,0,1,24:12
+2006,7,Sun,October 22,L,0,Los Angeles Chargers,Kansas City Chiefs,27,30,15,27,221,2,0,2,11,8.6,7.6,55.6,107.2,30,134,4.5,2,1,2,3,4,5,118,6,13,0,0,28:58
+2006,8,Sun,October 29,W,0,Los Angeles Chargers,St. Louis Rams,38,24,27,40,311,2,0,3,16,8.2,7.2,67.5,107.4,21,101,4.8,1,1,1,3,3,5,102,5,12,1,1,29:06
+2006,9,Sun,November 5,W,0,Los Angeles Chargers,Cleveland Browns,32,25,26,44,209,1,1,5,32,5.5,4.3,59.1,69.2,27,84,3.1,0,6,6,1,1,4,67,7,17,0,0,32:54
+2006,10,Sun,November 12,W,0,Los Angeles Chargers,Cincinnati Bengals,49,41,31,42,417,3,0,3,23,10.5,9.3,73.8,128.8,27,128,4.7,2,2,3,5,5,3,32,5,12,0,1,31:18
+2006,11,Sun,November 19,W,0,Los Angeles Chargers,Denver Broncos,35,27,13,28,168,0,1,2,15,6.5,5.6,46.4,50.9,35,158,4.5,2,2,2,3,3,4,76,6,15,2,3,30:49
+2006,12,Sun,November 26,W,0,Los Angeles Chargers,Oakland Raiders,21,14,17,30,161,1,2,5,26,6.2,4.6,56.7,55.0,26,84,3.2,1,0,1,2,2,6,166,5,15,1,2,32:25
+2006,13,Sun,December 3,W,0,Los Angeles Chargers,Buffalo Bills,24,21,21,37,167,2,2,3,17,5.0,4.2,56.8,63.7,24,63,2.6,1,0,0,3,3,7,195,8,17,0,0,25:37
+2006,14,Sun,December 10,W,0,Los Angeles Chargers,Denver Broncos,48,20,17,30,166,2,0,4,22,6.3,4.9,56.7,94.6,28,162,5.8,0,2,2,2,2,4,64,2,10,0,2,29:14
+2006,15,Sun,December 17,W,0,Los Angeles Chargers,Kansas City Chiefs,20,9,23,41,151,0,1,6,34,4.5,3.2,56.1,54.0,21,90,4.3,0,3,3,0,0,7,198,4,15,0,1,31:46
+2006,16,Sun,December 24,W,0,Los Angeles Chargers,Seattle Seahawks,20,17,17,37,161,0,2,6,28,5.1,3.7,45.9,36.0,33,153,4.6,2,1,1,2,2,9,401,10,21,0,0,32:51
+2006,17,Sun,December 31,W,0,Los Angeles Chargers,Arizona Cardinals,27,20,22,32,346,1,0,1,10,11.1,10.5,68.8,114.8,22,98,4.5,1,2,2,2,2,4,78,5,11,0,0,26:28
+2006,1,Sun,September 10,W,0,Los Angeles Rams,Denver Broncos,18,10,13,26,98,0,3,4,40,5.3,3.3,50.0,19.9,25,161,6.4,1,1,1,1,1,4,68,5,12,1,1,27:11
+2006,2,Sun,September 17,L,0,Los Angeles Rams,San Francisco 49ers,13,20,11,22,233,1,0,0,0,10.6,10.6,50.0,103.0,33,127,3.8,1,2,3,2,2,4,72,4,12,0,0,25:23
+2006,3,Sun,September 24,W,0,Los Angeles Rams,Arizona Cardinals,16,14,19,28,246,1,3,1,10,9.1,8.5,67.9,67.6,28,101,3.6,1,0,0,2,2,3,44,6,12,1,1,29:53
+2006,4,Sun,October 1,W,0,Los Angeles Rams,Detroit Lions,41,34,29,43,277,2,2,2,3,6.5,6.2,67.4,81.3,21,93,4.4,2,2,2,4,4,3,38,5,12,0,1,29:54
+2006,5,Sun,October 8,W,0,Los Angeles Rams,Green Bay Packers,23,20,22,39,215,1,0,2,5,5.6,5.2,56.4,80.6,26,121,4.7,1,2,3,2,2,4,78,9,16,0,0,29:17
+2006,6,Sun,October 15,L,0,Los Angeles Rams,Seattle Seahawks,28,30,19,34,239,3,0,4,29,7.9,6.3,55.9,107.4,28,125,4.5,0,3,4,3,3,4,63,9,17,0,0,27:55
+2006,8,Sun,October 29,L,0,Los Angeles Rams,San Diego Chargers,24,38,15,23,203,1,0,1,3,9.0,8.5,65.2,107.7,35,216,6.2,3,1,1,5,5,3,39,7,13,0,1,30:54
+2006,9,Sun,November 5,L,0,Los Angeles Rams,Kansas City Chiefs,17,31,10,15,131,3,0,2,17,9.9,7.7,66.7,133.6,32,186,5.8,1,1,1,4,4,6,157,5,12,0,0,25:20
+2006,10,Sun,November 12,L,0,Los Angeles Rams,Seattle Seahawks,22,24,15,23,123,2,0,6,38,7.0,4.2,65.2,107.7,26,160,6.2,0,1,1,3,3,4,67,4,11,0,0,26:08
+2006,11,Sun,November 19,L,0,Los Angeles Rams,Carolina Panthers,0,15,13,26,169,1,2,3,22,7.3,5.8,50.0,51.6,43,242,5.6,0,2,2,1,1,5,138,6,15,0,0,38:43
+2006,12,Sun,November 26,W,0,Los Angeles Rams,San Francisco 49ers,20,17,13,25,148,1,2,0,0,5.9,5.9,52.0,50.1,31,171,5.5,1,1,1,2,2,4,82,5,11,0,0,29:26
+2006,13,Sun,December 3,L,0,Los Angeles Rams,Arizona Cardinals,20,34,15,24,179,1,0,1,7,7.8,7.2,62.5,99.1,37,137,3.7,3,2,2,4,4,3,46,7,13,0,1,31:41
+2006,14,Mon,December 11,L,0,Los Angeles Rams,Chicago Bears,27,42,13,23,200,2,0,0,0,8.7,8.7,56.5,114.4,34,172,5.1,2,0,2,6,6,3,31,6,12,0,0,26:39
+2006,15,Sun,December 17,W,0,Los Angeles Rams,Oakland Raiders,20,0,25,39,203,0,3,4,26,5.9,4.7,64.1,45.1,18,57,3.2,0,0,0,0,0,4,68,5,11,0,1,28:46
+2006,16,Sun,December 24,W,1,Los Angeles Rams,Washington Redskins,37,31,13,26,160,1,0,0,0,6.2,6.2,50.0,82.2,38,176,4.6,3,1,1,4,4,7,216,4,12,0,0,29:56
+2006,17,Sun,December 31,W,0,Los Angeles Rams,Minnesota Vikings,41,21,21,35,211,1,2,4,14,6.4,5.4,60.0,62.9,22,82,3.7,2,0,0,3,3,6,163,6,14,0,0,28:06
+2006,1,Thu,September 7,L,0,Miami Dolphins,Pittsburgh Steelers,17,28,15,25,196,3,0,3,13,8.4,7.0,60.0,124.3,38,146,3.8,0,0,1,4,4,5,116,7,15,1,1,35:27
+2006,2,Sun,September 17,L,0,Miami Dolphins,Buffalo Bills,6,16,11,18,66,1,0,2,17,4.6,3.3,61.1,86.8,32,105,3.3,0,3,3,1,1,6,149,4,13,0,0,30:59
+2006,3,Sun,September 24,W,0,Miami Dolphins,Tennessee Titans,13,10,19,33,254,1,2,2,15,8.2,7.3,57.6,67.0,22,62,2.8,0,1,2,1,1,6,165,6,14,0,0,24:31
+2006,4,Sun,October 1,L,0,Miami Dolphins,Houston Texans,15,17,22,29,211,1,1,5,19,7.9,6.2,75.9,92.7,33,65,2.0,1,1,1,2,2,4,74,9,16,0,1,33:55
+2006,5,Sun,October 8,L,0,Miami Dolphins,New England Patriots,10,20,16,29,134,2,0,1,6,4.8,4.5,55.2,90.3,34,79,2.3,0,2,2,2,2,5,91,5,15,2,2,29:43
+2006,6,Sun,October 15,L,0,Miami Dolphins,New York Jets,17,20,17,29,169,2,0,2,6,6.0,5.5,58.6,98.2,27,103,3.8,0,2,2,2,2,7,214,4,13,0,0,28:16
+2006,7,Sun,October 22,L,0,Miami Dolphins,Green Bay Packers,24,34,19,35,191,2,0,2,15,5.9,5.2,54.3,89.1,29,155,5.3,1,2,2,4,4,6,157,4,15,2,2,27:59
+2006,9,Sun,November 5,W,0,Miami Dolphins,Chicago Bears,31,13,18,42,189,1,3,3,21,5.0,4.2,42.9,34.7,28,103,3.7,0,2,2,1,1,3,44,5,16,0,2,30:06
+2006,10,Sun,November 12,W,0,Miami Dolphins,Kansas City Chiefs,13,10,15,38,185,0,0,3,16,5.3,4.5,39.5,55.3,19,80,4.2,1,1,2,1,1,8,260,3,14,0,1,24:10
+2006,11,Sun,November 19,W,0,Miami Dolphins,Minnesota Vikings,24,20,26,44,247,0,1,3,15,6.0,5.3,59.1,65.2,35,114,3.3,2,2,2,2,2,6,136,5,17,4,4,36:00
+2006,12,Thu,November 23,W,0,Miami Dolphins,Detroit Lions,27,10,22,40,199,1,1,8,53,6.3,4.1,55.0,66.6,10,21,2.1,0,1,1,1,1,6,158,2,12,0,2,25:56
+2006,13,Sun,December 3,L,0,Miami Dolphins,Jacksonville Jaguars,10,24,16,22,203,2,0,4,26,10.4,7.8,72.7,131.4,31,150,4.8,1,1,1,3,3,3,34,7,12,0,0,30:56
+2006,14,Sun,December 10,W,0,Miami Dolphins,New England Patriots,21,0,14,28,66,0,0,5,24,3.2,2.0,50.0,56.2,25,123,4.9,0,0,0,0,0,7,167,7,15,0,0,28:40
+2006,15,Sun,December 17,L,0,Miami Dolphins,Buffalo Bills,0,21,13,19,186,3,0,3,14,10.5,8.5,68.4,139.5,37,100,2.7,0,0,0,3,3,7,190,6,15,0,0,31:40
+2006,16,Mon,December 25,L,0,Miami Dolphins,New York Jets,10,13,14,29,229,1,0,1,8,8.2,7.6,48.3,86.7,30,95,3.2,0,2,2,1,1,8,266,7,18,0,1,30:32
+2006,17,Sun,December 31,L,0,Miami Dolphins,Indianapolis Colts,22,27,22,37,282,2,0,0,0,7.6,7.6,59.5,101.4,31,117,3.8,1,2,2,3,3,4,70,8,14,0,0,30:48
+2006,1,Mon,September 11,W,0,Minnesota Vikings,Washington Redskins,19,16,17,28,163,0,0,0,0,5.8,5.8,60.7,76.9,25,103,4.1,1,3,4,1,1,5,108,4,13,0,0,28:16
+2006,2,Sun,September 17,W,1,Minnesota Vikings,Carolina Panthers,16,13,17,33,164,0,0,2,17,5.5,4.7,51.5,65.7,27,107,4.0,1,2,2,1,1,9,347,3,14,0,0,29:55
+2006,3,Sun,September 24,L,0,Minnesota Vikings,Chicago Bears,16,19,23,41,274,1,2,1,4,6.8,6.5,56.1,64.5,21,51,2.4,0,4,4,1,1,3,46,5,15,1,1,28:21
+2006,4,Sun,October 1,L,0,Minnesota Vikings,Buffalo Bills,12,17,23,32,203,1,0,3,21,7.0,5.8,71.9,98.8,33,95,2.9,1,1,2,2,2,7,185,5,14,0,0,35:57
+2006,5,Sun,October 8,W,0,Minnesota Vikings,Detroit Lions,26,17,23,42,201,1,3,5,24,5.4,4.3,54.8,45.8,11,16,1.5,1,1,1,2,2,6,178,3,12,1,2,23:21
+2006,7,Sun,October 22,W,0,Minnesota Vikings,Seattle Seahawks,31,13,21,42,237,1,2,4,24,6.2,5.2,50.0,55.4,21,53,2.5,0,2,2,1,1,6,184,6,16,0,1,27:41
+2006,8,Mon,October 30,L,0,Minnesota Vikings,New England Patriots,7,31,29,43,345,4,1,3,27,8.7,7.5,67.4,113.0,15,85,5.7,0,1,1,4,4,4,75,4,11,0,1,29:45
+2006,9,Sun,November 5,L,0,Minnesota Vikings,San Francisco 49ers,3,9,13,21,91,0,1,3,14,5.0,3.8,61.9,51.9,26,42,1.6,0,3,3,0,0,6,175,3,13,0,0,25:15
+2006,10,Sun,November 12,L,0,Minnesota Vikings,Green Bay Packers,17,23,24,42,347,2,0,0,0,8.3,8.3,57.1,100.0,26,47,1.8,0,3,3,2,2,7,251,9,19,0,0,33:39
+2006,11,Sun,November 19,L,0,Minnesota Vikings,Miami Dolphins,20,24,26,42,247,1,1,1,7,6.0,5.7,61.9,76.2,13,7,0.5,0,1,2,3,3,6,154,5,13,0,0,24:00
+2006,12,Sun,November 26,W,0,Minnesota Vikings,Arizona Cardinals,31,26,31,51,395,1,2,1,10,7.9,7.6,60.8,75.2,6,17,2.8,0,2,3,2,2,0,0,2,9,2,3,23:28
+2006,13,Sun,December 3,L,0,Minnesota Vikings,Chicago Bears,13,23,6,19,24,0,3,1,10,1.8,1.2,31.6,1.3,25,83,3.3,1,0,0,3,3,7,211,2,11,1,1,20:39
+2006,14,Sun,December 10,W,0,Minnesota Vikings,Detroit Lions,30,20,28,41,283,1,3,3,11,7.2,6.4,68.3,65.4,10,-3,-0.3,0,2,2,2,2,1,42,4,10,1,2,24:29
+2006,15,Sun,December 17,L,0,Minnesota Vikings,New York Jets,13,26,29,40,323,1,1,2,16,8.5,7.7,72.5,94.1,29,68,2.3,1,4,4,2,2,3,41,7,14,0,1,36:26
+2006,16,Thu,December 21,L,0,Minnesota Vikings,Green Bay Packers,7,9,26,51,273,0,2,1,12,5.6,5.3,51.0,50.5,24,46,1.9,0,3,5,0,0,5,112,7,19,0,0,34:39
+2006,17,Sun,December 31,L,0,Minnesota Vikings,St. Louis Rams,21,41,19,31,248,1,0,0,0,8.0,8.0,61.3,97.2,36,168,4.7,3,2,2,5,5,4,70,5,12,1,1,31:54
+2006,1,Sun,September 10,W,0,New England Patriots,Buffalo Bills,19,17,15,23,141,0,0,3,23,7.1,5.4,65.2,82.0,24,99,4.1,1,1,1,2,2,5,100,3,11,0,1,27:05
+2006,2,Sun,September 17,W,0,New England Patriots,New York Jets,24,17,22,37,286,2,1,4,20,8.3,7.0,59.5,90.6,24,52,2.2,0,1,1,2,2,5,80,11,18,0,1,29:44
+2006,3,Sun,September 24,L,0,New England Patriots,Denver Broncos,7,17,15,30,256,2,0,0,0,8.5,8.5,50.0,101.5,34,144,4.2,0,1,1,2,2,8,263,7,16,0,0,31:45
+2006,4,Sun,October 1,W,0,New England Patriots,Cincinnati Bengals,38,13,20,35,208,0,0,4,37,7.0,5.3,57.1,74.5,17,71,4.2,1,2,2,1,1,6,160,2,11,0,0,26:04
+2006,5,Sun,October 8,W,0,New England Patriots,Miami Dolphins,20,10,26,41,221,0,2,1,11,5.7,5.3,63.4,57.1,21,62,3.0,1,1,3,1,1,3,38,4,14,0,1,30:17
+2006,7,Sun,October 22,W,0,New England Patriots,Buffalo Bills,28,6,16,25,180,0,1,2,12,7.7,6.7,64.0,68.7,25,75,3.0,0,2,2,0,0,5,110,4,12,0,0,28:20
+2006,8,Mon,October 30,W,0,New England Patriots,Minnesota Vikings,31,7,26,42,239,0,4,4,22,6.2,5.2,61.9,37.8,15,45,3.0,0,0,0,1,1,5,124,5,14,0,2,30:15
+2006,9,Sun,November 5,L,0,New England Patriots,Indianapolis Colts,20,27,20,36,301,2,1,3,25,9.1,7.7,55.6,90.2,25,53,2.1,1,2,4,3,3,1,29,5,10,0,0,29:26
+2006,10,Sun,November 12,L,0,New England Patriots,New York Jets,14,17,22,33,161,1,1,1,7,5.1,4.7,66.7,75.4,29,117,4.0,1,1,1,2,2,5,92,6,13,1,1,30:34
+2006,11,Sun,November 19,W,0,New England Patriots,Green Bay Packers,35,0,9,27,76,0,0,5,29,3.9,2.4,33.3,42.4,16,44,2.8,0,0,1,0,0,10,459,1,13,0,1,20:50
+2006,12,Sun,November 26,W,0,New England Patriots,Chicago Bears,17,13,15,34,171,0,3,1,5,5.2,4.9,44.1,23.0,36,153,4.3,1,2,3,1,1,3,34,7,16,1,1,31:02
+2006,13,Sun,December 3,W,0,New England Patriots,Detroit Lions,28,21,22,38,284,1,3,5,30,8.3,6.6,57.9,57.3,22,77,3.5,0,4,4,1,1,1,44,5,12,0,0,30:43
+2006,14,Sun,December 10,L,0,New England Patriots,Miami Dolphins,0,21,18,30,184,1,0,1,6,6.3,5.9,60.0,88.7,31,131,4.2,1,2,2,1,1,6,148,3,12,1,1,31:20
+2006,15,Sun,December 17,W,0,New England Patriots,Houston Texans,40,7,16,28,93,0,4,4,34,4.5,2.9,57.1,24.0,22,105,4.8,1,0,0,1,1,7,206,3,11,0,1,24:07
+2006,16,Sun,December 24,W,0,New England Patriots,Jacksonville Jaguars,24,21,17,23,195,1,0,1,0,8.5,8.1,73.9,113.5,22,144,6.5,2,0,1,3,3,5,97,5,12,0,0,22:47
+2006,17,Sun,December 31,W,0,New England Patriots,Tennessee Titans,40,23,15,36,207,0,2,5,20,6.3,5.0,41.7,37.6,25,135,5.4,1,3,4,2,2,4,66,4,14,0,1,30:17
+2006,1,Sun,September 10,W,0,New Orleans Saints,Cleveland Browns,19,14,16,27,101,1,2,5,31,4.9,3.2,59.3,48.5,22,85,3.9,1,0,0,2,2,6,159,5,12,0,0,27:14
+2006,2,Sun,September 17,W,0,New Orleans Saints,Green Bay Packers,34,27,31,55,322,3,1,2,18,6.2,5.6,56.4,84.1,20,63,3.2,0,2,2,3,3,6,172,9,18,0,1,31:56
+2006,3,Mon,September 25,W,0,New Orleans Saints,Atlanta Falcons,23,3,12,31,112,0,0,5,25,4.4,3.1,38.7,49.4,23,117,5.1,0,1,2,0,0,7,186,3,16,2,3,27:20
+2006,4,Sun,October 1,L,0,New Orleans Saints,Carolina Panthers,18,21,19,29,157,2,0,1,12,5.8,5.2,65.5,102.2,29,167,5.8,1,0,0,3,3,6,182,4,10,0,0,30:21
+2006,5,Sun,October 8,W,0,New Orleans Saints,Tampa Bay Buccaneers,24,21,20,31,219,2,0,2,6,7.3,6.6,64.5,106.8,33,187,5.7,1,0,0,3,3,6,140,5,13,0,2,30:37
+2006,6,Sun,October 15,W,0,New Orleans Saints,Philadelphia Eagles,27,24,19,32,226,2,1,3,21,7.7,6.5,59.4,88.8,19,99,5.2,1,1,1,3,3,6,155,3,10,0,0,25:57
+2006,8,Sun,October 29,L,0,New Orleans Saints,Baltimore Ravens,22,35,17,23,156,2,0,1,3,6.9,6.5,73.9,120.9,39,137,3.5,1,0,0,5,5,6,155,8,14,0,0,36:46
+2006,9,Sun,November 5,W,0,New Orleans Saints,Tampa Bay Buccaneers,31,14,18,31,158,2,0,4,27,6.0,4.5,58.1,93.2,18,68,3.8,0,0,0,2,2,8,262,4,14,0,1,22:39
+2006,10,Sun,November 12,L,0,New Orleans Saints,Pittsburgh Steelers,31,38,17,28,250,3,0,2,14,9.4,8.3,60.7,125.6,26,217,8.3,2,1,2,5,5,3,297,7,12,0,0,26:59
+2006,11,Sun,November 19,L,0,New Orleans Saints,Cincinnati Bengals,16,31,14,22,266,3,1,1,9,12.5,11.6,63.6,126.1,31,119,3.8,0,1,1,4,4,6,149,4,11,0,0,26:27
+2006,12,Sun,November 26,W,0,New Orleans Saints,Atlanta Falcons,31,13,9,24,52,0,0,3,32,3.5,1.9,37.5,45.8,45,281,6.2,1,2,3,1,1,6,177,4,15,2,2,34:19
+2006,13,Sun,December 3,W,0,New Orleans Saints,San Francisco 49ers,34,10,14,28,145,1,3,4,26,6.1,4.5,50.0,37.6,15,57,3.8,0,1,1,1,1,7,246,3,11,0,0,22:41
+2006,14,Sun,December 10,W,0,New Orleans Saints,Dallas Cowboys,42,17,16,33,231,1,2,2,18,7.5,6.6,48.5,56.5,16,116,7.3,1,1,2,2,2,4,65,1,8,1,2,22:49
+2006,15,Sun,December 17,L,0,New Orleans Saints,Washington Redskins,10,16,13,28,193,1,0,1,11,7.3,6.7,46.4,81.4,31,161,5.2,0,3,3,1,1,5,120,5,13,0,0,29:37
+2006,16,Sun,December 24,W,0,New Orleans Saints,New York Giants,30,7,9,25,59,1,1,2,15,3.0,2.2,36.0,41.2,18,83,4.6,0,0,0,1,1,9,304,0,10,0,1,19:26
+2006,17,Sun,December 31,L,0,New Orleans Saints,Carolina Panthers,21,31,23,27,207,2,0,0,0,7.7,7.7,85.2,123.3,33,106,3.2,1,1,1,4,4,5,124,4,12,1,1,34:39
+2006,1,Sun,September 10,L,0,New York Giants,Indianapolis Colts,21,26,25,41,272,1,1,1,4,6.7,6.5,61.0,78.5,23,55,2.4,1,4,4,2,2,2,20,11,16,0,0,29:57
+2006,2,Sun,September 17,W,1,New York Giants,Philadelphia Eagles,30,24,27,45,344,2,0,1,6,7.8,7.5,60.0,98.7,30,107,3.6,1,1,2,3,3,5,110,6,14,0,2,33:02
+2006,3,Sun,September 24,L,0,New York Giants,Seattle Seahawks,30,42,24,33,227,5,3,0,0,6.9,6.9,72.7,93.1,41,106,2.6,1,0,0,6,6,4,78,10,16,1,1,38:00
+2006,5,Sun,October 8,W,0,New York Giants,Washington Redskins,19,3,12,22,86,0,0,3,23,5.0,3.4,54.5,63.8,20,78,3.9,0,1,2,0,0,5,104,3,11,0,1,25:13
+2006,6,Sun,October 15,W,0,New York Giants,Atlanta Falcons,27,14,14,27,106,0,1,7,48,5.7,3.1,51.9,46.2,26,223,8.6,2,0,0,2,2,6,134,6,15,0,1,25:42
+2006,7,Mon,October 23,W,0,New York Giants,Dallas Cowboys,36,22,21,37,310,2,4,6,28,9.1,7.2,56.8,62.7,21,69,3.3,1,0,0,2,2,3,37,7,11,0,1,27:31
+2006,8,Sun,October 29,W,0,New York Giants,Tampa Bay Buccaneers,17,3,20,48,134,0,0,2,5,2.9,2.7,41.7,49.3,13,40,3.1,0,1,1,0,0,9,321,2,16,0,3,24:22
+2006,9,Sun,November 5,W,0,New York Giants,Houston Texans,14,10,21,30,170,0,0,1,6,5.9,5.5,70.0,84.0,26,81,3.1,1,1,2,1,1,3,279,6,13,1,1,28:55
+2006,10,Sun,November 12,L,0,New York Giants,Chicago Bears,20,38,18,30,234,3,1,2,12,8.2,7.3,60.0,104.0,39,118,3.0,1,1,1,5,5,5,98,9,18,0,0,32:46
+2006,11,Mon,November 20,L,0,New York Giants,Jacksonville Jaguars,10,26,19,32,249,0,0,0,0,7.8,7.8,59.4,84.0,43,165,3.8,2,4,4,2,2,4,59,9,18,0,0,40:19
+2006,12,Sun,November 26,L,0,New York Giants,Tennessee Titans,21,24,24,35,235,2,0,2,14,7.1,6.4,68.6,106.2,25,108,4.3,1,1,2,3,3,4,73,3,10,1,3,26:23
+2006,13,Sun,December 3,L,0,New York Giants,Dallas Cowboys,20,23,20,34,255,0,2,1,2,7.6,7.3,58.8,57.8,24,110,4.6,2,3,4,2,2,2,184,6,11,0,0,26:39
+2006,14,Sun,December 10,W,0,New York Giants,Carolina Panthers,27,13,34,61,418,1,3,2,5,6.9,6.6,55.7,62.1,15,45,3.0,0,2,2,1,1,6,163,5,16,0,2,29:35
+2006,15,Sun,December 17,L,0,New York Giants,Philadelphia Eagles,22,36,19,28,221,1,1,2,16,8.5,7.4,67.9,88.5,30,161,5.4,3,0,1,4,4,3,41,4,10,1,1,31:49
+2006,16,Sun,December 24,L,0,New York Giants,New Orleans Saints,7,30,13,32,123,1,0,1,9,4.1,3.7,40.6,62.4,53,236,4.5,2,3,4,3,3,5,106,5,20,4,6,40:34
+2006,17,Sat,December 30,W,0,New York Giants,Washington Redskins,34,28,22,32,265,3,1,1,3,8.4,8.0,68.8,112.1,29,128,4.4,1,0,0,4,4,3,39,5,11,1,2,31:56
+2006,1,Sun,September 10,W,0,New York Jets,Tennessee Titans,23,16,20,42,242,0,3,2,8,6.0,5.5,47.6,36.0,25,86,3.4,2,0,0,0,0,6,143,5,13,1,2,25:58
+2006,2,Sun,September 17,L,0,New York Jets,New England Patriots,17,24,15,29,211,1,1,1,9,7.6,7.0,51.7,72.6,39,147,3.8,2,1,2,3,3,3,47,8,14,0,0,30:16
+2006,3,Sun,September 24,W,0,New York Jets,Buffalo Bills,28,20,22,39,306,1,1,3,22,8.4,7.3,56.4,79.6,31,169,5.5,1,2,2,2,2,2,198,3,12,1,4,33:13
+2006,4,Sun,October 1,L,0,New York Jets,Indianapolis Colts,28,31,21,30,192,1,0,2,25,7.2,6.0,70.0,98.2,36,160,4.4,3,1,1,4,4,4,74,7,12,0,0,28:03
+2006,5,Sun,October 8,L,0,New York Jets,Jacksonville Jaguars,0,41,9,20,131,2,0,1,9,7.0,6.2,45.0,100.2,39,181,4.6,3,2,2,5,5,4,62,6,13,0,0,32:02
+2006,6,Sun,October 15,W,0,New York Jets,Miami Dolphins,20,17,27,43,266,1,2,0,0,6.2,6.2,62.8,68.6,29,129,4.4,1,1,2,2,2,3,36,8,15,0,1,31:44
+2006,7,Sun,October 22,W,0,New York Jets,Detroit Lions,31,24,22,36,261,3,2,1,8,7.5,7.1,61.1,87.8,22,125,5.7,0,1,1,3,3,2,21,4,10,2,2,25:46
+2006,8,Sun,October 29,L,0,New York Jets,Cleveland Browns,13,20,15,22,120,1,1,3,21,6.4,4.8,68.2,77.8,39,147,3.8,1,2,3,2,2,5,121,7,17,0,0,35:11
+2006,10,Sun,November 12,W,0,New York Jets,New England Patriots,17,14,24,36,232,1,1,4,21,7.0,5.8,66.7,82.2,26,145,5.6,0,2,2,0,0,4,64,3,12,3,3,29:26
+2006,11,Sun,November 19,L,0,New York Jets,Chicago Bears,0,10,11,22,111,1,0,1,8,5.4,4.8,50.0,79.9,35,173,4.9,0,1,1,1,1,8,274,4,14,1,1,28:06
+2006,12,Sun,November 26,W,0,New York Jets,Houston Texans,26,11,39,54,309,1,1,4,14,6.0,5.3,72.2,84.6,14,25,1.8,0,1,2,0,0,5,120,7,15,0,1,30:51
+2006,13,Sun,December 3,W,0,New York Jets,Green Bay Packers,38,10,24,47,202,1,2,2,12,4.6,4.1,51.1,51.9,23,149,6.5,0,1,2,1,1,2,158,4,13,2,5,28:33
+2006,14,Sun,December 10,L,0,New York Jets,Buffalo Bills,13,31,10,15,144,2,0,3,13,10.5,8.0,66.7,137.2,34,174,5.1,1,1,1,4,4,6,146,4,11,0,0,27:52
+2006,15,Sun,December 17,W,0,New York Jets,Minnesota Vikings,26,13,24,40,245,2,1,3,28,6.8,5.7,60.0,83.9,15,62,4.1,0,0,1,1,1,7,232,2,13,1,1,23:34
+2006,16,Mon,December 25,W,0,New York Jets,Miami Dolphins,13,10,18,31,129,1,0,3,17,4.7,3.8,58.1,78.6,24,124,5.2,0,1,1,1,1,10,427,1,13,0,0,29:28
+2006,17,Sun,December 31,W,0,New York Jets,Oakland Raiders,23,3,15,26,121,0,1,2,15,5.2,4.3,57.7,53.5,22,88,4.0,0,1,1,0,0,3,41,3,11,1,3,23:11
+2006,1,Sun,September 10,W,0,Philadelphia Eagles,Houston Texans,24,10,18,27,171,1,0,5,37,7.7,5.3,66.7,96.4,20,70,3.5,0,1,1,1,1,5,112,3,11,1,2,27:09
+2006,2,Sun,September 17,L,1,Philadelphia Eagles,New York Giants,24,30,31,43,318,3,1,8,53,8.6,6.2,72.1,106.5,26,86,3.3,0,1,1,3,3,8,278,6,15,0,1,38:47
+2006,3,Sun,September 24,W,0,Philadelphia Eagles,San Francisco 49ers,38,24,27,46,269,1,0,3,24,6.4,5.5,58.7,82.6,28,123,4.4,2,1,1,3,3,7,209,7,18,1,1,35:21
+2006,4,Mon,October 2,W,0,Philadelphia Eagles,Green Bay Packers,31,9,24,47,219,0,2,0,0,4.7,4.7,51.1,46.3,28,99,3.5,0,3,4,0,0,5,116,4,14,0,1,32:43
+2006,5,Sun,October 8,W,0,Philadelphia Eagles,Dallas Cowboys,38,24,18,38,174,0,3,7,49,5.9,3.9,47.4,27.7,39,146,3.7,2,1,1,3,3,6,189,7,18,1,2,36:59
+2006,6,Sun,October 15,L,0,Philadelphia Eagles,New Orleans Saints,24,27,27,38,275,3,2,0,0,7.2,7.2,71.1,95.8,30,98,3.3,0,2,2,3,3,5,118,8,16,0,0,34:03
+2006,7,Sun,October 22,L,0,Philadelphia Eagles,Tampa Bay Buccaneers,21,23,13,26,85,0,0,2,19,4.0,3.0,50.0,57.4,30,111,3.7,0,3,3,2,2,6,145,5,14,1,1,31:01
+2006,8,Sun,October 29,L,0,Philadelphia Eagles,Jacksonville Jaguars,6,13,10,17,76,0,0,1,11,5.1,4.2,58.8,69.7,46,209,4.5,1,2,2,1,1,5,100,4,14,2,3,36:51
+2006,10,Sun,November 12,W,0,Philadelphia Eagles,Washington Redskins,27,3,16,32,132,0,1,0,0,4.1,4.1,50.0,47.9,31,146,4.7,0,1,2,0,0,6,143,3,13,1,2,29:31
+2006,11,Sun,November 19,L,0,Philadelphia Eagles,Tennessee Titans,13,31,8,22,84,1,0,3,17,4.6,3.4,36.4,63.4,32,209,6.5,1,1,1,4,4,7,203,4,13,0,1,23:38
+2006,12,Sun,November 26,L,0,Philadelphia Eagles,Indianapolis Colts,21,45,14,20,183,1,1,0,0,9.2,9.2,70.0,94.4,41,237,5.8,4,1,1,6,6,2,194,7,10,0,0,30:18
+2006,13,Mon,December 4,W,0,Philadelphia Eagles,Carolina Panthers,27,24,22,37,269,3,2,0,0,7.3,7.3,59.5,86.4,23,108,4.7,0,1,1,3,3,7,230,4,13,0,0,27:37
+2006,14,Sun,December 10,W,0,Philadelphia Eagles,Washington Redskins,21,19,16,28,205,1,2,2,17,7.9,6.8,57.1,62.4,40,210,5.3,0,4,4,1,1,3,43,7,16,0,0,37:46
+2006,15,Sun,December 17,W,0,Philadelphia Eagles,New York Giants,36,22,28,40,270,0,2,1,12,7.1,6.6,70.0,67.7,22,88,4.0,2,3,3,1,1,2,146,2,9,2,2,28:11
+2006,16,Mon,December 25,W,0,Philadelphia Eagles,Dallas Cowboys,23,7,14,29,118,1,2,3,24,4.9,3.7,48.3,42.0,19,83,4.4,0,0,0,1,1,3,39,5,11,1,3,22:54
+2006,17,Sun,December 31,W,0,Philadelphia Eagles,Atlanta Falcons,24,17,23,35,219,2,1,5,37,7.3,5.5,65.7,90.1,34,159,4.7,0,1,1,2,2,5,86,7,17,0,2,35:18
+2006,1,Thu,September 7,W,0,Pittsburgh Steelers,Miami Dolphins,28,17,18,37,240,0,2,3,22,7.1,6.0,48.6,47.1,18,38,2.1,2,1,1,2,2,6,132,5,13,0,1,24:33
+2006,2,Mon,September 18,L,0,Pittsburgh Steelers,Jacksonville Jaguars,0,9,26,39,252,0,1,1,8,6.7,6.3,66.7,73.9,30,110,3.7,0,3,3,0,0,6,151,6,18,0,1,37:25
+2006,3,Sun,September 24,L,0,Pittsburgh Steelers,Cincinnati Bengals,20,28,18,26,159,4,2,6,34,7.4,5.0,69.2,92.8,25,87,3.5,0,0,0,4,4,5,134,4,12,1,1,26:09
+2006,5,Sun,October 8,L,0,Pittsburgh Steelers,San Diego Chargers,13,23,24,37,222,2,1,4,20,6.5,5.4,64.9,87.9,31,119,3.8,0,3,3,2,2,3,40,9,16,0,0,33:52
+2006,6,Sun,October 15,W,0,Pittsburgh Steelers,Kansas City Chiefs,45,7,19,39,175,0,3,1,10,4.7,4.4,48.7,29.3,19,38,2.0,1,0,0,1,1,7,239,5,14,0,1,25:29
+2006,7,Sun,October 22,L,1,Pittsburgh Steelers,Atlanta Falcons,38,41,18,30,226,4,2,1,6,7.7,7.3,60.0,95.3,39,173,4.4,1,2,3,5,5,5,125,8,16,0,0,36:03
+2006,8,Sun,October 29,L,0,Pittsburgh Steelers,Oakland Raiders,13,20,5,14,17,0,1,6,34,3.6,0.9,35.7,14.6,29,81,2.8,0,2,2,2,2,7,236,1,11,0,1,24:30
+2006,9,Sun,November 5,L,0,Pittsburgh Steelers,Denver Broncos,20,31,16,27,221,3,0,1,6,8.4,7.9,59.3,122.6,23,115,5.0,1,1,1,4,4,7,207,3,12,0,0,25:27
+2006,10,Sun,November 12,W,0,Pittsburgh Steelers,New Orleans Saints,38,31,31,47,393,1,0,1,5,8.5,8.2,66.0,99.0,29,120,4.1,2,1,2,4,4,2,158,10,16,1,1,33:01
+2006,11,Sun,November 19,W,0,Pittsburgh Steelers,Cleveland Browns,24,20,17,27,203,0,0,5,21,8.3,6.3,63.0,85.9,29,99,3.4,0,2,3,2,2,3,37,7,15,1,1,32:13
+2006,12,Sun,November 26,L,0,Pittsburgh Steelers,Baltimore Ravens,0,27,21,27,161,1,0,0,0,6.0,6.0,77.8,103.9,35,114,3.3,1,2,2,3,3,6,155,4,12,0,0,34:46
+2006,13,Sun,December 3,W,0,Pittsburgh Steelers,Tampa Bay Buccaneers,20,3,20,34,144,0,3,5,31,5.1,3.7,58.8,32.0,30,110,3.7,0,1,1,0,0,6,137,7,14,0,1,31:01
+2006,14,Thu,December 7,W,0,Pittsburgh Steelers,Cleveland Browns,27,7,21,37,276,1,1,0,0,7.5,7.5,56.8,78.2,11,18,1.6,0,0,1,1,1,6,137,3,12,1,1,21:13
+2006,15,Sun,December 17,W,0,Pittsburgh Steelers,Carolina Panthers,37,3,24,39,197,0,2,5,29,5.8,4.5,61.5,53.0,11,43,3.9,0,1,2,0,0,7,188,3,13,1,2,22:47
+2006,16,Sun,December 24,L,0,Pittsburgh Steelers,Baltimore Ravens,7,31,21,31,256,3,2,0,0,8.3,8.3,67.7,98.3,33,103,3.1,1,1,1,4,4,4,74,6,12,1,1,35:22
+2006,17,Sun,December 31,W,1,Pittsburgh Steelers,Cincinnati Bengals,23,17,20,38,251,2,0,0,0,6.6,6.6,52.6,91.0,16,44,2.8,0,1,2,2,2,6,181,5,13,0,0,20:52
+2006,1,Sun,September 10,L,0,San Francisco 49ers,Arizona Cardinals,27,34,23,37,283,3,0,3,18,8.1,7.1,62.2,112.8,29,84,2.9,1,2,2,4,4,4,69,7,14,0,0,35:02
+2006,2,Sun,September 17,W,0,San Francisco 49ers,St. Louis Rams,20,13,19,34,147,1,0,6,38,5.4,3.7,55.9,76.5,28,118,4.2,0,2,3,1,1,5,108,7,17,1,1,34:37
+2006,3,Sun,September 24,L,0,San Francisco 49ers,Philadelphia Eagles,24,38,18,33,266,2,0,3,30,9.0,7.4,54.5,101.3,18,150,8.3,2,1,2,5,5,4,70,5,12,0,0,24:39
+2006,4,Sun,October 1,L,0,San Francisco 49ers,Kansas City Chiefs,0,41,18,23,208,2,0,0,0,9.0,9.0,78.3,133.3,40,125,3.1,2,2,2,5,5,4,68,8,15,0,0,35:15
+2006,5,Sun,October 8,W,0,San Francisco 49ers,Oakland Raiders,34,20,18,32,216,2,4,1,0,6.8,6.5,56.3,58.3,23,154,6.7,0,2,2,2,2,2,130,3,9,1,1,24:47
+2006,6,Sun,October 15,L,0,San Francisco 49ers,San Diego Chargers,19,48,29,39,334,2,0,0,0,8.6,8.6,74.4,116.8,30,87,2.9,4,2,2,6,6,1,53,12,15,0,0,35:48
+2006,8,Sun,October 29,L,0,San Francisco 49ers,Chicago Bears,10,41,25,32,257,3,0,1,6,8.2,7.8,78.1,131.4,35,145,4.1,2,2,2,5,5,3,46,7,14,1,2,37:05
+2006,9,Sun,November 5,W,0,San Francisco 49ers,Minnesota Vikings,9,3,21,31,103,0,1,3,33,4.4,3.0,67.7,58.9,33,135,4.1,0,1,1,0,0,5,99,5,14,0,1,34:45
+2006,10,Sun,November 12,W,0,San Francisco 49ers,Detroit Lions,19,13,19,30,180,1,1,3,22,6.7,5.5,63.3,77.1,17,71,4.2,0,2,2,1,1,3,36,3,9,0,1,21:11
+2006,11,Sun,November 19,W,0,San Francisco 49ers,Seattle Seahawks,20,14,19,31,233,2,3,2,19,8.1,7.1,61.3,66.4,21,70,3.3,0,0,0,2,2,5,126,1,8,0,2,23:48
+2006,12,Sun,November 26,L,0,San Francisco 49ers,St. Louis Rams,17,20,24,37,209,1,1,2,19,6.2,5.4,64.9,77.4,29,140,4.8,1,2,2,2,2,5,102,8,16,2,2,30:34
+2006,13,Sun,December 3,L,0,San Francisco 49ers,New Orleans Saints,10,34,17,28,185,1,0,1,1,6.6,6.4,60.7,92.1,41,190,4.6,3,2,2,4,4,5,105,8,16,1,1,37:19
+2006,14,Sun,December 10,L,0,San Francisco 49ers,Green Bay Packers,19,30,22,34,281,2,0,1,12,8.6,8.0,64.7,110.0,34,139,4.1,1,3,3,3,3,5,104,6,15,0,1,33:31
+2006,15,Thu,December 14,W,0,San Francisco 49ers,Seattle Seahawks,24,14,20,37,210,1,2,3,10,5.9,5.3,54.1,57.3,27,90,3.3,1,0,0,2,2,7,181,5,13,0,1,28:56
+2006,16,Sun,December 24,L,0,San Francisco 49ers,Arizona Cardinals,20,26,18,26,249,1,0,2,18,10.3,8.9,69.2,112.5,41,123,3.0,1,4,4,2,2,2,174,8,16,1,1,37:40
+2006,17,Sun,December 31,W,1,San Francisco 49ers,Denver Broncos,26,23,21,34,210,1,2,3,20,6.8,5.7,61.8,64.6,27,115,4.3,0,3,3,2,2,6,151,3,13,0,0,34:06
+2006,1,Sun,September 10,W,0,Seattle Seahawks,Detroit Lions,9,6,21,37,213,0,0,3,16,6.2,5.3,56.8,73.4,17,38,2.2,0,2,3,0,0,6,155,5,14,0,0,27:35
+2006,2,Sun,September 17,W,0,Seattle Seahawks,Arizona Cardinals,21,10,24,38,191,1,1,5,40,6.1,4.4,63.2,73.5,20,65,3.3,0,1,3,1,1,6,143,6,14,0,0,28:07
+2006,3,Sun,September 24,W,0,Seattle Seahawks,New York Giants,42,30,24,36,264,3,3,1,11,7.6,7.1,66.7,81.2,15,73,4.9,0,1,1,3,3,4,77,2,9,1,1,22:00
+2006,4,Sun,October 1,L,0,Seattle Seahawks,Chicago Bears,6,37,17,31,219,2,0,1,13,7.5,6.8,54.8,98.7,38,143,3.8,2,3,3,4,4,5,106,6,15,1,1,35:32
+2006,6,Sun,October 15,W,0,Seattle Seahawks,St. Louis Rams,30,28,26,39,309,3,1,6,51,9.2,6.9,66.7,105.6,22,59,2.7,1,0,0,4,4,5,94,8,15,0,0,32:05
+2006,7,Sun,October 22,L,0,Seattle Seahawks,Minnesota Vikings,13,31,16,25,157,2,0,4,29,7.4,5.4,64.0,108.2,30,175,5.8,1,1,2,4,4,5,102,5,14,0,1,32:19
+2006,8,Sun,October 29,L,0,Seattle Seahawks,Kansas City Chiefs,28,35,17,25,308,1,0,1,4,12.5,11.8,68.0,123.4,53,191,3.6,3,2,3,3,3,1,50,6,13,1,2,42:15
+2006,9,Mon,November 6,W,0,Seattle Seahawks,Oakland Raiders,16,0,16,35,121,0,0,9,45,4.7,2.8,45.7,54.6,13,64,4.9,0,0,0,0,0,10,450,3,15,1,2,24:21
+2006,10,Sun,November 12,W,0,Seattle Seahawks,St. Louis Rams,24,22,26,40,191,0,1,4,24,5.4,4.3,65.0,65.7,20,108,5.4,1,3,3,1,1,3,39,6,14,0,2,33:52
+2006,11,Sun,November 19,L,0,Seattle Seahawks,San Francisco 49ers,14,20,19,25,154,1,0,1,9,6.5,5.9,76.0,104.4,34,262,7.7,1,2,4,2,2,6,156,3,13,0,0,36:12
+2006,12,Mon,November 27,W,0,Seattle Seahawks,Green Bay Packers,34,24,22,36,265,1,3,1,1,7.4,7.2,61.1,58.2,20,51,2.6,1,1,2,3,3,5,87,6,14,0,0,23:53
+2006,13,Sun,December 3,W,0,Seattle Seahawks,Denver Broncos,23,20,10,21,121,2,2,3,22,6.8,5.0,47.6,57.9,34,181,5.3,0,2,2,2,2,7,215,4,14,1,1,29:29
+2006,14,Sun,December 10,L,0,Seattle Seahawks,Arizona Cardinals,21,27,21,34,232,2,1,0,0,6.8,6.8,61.8,89.3,33,113,3.4,1,2,3,3,3,4,68,6,13,0,0,34:39
+2006,15,Thu,December 14,L,0,Seattle Seahawks,San Francisco 49ers,14,24,14,25,162,2,0,0,0,6.5,6.5,56.0,102.4,38,228,6.0,1,1,1,3,3,8,288,7,17,1,1,31:04
+2006,16,Sun,December 24,L,0,Seattle Seahawks,San Diego Chargers,17,20,10,30,172,2,0,1,9,6.0,5.5,33.3,76.0,33,168,5.1,0,2,2,2,2,10,425,4,16,0,0,27:09
+2006,17,Sun,December 31,W,0,Seattle Seahawks,Tampa Bay Buccaneers,23,7,16,27,177,1,0,1,8,6.9,6.3,59.3,91.1,21,110,5.2,0,0,1,1,1,3,47,3,9,0,1,22:40
+2006,1,Sun,September 10,L,0,Tampa Bay Buccaneers,Baltimore Ravens,0,27,17,27,168,1,0,1,13,6.7,6.0,63.0,92.8,34,103,3.0,1,2,2,3,3,6,169,5,14,0,0,35:49
+2006,2,Sun,September 17,L,0,Tampa Bay Buccaneers,Atlanta Falcons,3,14,10,16,76,1,1,3,16,5.8,4.0,62.5,68.7,44,306,7.0,1,0,4,2,2,2,170,5,13,0,0,34:09
+2006,3,Sun,September 24,L,0,Tampa Bay Buccaneers,Carolina Panthers,24,26,22,36,249,1,0,3,23,7.6,6.4,61.1,91.1,28,101,3.6,1,4,4,2,2,3,30,2,12,1,1,34:23
+2006,5,Sun,October 8,L,0,Tampa Bay Buccaneers,New Orleans Saints,21,24,21,33,171,1,0,0,0,5.2,5.2,63.6,86.8,25,143,5.7,1,1,1,3,3,8,286,3,12,0,0,29:23
+2006,6,Sun,October 15,W,0,Tampa Bay Buccaneers,Cincinnati Bengals,14,13,24,37,252,1,0,2,9,7.1,6.5,64.9,93.5,20,53,2.7,0,2,3,1,1,7,206,3,14,0,1,24:53
+2006,7,Sun,October 22,W,0,Tampa Bay Buccaneers,Philadelphia Eagles,23,21,22,35,298,3,3,1,4,8.6,8.3,62.9,82.8,27,208,7.7,0,0,0,3,3,3,40,7,11,0,0,28:59
+2006,8,Sun,October 29,L,0,Tampa Bay Buccaneers,New York Giants,3,17,16,31,143,1,0,2,11,5.0,4.3,51.6,75.1,35,108,3.1,1,1,1,2,2,9,302,3,14,0,1,35:38
+2006,9,Sun,November 5,L,0,Tampa Bay Buccaneers,New Orleans Saints,14,31,24,32,314,3,0,0,0,9.8,9.8,75.0,136.7,35,49,1.4,1,1,1,4,4,6,145,9,17,0,1,37:21
+2006,10,Mon,November 13,L,0,Tampa Bay Buccaneers,Carolina Panthers,10,24,22,34,240,2,1,0,0,7.1,7.1,64.7,92.8,30,78,2.6,1,1,1,3,3,6,167,6,14,0,0,33:16
+2006,11,Sun,November 19,W,0,Tampa Bay Buccaneers,Washington Redskins,20,17,19,34,193,2,0,1,3,5.8,5.5,55.9,91.9,21,59,2.8,0,1,1,2,2,5,110,4,13,2,2,23:59
+2006,12,Thu,November 23,L,0,Tampa Bay Buccaneers,Dallas Cowboys,10,38,22,29,298,5,0,1,8,10.6,9.9,75.9,147.7,37,137,3.7,0,1,1,5,5,2,142,7,12,1,2,37:17
+2006,13,Sun,December 3,L,0,Tampa Bay Buccaneers,Pittsburgh Steelers,3,20,12,25,191,2,1,1,7,7.9,7.3,48.0,83.9,31,76,2.5,0,2,3,2,2,5,92,5,14,0,1,28:59
+2006,14,Sun,December 10,L,0,Tampa Bay Buccaneers,Atlanta Falcons,6,17,14,23,141,0,1,2,14,6.7,5.6,60.9,60.2,34,139,4.1,1,1,1,2,2,4,60,6,15,1,2,30:29
+2006,15,Sun,December 17,L,1,Tampa Bay Buccaneers,Chicago Bears,31,34,29,44,312,2,0,4,27,7.7,6.5,65.9,101.7,34,134,3.9,2,2,3,4,4,10,446,5,16,0,0,41:56
+2006,16,Sun,December 24,W,0,Tampa Bay Buccaneers,Cleveland Browns,22,7,10,28,96,0,4,3,27,4.4,3.1,35.7,6.5,20,91,4.6,0,0,1,1,1,3,38,4,12,0,1,22:44
+2006,17,Sun,December 31,L,0,Tampa Bay Buccaneers,Seattle Seahawks,7,23,17,29,212,1,0,1,4,7.4,7.1,58.6,92.9,42,132,3.1,1,3,3,2,2,2,134,8,14,0,0,37:20
+2006,1,Sun,September 10,L,0,Tennessee Titans,New York Jets,16,23,24,33,302,2,0,2,17,9.7,8.6,72.7,121.0,34,91,2.7,1,1,3,2,3,4,80,4,13,0,0,34:02
+2006,2,Sun,September 17,L,0,Tennessee Titans,San Diego Chargers,7,40,25,36,235,1,0,0,0,6.5,6.5,69.4,96.4,37,241,6.5,3,4,4,4,4,2,154,5,13,1,2,38:35
+2006,3,Sun,September 24,L,0,Tennessee Titans,Miami Dolphins,10,13,17,26,130,0,0,6,38,6.5,4.1,65.4,77.4,36,159,4.4,1,2,3,1,1,6,190,6,16,0,0,35:29
+2006,4,Sun,October 1,L,0,Tennessee Titans,Dallas Cowboys,14,45,13,20,179,2,1,0,0,9.0,9.0,65.0,106.0,41,217,5.3,3,1,2,6,6,1,40,5,10,1,1,32:34
+2006,5,Sun,October 8,L,0,Tennessee Titans,Indianapolis Colts,13,14,20,31,166,2,1,0,0,5.4,5.4,64.5,86.2,34,154,4.5,0,0,0,2,2,6,167,5,12,0,0,33:55
+2006,6,Sun,October 15,W,0,Tennessee Titans,Washington Redskins,25,22,16,30,180,1,1,0,0,6.0,6.0,53.3,68.7,26,125,4.8,2,0,0,2,2,7,168,5,12,0,0,24:20
+2006,8,Sun,October 29,W,0,Tennessee Titans,Houston Texans,28,22,33,46,279,3,2,4,20,6.5,5.6,71.7,90.8,26,148,5.7,0,1,1,1,2,3,39,4,12,2,2,36:21
+2006,9,Sun,November 5,L,0,Tennessee Titans,Jacksonville Jaguars,7,37,12,22,169,3,0,2,8,8.0,7.0,54.5,119.1,30,173,5.8,0,3,3,4,4,5,102,5,13,0,0,30:11
+2006,10,Sun,November 12,L,0,Tennessee Titans,Baltimore Ravens,26,27,29,47,371,3,2,1,2,7.9,7.7,61.7,89.9,21,50,2.4,0,2,2,3,3,5,97,7,16,1,1,29:16
+2006,11,Sun,November 19,W,0,Tennessee Titans,Philadelphia Eagles,31,13,32,61,267,1,1,0,0,4.4,4.4,52.5,62.7,30,123,4.1,0,2,2,1,1,6,151,10,23,1,3,36:22
+2006,12,Sun,November 26,W,0,Tennessee Titans,New York Giants,24,21,18,28,143,1,2,0,0,5.1,5.1,64.3,59.1,36,144,4.0,2,0,0,3,3,5,106,8,15,1,2,33:37
+2006,13,Sun,December 3,W,0,Tennessee Titans,Indianapolis Colts,20,17,21,28,351,1,2,0,0,12.5,12.5,75.0,98.8,29,100,3.4,1,1,2,2,2,3,32,7,12,0,0,30:55
+2006,14,Sun,December 10,W,1,Tennessee Titans,Houston Texans,26,20,17,23,133,0,0,2,7,6.1,5.3,73.9,87.8,30,107,3.6,2,2,2,2,2,6,151,2,11,1,1,29:09
+2006,15,Sun,December 17,W,0,Tennessee Titans,Jacksonville Jaguars,24,17,22,37,203,1,3,4,30,6.3,5.0,59.5,49.7,41,193,4.7,1,1,1,2,2,2,150,10,19,0,2,44:22
+2006,16,Sun,December 24,W,0,Tennessee Titans,Buffalo Bills,30,29,19,34,251,1,2,3,15,7.8,6.8,55.9,64.7,24,117,4.9,1,5,5,2,2,2,160,2,10,1,2,26:42
+2006,17,Sun,December 31,L,0,Tennessee Titans,New England Patriots,23,40,17,28,243,2,0,2,11,9.1,8.1,60.7,112.6,31,171,5.5,3,2,3,4,5,5,116,5,14,1,1,29:43
+2006,1,Mon,September 11,L,0,Washington Commanders,Minnesota Vikings,16,19,16,30,223,1,0,1,0,7.4,7.2,53.3,88.6,34,86,2.5,1,2,3,1,1,5,95,9,17,0,0,31:44
+2006,2,Sun,September 17,L,0,Washington Commanders,Dallas Cowboys,10,27,19,38,229,2,0,1,8,6.2,5.9,50.0,86.4,31,138,4.5,1,2,2,3,3,7,240,6,16,1,1,31:55
+2006,3,Sun,September 24,W,0,Washington Commanders,Houston Texans,31,15,19,29,200,2,1,1,8,7.2,6.7,65.5,94.0,18,61,3.4,0,0,0,1,1,4,63,3,7,0,0,21:33
+2006,4,Sun,October 1,W,1,Washington Commanders,Jacksonville Jaguars,36,30,20,34,275,3,1,4,15,8.5,7.2,58.8,102.0,16,32,2.0,0,3,3,3,3,5,123,2,13,2,2,25:17
+2006,5,Sun,October 8,L,0,Washington Commanders,New York Giants,3,19,23,33,256,1,0,0,0,7.8,7.8,69.7,102.6,36,155,4.3,0,4,5,1,1,2,144,9,16,0,0,34:47
+2006,6,Sun,October 15,L,0,Washington Commanders,Tennessee Titans,22,25,13,25,151,1,0,3,10,6.4,5.4,52.0,83.9,42,193,4.6,1,3,3,2,2,7,206,4,15,1,1,35:40
+2006,7,Sun,October 22,L,0,Washington Commanders,Indianapolis Colts,22,36,25,35,342,4,0,0,0,9.8,9.8,71.4,140.4,25,110,4.4,0,3,3,3,3,2,188,5,10,0,0,29:06
+2006,9,Sun,November 5,W,0,Washington Commanders,Dallas Cowboys,22,19,24,36,267,2,0,2,17,7.9,7.0,66.7,107.1,29,111,3.8,0,2,3,1,1,5,108,10,16,0,0,31:28
+2006,10,Sun,November 12,L,0,Washington Commanders,Philadelphia Eagles,3,27,12,26,255,2,0,1,2,9.9,9.4,46.2,107.1,34,145,4.3,0,2,2,3,3,5,94,6,15,1,1,30:29
+2006,11,Sun,November 19,L,0,Washington Commanders,Tampa Bay Buccaneers,17,20,14,21,178,2,1,0,0,8.5,8.5,66.7,104.9,42,181,4.3,0,2,2,2,2,3,44,6,13,0,0,36:01
+2006,12,Sun,November 26,W,0,Washington Commanders,Carolina Panthers,17,13,23,38,163,1,2,1,5,4.4,4.2,60.5,57.2,25,101,4.0,0,2,2,1,1,8,267,6,16,0,1,30:46
+2006,13,Sun,December 3,L,0,Washington Commanders,Atlanta Falcons,14,24,8,16,113,2,0,1,9,7.6,6.6,50.0,112.8,41,256,6.2,1,1,1,3,3,5,78,5,12,0,1,28:22
+2006,14,Sun,December 10,L,0,Washington Commanders,Philadelphia Eagles,19,21,15,23,164,2,0,0,0,7.1,7.1,65.2,115.1,22,99,4.5,0,0,0,3,3,5,112,4,10,0,0,22:14
+2006,15,Sun,December 17,W,0,Washington Commanders,New Orleans Saints,16,10,21,38,199,0,1,2,8,5.4,5.0,55.3,59.0,24,71,3.0,1,1,1,1,1,6,169,8,17,1,2,30:23
+2006,16,Sun,December 24,L,1,Washington Commanders,St. Louis Rams,31,37,25,38,382,4,0,1,6,10.2,9.8,65.8,133.9,39,197,5.1,1,1,2,4,4,6,124,6,15,0,0,36:37
+2006,17,Sat,December 30,L,0,Washington Commanders,New York Giants,28,34,12,26,94,1,0,1,7,3.9,3.5,46.2,68.4,34,261,7.7,3,2,2,4,4,4,68,8,14,0,0,28:04
