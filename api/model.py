@@ -1,6 +1,5 @@
 from pydantic import BaseModel
 from typing import Optional, Union
-from helper import get_madden_columns
 
 class WeeklyProjection(BaseModel):
     data_source: str
