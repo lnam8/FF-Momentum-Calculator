@@ -15,11 +15,14 @@ import streamlit as st
 from sklearn.decomposition import PCA
 import plotly.express as px
 from plotly.offline import plot
+import warnings
+warnings.simplefilter(action='ignore', category=FutureWarning)
+
 
 
 class Query(object):
     def __init__(self):
-        self.conn = sqlite3.connect("ff_momentum.db")
+        self.conn = sqlite3.connect("../../db/ff_momentum.db")
         sql_query = """SELECT name FROM sqlite_master 
             WHERE type='table';"""
             
@@ -28,7 +31,7 @@ class Query(object):
         self.cursor.execute(sql_query)
         self.tables = self.cursor.fetchall()
 
-    def relevant_stats(self):
+    def relevant_stats(self, position):
         madden_query = '''
         select * From ''' + "madden_weekly"
         
@@ -57,7 +60,7 @@ class Query(object):
         df = new.merge(madden, left_on=['year','week', 'player_name'], right_on = ['year','week','fullNameForSearch'])
         df = df.sort_values(by=['year','week','player_name']).reset_index(drop=True)
         
-        df = df[(df.player_position == 'WR') & (df.year == '2023')]
+        df = df[(df.player_position == position) & (df.year == '2023')]
         
         df1 = df.set_index('player_name')
         
@@ -130,37 +133,76 @@ class Query(object):
         df_new = df_new.merge(df, 
                      how = 'left', 
                      left_on = ['Name'], 
-                     right_on = ['player_name']).drop_duplicates(subset=['Name'])
+                     right_on = ['player_name']).drop_duplicates(subset=['Name']).reset_index(drop=True)
         
         
+        return df_new
+        
+        
+    def plot_cluster(self, df):
         #fig = px.scatter_3d(df_new,x="Feature 1",y="Feature 2", z='Feature 3', color ='Cluster', text="Name", title="")
-        fig = px.scatter(df_new,x="Feature 1",y="Feature 2", color ='Cluster', text="Name", title="")
+        fig = px.scatter(df,x="Feature 1",y="Feature 2", color ='Cluster', text="Name", title="")
         fig.update_traces(textposition='top center')
         
-        return df_new, fig
+        return fig
     
     
     def closest_points(self, df, POI, neighbors):
+        #POI = 'Stefon Diggs'
+        
+        x = df[df['player_name'] == POI]['Feature 1'].reset_index(drop=True).tolist()
+        y = df[df['player_name'] == POI]['Feature 2'].reset_index(drop=True).tolist()
+        z = df[df['player_name'] == POI]['Feature 3'].reset_index(drop=True).tolist()
+        
+        df['distance'] = df.apply(lambda row: np.sqrt( (row['Feature 1'] - x[0])**2 + (row['Feature 2'] - y[0])**2 + (row['Feature 3'] - z[0])**2 ), axis=1)
+        
+        df = df.sort_values(by=['distance']).reset_index(drop=True)
         
         
-        
-        return
+        return df[0:neighbors+1].reset_index(drop=True)
         
         
 if __name__ == '__main__':
     
     q = Query()
-    df, clean = q.relevant_stats()
-    df_new, figure = q.cluster(df,clean)
+
     
-    def update(player):
-        df_new, figure = q.cluster(df[df.player_name == player], clean)
-        return df_new, figure
+    if 'player_position' not in st.session_state:
+        st.session_state['player_position'] = None
     
-    players = st.selectbox('Available Players', set(df.player_name.unique().tolist()))
-                          #index = None,
-                          #on_change = update(index))
+        
+    position = st.selectbox('Position', ('WR', 'RB', 'TE'), index = st.session_state.player_position)
     
-    print(players)
+    if position == None:
+        df, clean = q.relevant_stats('WR')
+    else:
+        df,clean = q.relevant_stats(position)
+        
+ 
     
-    st.plotly_chart(figure)
+    if 'selection' not in st.session_state:
+        st.session_state['selection'] = None
+    
+    player = st.selectbox('Available Players', df.player_name.unique().tolist(),
+                           index = st.session_state.selection)
+    
+    
+    
+    
+    
+    
+    
+    
+    if player == None:
+        df_new = q.cluster(df,clean)
+        figure = q.plot_cluster(df_new)
+        st.plotly_chart(figure)
+    else:
+        df_new = q.cluster(df,clean)
+        close = q.closest_points(df_new,player,10)
+                
+        figure = q.plot_cluster(close)
+        st.plotly_chart(figure)
+
+ 
+    
