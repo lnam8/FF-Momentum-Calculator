@@ -82,7 +82,22 @@ class Query(object):
         return df, clean
     
     def cluster(self,df,clean):
+        '''
         
+        Parameters
+        ----------
+        df : Dataframe
+            Dataframe that you want to cluster. Usually generated from the SQL
+            Query above.
+        clean : Datframe
+            A 'Cleaned' dataframe. Has all of the useless columns removed.
+
+        Returns
+        -------
+        df_new : Dataframe
+            New dataframe with the 'Feature' columns from performing PCA.
+
+        '''
     
         min_max_scale = preprocessing.MinMaxScaler()
         scaled = min_max_scale.fit_transform(clean)
@@ -93,8 +108,7 @@ class Query(object):
         
         pca = PCA(n_components = 3)
         df_new = pd.DataFrame(pca.fit_transform(scaled))
-        #Check how many clusters should we pick that have the least cost function value
-        
+       
         
         
         # Vary the Number of Clusters
@@ -108,7 +122,7 @@ class Query(object):
             km.fit(df_new)
             within_ss.append(km.inertia_)
         
-        
+        # Elbow Plot Below
         # f, axes = plt.subplots(1, 1, figsize=(16,4))
         # plt.plot(range(min_clust, max_clust+1), within_ss)
         # plt.xlabel('Number of Clusters')
@@ -140,15 +154,46 @@ class Query(object):
         
         
     def plot_cluster(self, df):
+        '''
+
+        Parameters
+        ----------
+        df : DataFrame
+            Dataframe of what you want plotted clustered using PCA.
+
+        Returns
+        -------
+        fig : Plotly Figure
+            The plotly plot generated.
+
+        '''
         #fig = px.scatter_3d(df_new,x="Feature 1",y="Feature 2", z='Feature 3', color ='Cluster', text="Name", title="")
         fig = px.scatter(df,x="Feature 1",y="Feature 2", color ='Cluster', text="Name", title="")
-        fig.update_traces(textposition='top center')
+        fig.update_traces(textposition='top center', textfont_size=12)
         
         return fig
     
     
     def closest_points(self, df, POI, neighbors):
-        #POI = 'Stefon Diggs'
+        '''
+
+        Parameters
+        ----------
+        df : DataFrame
+            Dataframe of Players and Weekly Data.
+        POI : String
+            Player of interest who you want to determine who the closest
+            players are.
+        neighbors : integer
+            How many neighbors do you want to see.
+
+        Returns
+        -------
+        Dataframe
+            A new dataframe of length(neighbors+1) including the Player of 
+            Interest and the # of neighbors nearest to them.
+
+        '''
         
         x = df[df['player_name'] == POI]['Feature 1'].reset_index(drop=True).tolist()
         y = df[df['player_name'] == POI]['Feature 2'].reset_index(drop=True).tolist()
@@ -185,12 +230,6 @@ if __name__ == '__main__':
     
     player = st.selectbox('Available Players', df.player_name.unique().tolist(),
                            index = st.session_state.selection)
-    
-    
-    
-    
-    
-    
     
     
     if player == None:
