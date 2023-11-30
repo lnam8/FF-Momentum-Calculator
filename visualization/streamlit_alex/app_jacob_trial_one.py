@@ -22,7 +22,7 @@ import re
 warnings.simplefilter(action='ignore', category=FutureWarning)
 class Query(object):
     def __init__(self):
-        self.conn = sqlite3.connect("ff_momentum.db")
+        self.conn = sqlite3.connect("../../db/ff_momentum.db")
         sql_query = """SELECT name FROM sqlite_master 
             WHERE type='table';"""
             

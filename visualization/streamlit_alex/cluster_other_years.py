@@ -38,8 +38,6 @@ class Query(object):
             receptions ,
             targets ,
             
-           
-            
             half_ppr_points 
               FROM """ +"historical_weekly_stats where year>2017 " 
         

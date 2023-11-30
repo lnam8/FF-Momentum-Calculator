@@ -32,6 +32,8 @@ class Query(object):
         self.tables = self.cursor.fetchall()
 
     def relevant_stats(self, position):
+        
+
         madden_query = '''
         select * From ''' + "madden_weekly"
         
@@ -167,8 +169,11 @@ class Query(object):
             The plotly plot generated.
 
         '''
+        df['Cluster'] = df['Cluster'].astype(str)
+
         #fig = px.scatter_3d(df_new,x="Feature 1",y="Feature 2", z='Feature 3', color ='Cluster', text="Name", title="")
-        fig = px.scatter(df,x="Feature 1",y="Feature 2", color ='Cluster', text="Name", title="")
+        fig = px.scatter(df,x="Feature 1",y="Feature 2", color ='Cluster', text="Name", title="",
+                         color_discrete_map={'1': 'red', '0': 'blue', '2': 'white'})
         fig.update_traces(textposition='top center', textfont_size=12)
         
         return fig
@@ -225,23 +230,29 @@ if __name__ == '__main__':
         
  
     
+    col1, col2 = st.columns(2)
+
     if 'selection' not in st.session_state:
         st.session_state['selection'] = None
     
-    player = st.selectbox('Available Players', df.player_name.unique().tolist(),
-                           index = st.session_state.selection)
-    
-    
-    if player == None:
-        df_new = q.cluster(df,clean)
-        figure = q.plot_cluster(df_new)
-        st.plotly_chart(figure)
-    else:
-        df_new = q.cluster(df,clean)
-        close = q.closest_points(df_new,player,10)
-                
-        figure = q.plot_cluster(close)
-        st.plotly_chart(figure)
+    if 'neighbor' not in st.session_state:
+        st.session_state['neighbor'] = 10
 
- 
-    
+    with col2:
+        neighbor_dropdown = st.selectbox('Number of Similar Players', np.arange(50),
+                        index = st.session_state.neighbor)
+
+    with col1:
+        player = st.selectbox('Available Players', df.player_name.unique().tolist(),
+                            index = st.session_state.selection)
+        if player == None:
+            df_new = q.cluster(df,clean)
+            figure = q.plot_cluster(df_new)
+            st.plotly_chart(figure)
+        else:
+            df_new = q.cluster(df,clean)
+            close = q.closest_points(df_new,player,neighbor_dropdown)
+                    
+            figure = q.plot_cluster(close)
+            st.plotly_chart(figure)
+        
