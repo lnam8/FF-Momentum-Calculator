@@ -113,7 +113,7 @@ st.write('You selected:', player_selection)
 st.markdown('''  
     ### Fantasy Football Cumulative Data by Weeks Played
     Players marked with :green[green] bubbles have surpassed the breakout threshold.  
-    Players with :gray[empty] bubbles are under the breakout threshold.   
+    Players with :gray[grey] bubbles are under the breakout threshold.   
 ''')
 
 
@@ -132,7 +132,7 @@ sorted_player_names = sorted(df['player_name'].unique())
 # Group by player_name and add traces
 for player in sorted_player_names:
     player_data = df[df['player_name'] == player]
-    marker_fill = ['green' if breakout == 1 else 'rgba(0, 0, 0, 0.2)' for breakout in player_data['breakout']]
+    marker_fill = ['green' if breakout == 1 else 'rgba(178, 178, 178, 0.8)' for breakout in player_data['breakout']]
     marker_size = [8 if breakout == 1 else 4 for breakout in player_data['breakout']]
     fig.add_trace(go.Scatter(x=player_data['weeks_active'], y=player_data['pts_cumsum'],
                              mode='lines+markers', name=player, line=dict(dash='solid', width=0.8),
