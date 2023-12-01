@@ -27,7 +27,8 @@ warnings.simplefilter(action='ignore', category=FutureWarning)
 
 class Query(object):
     def __init__(self):
-        self.conn = sqlite3.connect("./ff_momentum.db")
+        db = st.secrets["db"]
+        self.conn = sqlite3.connect(db)
         sql_query = """SELECT name FROM sqlite_master 
             WHERE type='table';"""
             
