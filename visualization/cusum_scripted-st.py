@@ -27,7 +27,7 @@ weekly_stats = pd.read_sql("SELECT * FROM weekly_stats", con=con)
 weekly_stats = weekly_stats.drop_duplicates(subset=['player_name', 'week'], keep='first').reset_index(drop=True)
 weekly_stats['pts_cumsum'] = weekly_stats.groupby('player_name')['half_ppr_points'].cumsum()
 weekly_stats['activity'] = weekly_stats['targets']+weekly_stats['rushing_attempts']
-weekly_stats['is_active'] = np.where(weekly_stats['activity']>0, 1, 0)
+weekly_stats['is_active'] = np.where((weekly_stats['activity']>0) | (weekly_stats['half_ppr_points']>2), 1, 0)
 weekly_stats['weeks_active'] = weekly_stats.groupby('player_name')['is_active'].cumsum()
 
 # select position - make selectable on streamlit
@@ -98,6 +98,7 @@ breakout_table.head(20)
 
 
 df = breakout_table
+
 
 # Highlight Player
 
