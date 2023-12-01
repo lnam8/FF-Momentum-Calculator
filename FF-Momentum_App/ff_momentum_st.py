@@ -89,7 +89,8 @@ class Query(object):
     
     
     def historical_cluster_stats(self,CURRENT_FOOTBALL_YEAR):
-        self.conn = sqlite3.connect("ff_momentum.db")
+        db = st.secrets["db"]
+        self.conn = sqlite3.connect(db)
         cursor = self.conn.cursor()
         weekly_stats_query = """select player_name ,
             player_position,
