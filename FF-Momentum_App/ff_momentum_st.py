@@ -8,14 +8,14 @@ Created on Wed Nov  1 20:19:07 2023
 
 import pandas as pd 
 import sqlite3
-# from sklearn import preprocessing
-from scikit-learn import preprocessing
+from sklearn import preprocessing
+# from scikit-learn import preprocessing
 import numpy as np
-# from sklearn.cluster import KMeans
-from scikit-learn.cluster import KMeans
+from sklearn.cluster import KMeans
+# from scikit-learn.cluster import KMeans
 import streamlit as st
-# from sklearn.decomposition import PCA
-from scikit-learn.decomposition import PCA
+from sklearn.decomposition import PCA
+# from scikit-learn.decomposition import PCA
 import plotly.express as px
 from plotly.offline import plot
 import matplotlib.pyplot as plt
