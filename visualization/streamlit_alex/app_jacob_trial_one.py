@@ -20,6 +20,8 @@ import warnings
 
 import re
 warnings.simplefilter(action='ignore', category=FutureWarning)
+
+
 class Query(object):
     def __init__(self):
         self.conn = sqlite3.connect("../../db/ff_momentum.db")
@@ -80,6 +82,8 @@ class Query(object):
         clean = clean[np.isfinite(clean).all(1)]
         
         return df, clean
+    
+    
     def historical_cluster_stats(self,CURRENT_FOOTBALL_YEAR):
         self.conn = sqlite3.connect("../../db/ff_momentum.db")
         cursor = self.conn.cursor()
