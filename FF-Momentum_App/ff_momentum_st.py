@@ -18,6 +18,8 @@ from sklearn.decomposition import PCA
 # from scikit-learn.decomposition import PCA
 import plotly.express as px
 from plotly.offline import plot
+import plotly.graph_objects as go
+
 import matplotlib.pyplot as plt
 import warnings
 
@@ -28,6 +30,7 @@ warnings.simplefilter(action='ignore', category=FutureWarning)
 class Query(object):
     def __init__(self):
         db = st.secrets["db"]
+        #db = 'ff_momentum.db'
         self.conn = sqlite3.connect(db)
         sql_query = """SELECT name FROM sqlite_master 
             WHERE type='table';"""
@@ -52,6 +55,8 @@ class Query(object):
         week = '''select * from weekly_stats'''
         
         weekly = pd.read_sql_query(week,self.conn)
+
+        unmodified_weekly = weekly
         
         
         year = ['2023']*len(weekly)
@@ -66,8 +71,14 @@ class Query(object):
         df = new.merge(madden, left_on=['year','week', 'player_name'], right_on = ['year','week','fullNameForSearch'])
         df = df.sort_values(by=['year','week','player_name']).reset_index(drop=True)
         
-        df = df[(df.player_position == position) & (df.year == '2023')]
+        if position == 'FLX':
+            df = df[df['player_position'].isin(['WR','RB','TE']) & (df.year == '2023')]
+        else:
+            df = df[(df.player_position == position) & (df.year == '2023')]
         
+        
+
+
         df1 = df.set_index('player_name')
         
         
@@ -85,11 +96,24 @@ class Query(object):
         clean = clean.replace(['inf', 'nan', '-inf'], 0)
         clean = clean[np.isfinite(clean).all(1)]
         
-        return df, clean
+        return df, clean, unmodified_weekly
     
+
+    def cusum(self, weekly_stats):
+        weekly_stats = weekly_stats.drop_duplicates(subset=['player_name', 'week'], keep='first').reset_index(drop=True)
+        weekly_stats['pts_cumsum'] = weekly_stats.groupby('player_name')['half_ppr_points'].cumsum()
+        weekly_stats['activity'] = weekly_stats['targets']+weekly_stats['rushing_attempts']
+        weekly_stats['is_active'] = np.where((weekly_stats['activity']>0) | (weekly_stats['half_ppr_points']>2), 1, 0)
+        weekly_stats['weeks_active'] = weekly_stats.groupby('player_name')['is_active'].cumsum()
+
+
+
+        return weekly_stats
+
     
     def historical_cluster_stats(self,CURRENT_FOOTBALL_YEAR):
         db = st.secrets["db"]
+        #db = 'ff_momentum.db'
         self.conn = sqlite3.connect(db)
         cursor = self.conn.cursor()
         weekly_stats_query = """select player_name ,
@@ -315,23 +339,36 @@ class Query(object):
 
         if len(df) > 50:
             title = 'Database of Players Clustered Using Principle Component Analysis'
+            df['Cluster'] = df['Cluster'].astype(str)
+
+            #fig = px.scatter_3d(df_new,x="Feature 1",y="Feature 2", z='Feature 3', color ='Cluster', text="Name", title="")
+            
+            fig1 = px.scatter(df,x="Feature 1",y="Feature 2", color ='Cluster', text="Name", title=title,
+                            color_discrete_map={'1': 'red', '0': 'blue', '2': 'white'})
+
+            fig1.update_traces(textposition='top center', textfont_size=12)
+            
+            return fig1
 
         else:
             title = 'Players Most Similar to {}'.format(df.player_name[0])
 
 
-        df['Cluster'] = df['Cluster'].astype(str)
+            df['Cluster'] = df['Cluster'].astype(str)
 
-        #fig = px.scatter_3d(df_new,x="Feature 1",y="Feature 2", z='Feature 3', color ='Cluster', text="Name", title="")
-        fig = px.scatter(df,x="Feature 1",y="Feature 2", color ='Cluster', text="Name", title=title,
-                         color_discrete_map={'1': 'red', '0': 'blue', '2': 'white'})
-        fig.update_traces(textposition='top center', textfont_size=12)
-        
-        return fig
+            df['Cluster'][0] = df.player_name[0]
+
+            #fig = px.scatter_3d(df_new,x="Feature 1",y="Feature 2", z='Feature 3', color ='Cluster', text="Name", title="")
+            
+            fig1 = px.scatter(df,x="Feature 1",y="Feature 2", color ='Cluster', text="Name", title=title,
+                            color_discrete_map={'1': 'red', '0': 'blue', '2': 'white', df.player_name[0]:'limegreen'})
+
+            fig1.update_traces(textposition='top center', textfont_size=12)
+            
+            return fig1
     
     def closest_points(self, df, POI, neighbors):
-        #POI = 'Stefon Diggs'
-        
+    
         x = df[df['player_name'] == POI]['Feature 1'].reset_index(drop=True).tolist()
         y = df[df['player_name'] == POI]['Feature 2'].reset_index(drop=True).tolist()
         z = df[df['player_name'] == POI]['Feature 3'].reset_index(drop=True).tolist()
@@ -350,9 +387,9 @@ class Query(object):
         for item in modeling_output_df_int_cluster.index:
             person_year = players + " " + str(2023)
             if re.findall(person_year,item):
-                print(item)
+                #print(item)
                 id_name = new_df[new_df['index']== item ].index[0]   
-                print(id_name)
+                #print(id_name)
 
 
                     
@@ -360,50 +397,175 @@ class Query(object):
 if __name__ == '__main__':
     
     q = Query()
-    ##Alex
-    if 'player_position' not in st.session_state:
-        st.session_state['player_position'] = 1 
+
+    option = st.selectbox(
+    'Select position',
+    ('WR', 'RB', 'TE', 'FLX'))
+
+    st.write('You selected:', option)
+    position_select = option
+
+        ##Alex
+ #   if 'player_position' not in st.session_state:
+ #       st.session_state['player_position'] = 1 
     
         
-    position = st.selectbox('Position', ('WR', 'RB', 'TE'), index = st.session_state.player_position)
-    print(position)
+  #  position = st.selectbox('Position', ('WR', 'RB', 'TE'), index = st.session_state.player_position)
+ #   print(position)
     
-    if position == None:
-        df, clean = q.relevant_stats('WR')
-    else:
-        df,clean = q.relevant_stats(position)
+    df,clean, weekly_stats = q.relevant_stats(option)
+
+    weekly_stats = q.cusum(weekly_stats)
+
+    def position_tables(df=weekly_stats, pos=position_select):
+        pos_up = pos.upper()
+        if pos_up == 'FLX':
+            pos_table = df[df['player_position'].isin(['WR','RB','TE'])].copy()
+        else:
+            pos_table = df[df['player_position']==pos_up].copy()
+            # pos_table = df.loc[df['player_position']=='RB'].copy()
+        pos_table['weekly_rank'] = pos_table.groupby('week')['pts_cumsum'].rank('dense', ascending=False)
+        pos_table.sort_values(['weekly_rank'], ascending=False).groupby('week')
+        return pos_table # RETURNS df of formatted player data for selected position
+
+    # Set up bubble tables
+
+    bubble_range = {
+        'wr': {'wr_max':40, 'wr_min':20},
+        'rb':{'rb_max':40, 'rb_min':20},
+        'te':{'te_max':15, 'te_min':6},
+        'flx':{'flx_max':60, 'flx_min':40}
+        }
+
+    def bubble_tables(df):
+        '''RETURNS table of bubble avg points per week and stdev of bubble player points'''
+        if len(df['player_position'].unique()) == 1:
+            pos = df['player_position'].unique()[0].lower()
+        else:
+            pos = 'flx'
+        bubbles = df.loc[(df['weekly_rank']<=bubble_range[pos][pos+'_max']) & (df['weekly_rank']>=bubble_range[pos][pos+'_min'])]
+        bubble_std = bubbles['half_ppr_points'].std()
+        bubble_avg_pos = bubbles.groupby('week')['pts_cumsum'].mean().reset_index()
+        bubble_avg_pos.rename(columns={'pts_cumsum': 'bubble_avg'}, inplace=True)
+        bubble_avg_pos['bubble_avg'] = bubble_avg_pos['bubble_avg']+bubble_std
+        return bubble_avg_pos, bubble_std
+
+    # Join bubble info to main table and calculate breakout trigger
+
+    def breakouts(position_table, bubble_table, bubble_std):
+        '''
+        INPUTS: output of "position_tables", table from "bubble_tables", std from "bubble_tables" 
+        OUTPUT: Table with breakout info added
+        '''
+        breakout_check = pd.merge(position_table, bubble_table, left_on='weeks_active', right_on='week', how='left')
+        breakout_check['cumsum_diff'] = breakout_check['pts_cumsum']-breakout_check['bubble_avg']
+        breakout_check['breakout'] = np.where(breakout_check['cumsum_diff']>0, 1, 0)
+        return breakout_check
+
+    # RUN THROUGH
+
+    position_table = position_tables()
+    bubble_avg, bubble_std = bubble_tables(position_table)
+    breakout_table = breakouts(position_table=position_table, bubble_table=bubble_avg, bubble_std=bubble_std)
+    #print(len(breakout_table))
+    breakout_table.head(20)
+
+
+
+    df = breakout_table
+
+
+    # Highlight Player
+
+    players = sorted(list(df['player_name'].unique()))
+
+    player_selection = st.selectbox(
+        'Select player to spotlight',
+        players,
+        index=None)
+
+    st.write('You selected:', player_selection)
+
+    st.markdown('''  
+        ### Fantasy Football Cumulative Data by Weeks Played
+        Players marked with :green[green] bubbles have surpassed the breakout threshold.  
+        Players with :gray[grey] bubbles are under the breakout threshold.   
+    ''')
+
+
+
+    # VIZ
+
+
+    # Preprocess data to create line dash styles
+    df['line_dash'] = df['breakout'].apply(lambda x: 'solid' if x == 1 else 'dash')
+
+    # Create a figure
+    fig = go.Figure()
+
+    sorted_player_names = sorted(df['player_name'].unique())
+
+    # Group by player_name and add traces
+    for player in sorted_player_names:
+        player_data = df[df['player_name'] == player]
+        marker_fill = ['green' if breakout == 1 else 'rgba(178, 178, 178, 0.8)' for breakout in player_data['breakout']]
+        marker_size = [8 if breakout == 1 else 4 for breakout in player_data['breakout']]
+        fig.add_trace(go.Scatter(x=player_data['weeks_active'], y=player_data['pts_cumsum'],
+                                mode='lines+markers', name=player, line=dict(dash='solid', width=0.8),
+                                marker=dict(size=marker_size, symbol='circle', line=dict(color='white', width=1),
+                                            opacity=1, line_color='black', color=marker_fill),
+                                text=[player_data['player_name']]))
+
+    # Add average line
+    fig.add_trace(go.Scatter(x=bubble_avg['week'], y=bubble_avg['bubble_avg'], line_dash='dot',
+                            marker=dict(color='grey', size=8, symbol='circle'),
+                            mode='lines', line=dict(color='yellow', width=5), name='Threshold'))
+
+    # Update if player selected for highlighting
+    if player_selection:
+        player_select_data = df[df['player_name'] == player_selection]
+        selected_marker_fill = ['green' if breakout == 1 else 'rgba(0, 0, 0, 0.2)' for breakout in player_select_data['breakout']]
+        selected_marker_size = [12 if breakout == 1 else 8 for breakout in player_select_data['breakout']]
+        fig.add_trace(go.Scatter(x=player_select_data['weeks_active'], y=player_select_data['pts_cumsum'],
+                                    mode='lines+markers', name=player_selection, line=dict(dash='solid', width=4, color='white'),
+                                    marker=dict(size=selected_marker_size, symbol='circle', line=dict(color='white', width=1),
+                                                opacity=1, line_color='white', color=selected_marker_fill)))
         
-    col1, col2 = st.columns(2)
+        # Add green or red box annotation based on the breakout value of the last data point
+        last_point_breakout = player_select_data['breakout'].iloc[-1]
+        last_point_week = player_select_data['weeks_active'].iloc[-1]
+        box_color = 'green' if last_point_breakout == 1 else 'red'
+        box_text = 'START' if last_point_breakout == 1 else 'SIT'
+        fig.add_shape(
+            type='rect',
+            label=dict(
+                text=f'{player_selection}<br>{box_text}',
+                font=dict(
+                    size=38,
+                    family='Arial'
+                ),
+                textposition='middle center'
+            ),
+            x0=-0.4,
+            x1=max(df['weeks_active'])*3/5,
+            y0=max(df['pts_cumsum']),
+            y1=max(df['pts_cumsum'])*3/4,
+            fillcolor=box_color,
+            opacity=1,
+            layer='above',
+        )
 
-    if 'selection' not in st.session_state:
-        st.session_state['selection'] = None
-    
-    if 'neighbor' not in st.session_state:
-        st.session_state['neighbor'] = 10
+    # Customize layout
+    fig.update_layout(xaxis_title='Weeks Played', yaxis_title='Cumulative Points Scored',
+                    legend_title='Player Name', height=1000, width=1000)
 
-    with col2:
-        neighbor_dropdown = st.selectbox('Number of Similar Players', np.arange(50),
-                        index = st.session_state.neighbor)
+    fig.update_layout(
+        margin=dict(l=0, r=0, t=0, b=20),
+    )
 
-    with col1:
-        player = st.selectbox('Available Players', df.player_name.unique().tolist(),
-                            index = st.session_state.selection)
+    # Display the chart using Streamlit
+    st.plotly_chart(fig)
 
-
-    WEEK_OF_THE_SEASON = st.number_input("Current Week Number", value=3, placeholder=3,step=1)
-    st.write('The current week Number is ', WEEK_OF_THE_SEASON)
-
-    
-    
-
-    
-    # df_new, figure = q.cluster(df,clean)
-    df_data_weekly = q.historical_cluster_stats(WEEK_OF_THE_SEASON)
-    
-    
-    clean_hist_df = q.clean_historical_cluster(df_data_weekly)
-    hist_array   = q.cluster_historical(clean_hist_df,WEEK_OF_THE_SEASON)
-    max_week_of_ = df_data_weekly[df_data_weekly['year'] == 2023]
     # def update(player):
     #     df_new, figure = q.cluster(df[df.player_name == player], clean)
     #     return df_new, figure
@@ -427,31 +589,50 @@ if __name__ == '__main__':
     # plt.hist(list(histo_hist))
     # st.pyplot(hist_figure)
     
-    if player == None:
+    if player_selection == None:
         df_new = q.cluster(df,clean)
         figure = q.plot_cluster(df_new)
         st.plotly_chart(figure)
     else:
-        df_new = q.cluster(df,clean)
-        close = q.closest_points(df_new,player,10)
-                
-        figure = q.plot_cluster(close)
-        st.plotly_chart(figure)
-        id_name = q.id_from_player_name(player,clean_hist_df,WEEK_OF_THE_SEASON)
+        WEEK_OF_THE_SEASON = st.number_input("Current Week Number", value=3, placeholder=3,step=1)
+        st.write('The current week Number is ', WEEK_OF_THE_SEASON)
+
+        
+        
+
+        
+        # df_new, figure = q.cluster(df,clean)
+        df_data_weekly = q.historical_cluster_stats(WEEK_OF_THE_SEASON)
+        
+        
+        clean_hist_df = q.clean_historical_cluster(df_data_weekly)
+        hist_array   = q.cluster_historical(clean_hist_df,WEEK_OF_THE_SEASON)
+        max_week_of_ = df_data_weekly[df_data_weekly['year'] == 2023]
+        id_name = q.id_from_player_name(player_selection,clean_hist_df,WEEK_OF_THE_SEASON)
     
-        st.header('Previous Years Understanding for ' + str(player) + ' in week ' + str(WEEK_OF_THE_SEASON))
+        st.header('Previous Years Understanding for ' + str(player_selection) + ' in week ' + str(WEEK_OF_THE_SEASON))
 
         histo_hist,plot_figure = q.prevyearcompare(hist_array,id_name,WEEK_OF_THE_SEASON,clean_hist_df)
         st.pyplot(plot_figure)
         
         hist_figure = plt.figure(figsize=(10,10))
-        plt.title('Most Likely Outcomes for ' + str(player) + ' after week ' +str(WEEK_OF_THE_SEASON))
+        plt.title('Most Likely Outcomes for ' + str(player_selection) + ' after week ' +str(WEEK_OF_THE_SEASON))
         plt.xlabel('half ppr points scored')
         plt.ylabel('Expected chance of score')
         plt.hist(list(histo_hist))
         st.pyplot(hist_figure)
-    
 
+        if 'neighbor' not in st.session_state:
+            st.session_state['neighbor'] = 10
+
+        neighbor_dropdown = st.selectbox('Number of Similar Players', np.arange(50),
+                    index = st.session_state.neighbor)
+        df_new = q.cluster(df,clean)
+        close = q.closest_points(df_new,player_selection,10)
+                
+        figure = q.plot_cluster(close)
+        st.plotly_chart(figure)
+    
     
 
     # st.plotly_chart(figure)
