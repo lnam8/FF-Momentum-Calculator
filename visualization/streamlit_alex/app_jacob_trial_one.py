@@ -81,7 +81,7 @@ class Query(object):
         
         return df, clean
     def historical_cluster_stats(self,CURRENT_FOOTBALL_YEAR):
-        self.conn = sqlite3.connect("ff_momentum.db")
+        self.conn = sqlite3.connect("../../db/ff_momentum.db")
         cursor = self.conn.cursor()
         weekly_stats_query = """select player_name ,
             player_position,
@@ -203,6 +203,8 @@ class Query(object):
         
         modeling_output_df_int_cluster  = piv_data[list_of_columns]
 
+        modeling_output_df_int_cluster.columns = [str(x) for x in modeling_output_df_int_cluster.columns]
+
         from sklearn.neighbors import NearestNeighbors
         for i in [1]:
             neigh = NearestNeighbors(n_neighbors=11)
@@ -227,6 +229,8 @@ class Query(object):
         labels.append(np.array(new_df.iloc[id])[0])
         #labels.append(str(np.array(new_df.iloc[id])[0]) + ' Projected')
         plt.title('Players most like ' + str(np.array(new_df.iloc[id])[0]))
+
+        
         for item in index_for_nn:
             if item != id: 
                 #print('Neighbors of id', new_df.iloc[item]['index'])
@@ -299,9 +303,20 @@ class Query(object):
         return df_new
         
     def plot_cluster(self, df):
+
+        if len(df) > 50:
+            title = 'Database of Players Clustered Using Principle Component Analysis'
+
+        else:
+            title = 'Players Most Similar to {}'.format(df.player_name[0])
+
+
+        df['Cluster'] = df['Cluster'].astype(str)
+
         #fig = px.scatter_3d(df_new,x="Feature 1",y="Feature 2", z='Feature 3', color ='Cluster', text="Name", title="")
-        fig = px.scatter(df,x="Feature 1",y="Feature 2", color ='Cluster', text="Name", title="")
-        fig.update_traces(textposition='top center')
+        fig = px.scatter(df,x="Feature 1",y="Feature 2", color ='Cluster', text="Name", title=title,
+                         color_discrete_map={'1': 'red', '0': 'blue', '2': 'white'})
+        fig.update_traces(textposition='top center', textfont_size=12)
         
         return fig
     
@@ -349,17 +364,25 @@ if __name__ == '__main__':
     else:
         df,clean = q.relevant_stats(position)
         
- 
-    
+    col1, col2 = st.columns(2)
+
     if 'selection' not in st.session_state:
         st.session_state['selection'] = None
     
-    player = st.selectbox('Available Players', df.player_name.unique().tolist(),
-                           index = st.session_state.selection)
+    if 'neighbor' not in st.session_state:
+        st.session_state['neighbor'] = 10
+
+    with col2:
+        neighbor_dropdown = st.selectbox('Number of Similar Players', np.arange(50),
+                        index = st.session_state.neighbor)
+
+    with col1:
+        player = st.selectbox('Available Players', df.player_name.unique().tolist(),
+                            index = st.session_state.selection)
+
 
     WEEK_OF_THE_SEASON = st.number_input("Current Week Number", value=3, placeholder=3,step=1)
     st.write('The current week Number is ', WEEK_OF_THE_SEASON)
-
 
     
     
@@ -413,7 +436,7 @@ if __name__ == '__main__':
         st.pyplot(plot_figure)
         
         hist_figure = plt.figure(figsize=(10,10))
-        plt.title('Most Likely Outcomes for ' + str(player) + 'after week ' +str(WEEK_OF_THE_SEASON))
+        plt.title('Most Likely Outcomes for ' + str(player) + ' after week ' +str(WEEK_OF_THE_SEASON))
         plt.xlabel('half ppr points scored')
         plt.ylabel('Expected chance of score')
         plt.hist(list(histo_hist))
