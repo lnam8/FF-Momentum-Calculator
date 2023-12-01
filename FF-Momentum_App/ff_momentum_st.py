@@ -29,7 +29,7 @@ warnings.simplefilter(action='ignore', category=FutureWarning)
 
 class Query(object):
     def __init__(self):
-        db = st.secrets["db"]
+        self.db = st.secrets["db"]
         #db = 'ff_momentum.db'
         self.conn = sqlite3.connect(db)
         sql_query = """SELECT name FROM sqlite_master 
@@ -112,9 +112,9 @@ class Query(object):
 
     
     def historical_cluster_stats(self,CURRENT_FOOTBALL_YEAR):
-        db = st.secrets["db"]
+        #db = st.secrets["db"]
         #db = 'ff_momentum.db'
-        self.conn = sqlite3.connect(db)
+        self.conn = sqlite3.connect(self.db)
         cursor = self.conn.cursor()
         weekly_stats_query = """select player_name ,
             player_position,
@@ -594,7 +594,7 @@ if __name__ == '__main__':
         figure = q.plot_cluster(df_new)
         st.plotly_chart(figure)
     else:
-        WEEK_OF_THE_SEASON = st.number_input("Current Week Number", value=3, placeholder=3,step=1)
+        WEEK_OF_THE_SEASON = st.selectbox("Current Week Number", sorted(list(weekly_stats.week.unique())), index=max(weekly_stats.week)-1)
         st.write('The current week Number is ', WEEK_OF_THE_SEASON)
 
         
