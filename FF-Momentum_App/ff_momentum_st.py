@@ -27,7 +27,7 @@ warnings.simplefilter(action='ignore', category=FutureWarning)
 
 class Query(object):
     def __init__(self):
-        self.conn = sqlite3.connect("ff_momentum.db")
+        self.conn = sqlite3.connect("FF-Momentum-Calculator\ff_momentum.db")
         sql_query = """SELECT name FROM sqlite_master 
             WHERE type='table';"""
             
@@ -88,7 +88,7 @@ class Query(object):
     
     
     def historical_cluster_stats(self,CURRENT_FOOTBALL_YEAR):
-        self.conn = sqlite3.connect("ff_momentum.db")
+        self.conn = sqlite3.connect("FF-Momentum-Calculator\ff_momentum.db")
         cursor = self.conn.cursor()
         weekly_stats_query = """select player_name ,
             player_position,
