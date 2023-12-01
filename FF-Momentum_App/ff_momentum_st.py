@@ -27,7 +27,7 @@ warnings.simplefilter(action='ignore', category=FutureWarning)
 
 class Query(object):
     def __init__(self):
-        self.conn = sqlite3.connect("ff_momentum.db")
+        self.conn = sqlite3.connect("./ff_momentum.db")
         sql_query = """SELECT name FROM sqlite_master 
             WHERE type='table';"""
             
@@ -360,7 +360,7 @@ if __name__ == '__main__':
     q = Query()
     ##Alex
     if 'player_position' not in st.session_state:
-        st.session_state['player_position'] = None
+        st.session_state['player_position'] = 1 
     
         
     position = st.selectbox('Position', ('WR', 'RB', 'TE'), index = st.session_state.player_position)
