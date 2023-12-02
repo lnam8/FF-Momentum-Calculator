@@ -14,7 +14,7 @@ In your terminal, run the code:
 
 
 ## Execution
-Once that finishes, run the docker image using the command:
+Once the image is built, run the docker image using the command:
 
 `docker run -p 8501:8501 <image name>`
 
