@@ -4,7 +4,20 @@ We developed an ensemble Machine Learning (ML) based player performance comparis
 
 
 ## Installation
-Download the DockerFile and navigate to the directory it was downloaded to. Make sure the filename of the DockerFile is `dockerfile` and not `dockerfile.txt`. 
+
+### Option 1: Pull From DockerHub
+If you have Docker Desktop, be sure that it is open so the Docker Daemon is running.
+
+To pull the pre-compiled Docker Image from DockerHub, run the command: 
+
+`docker pull asanner3/fantasy_analyzer:latest`
+
+The image name will be `asanner3/fantasy_analyzer`
+
+Now move on to execution.
+
+### Option 2: Build Yourself From DockerFile
+Download the DockerFile from our GitHub and navigate to the directory it was downloaded to. Make sure the filename of the DockerFile is `dockerfile` and not `dockerfile.txt`. 
 
 Open Docker locally.
 
