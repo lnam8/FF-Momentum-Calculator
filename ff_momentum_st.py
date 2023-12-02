@@ -396,9 +396,9 @@ class Query(object):
         return id_name
 if __name__ == '__main__':
     
-    st.title('Fantasy Football Player Sit/Start Analyzer')
     q = Query()
 
+    st.markdown('''# Fantasy Football Player Sit/Start Analyzer''')
 
     option = st.selectbox(
     'Select position',
