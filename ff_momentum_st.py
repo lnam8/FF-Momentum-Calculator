@@ -351,7 +351,7 @@ class Query(object):
             return fig1
 
         else:
-            title = 'Players Most Similar to {}'.format(df.player_name[0])
+            title = 'Players Most Similar to {} based on Principal Component Analysis'.format(df.player_name[0])
 
 
             df['Cluster'] = df['Cluster'].astype(str)
