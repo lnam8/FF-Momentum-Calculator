@@ -20,6 +20,6 @@ Once the image is built, run the docker image using the command:
 
 This is not the typical docker run command, but it is imperative to be able to use the streamlit deployed app.
 
-The terminal will tell you to view the streamlit app in your browser at `http://0.0.0.0:8501`, but you SHOULD USE `localhost:8501` in your browser.
+The terminal will tell you to view the streamlit app in your browser at `http://0.0.0.0:8501`, but you SHOULD COPY `localhost:8501` into your browser.
 
 Once opening `localhost:8501` in your browser, the app will load and you are free to explore our analysis for the available players.
