@@ -398,7 +398,7 @@ if __name__ == '__main__':
     
     q = Query()
 
-    st.markdown('''# Fantasy Football Player Sit/Start Analyzer''')
+    st.title('Fantasy Football Player Sit/Start Analyzer')
 
     option = st.selectbox(
     'Select position',
