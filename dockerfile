@@ -10,7 +10,7 @@ RUN apt-get update && apt-get install -y \
     && rm -rf /var/lib/apt/lists/*
 
 
-RUN git clone https://github.com/asanner/FF_Test .
+RUN git clone https://github.com/lnam8/FF-Momentum-Calculator.git .
 
 RUN pip install -r requirements.txt
 
