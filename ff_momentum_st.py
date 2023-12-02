@@ -398,6 +398,8 @@ if __name__ == '__main__':
     
     q = Query()
 
+    st.title('Fantasy Football Player Sit/Start Analyzer')
+
     option = st.selectbox(
     'Select position',
     ('WR', 'RB', 'TE', 'FLX'))
@@ -605,34 +607,35 @@ if __name__ == '__main__':
         df_data_weekly = q.historical_cluster_stats(WEEK_OF_THE_SEASON)
         
         
-        clean_hist_df = q.clean_historical_cluster(df_data_weekly)
-        hist_array   = q.cluster_historical(clean_hist_df,WEEK_OF_THE_SEASON)
-        max_week_of_ = df_data_weekly[df_data_weekly['year'] == 2023]
-        id_name = q.id_from_player_name(player_selection,clean_hist_df,WEEK_OF_THE_SEASON)
-    
-        st.header('Previous Years Understanding for ' + str(player_selection) + ' in week ' + str(WEEK_OF_THE_SEASON))
-
-        histo_hist,plot_figure = q.prevyearcompare(hist_array,id_name,WEEK_OF_THE_SEASON,clean_hist_df)
-        st.pyplot(plot_figure)
+        try:
+            clean_hist_df = q.clean_historical_cluster(df_data_weekly)
+            hist_array   = q.cluster_historical(clean_hist_df,WEEK_OF_THE_SEASON)
+            max_week_of_ = df_data_weekly[df_data_weekly['year'] == 2023]
+            id_name = q.id_from_player_name(player_selection,clean_hist_df,WEEK_OF_THE_SEASON)
         
-        hist_figure = plt.figure(figsize=(10,10))
-        plt.title('Most Likely Outcomes for ' + str(player_selection) + ' after week ' +str(WEEK_OF_THE_SEASON))
-        plt.xlabel('half ppr points scored')
-        plt.ylabel('Expected chance of score')
-        plt.hist(list(histo_hist))
-        st.pyplot(hist_figure)
-
-        if 'neighbor' not in st.session_state:
-            st.session_state['neighbor'] = 10
-
-        neighbor_dropdown = st.selectbox('Number of Similar Players', np.arange(50),
-                    index = st.session_state.neighbor)
-        df_new = q.cluster(df,clean)
-        close = q.closest_points(df_new,player_selection,10)
-                
-        figure = q.plot_cluster(close)
-        st.plotly_chart(figure)
+            st.header('Previous Years Understanding for ' + str(player_selection) + ' in week ' + str(WEEK_OF_THE_SEASON))
     
-    
+            histo_hist,plot_figure = q.prevyearcompare(hist_array,id_name,WEEK_OF_THE_SEASON,clean_hist_df)
+            st.pyplot(plot_figure)
+            
+            hist_figure = plt.figure(figsize=(10,10))
+            plt.title('Most Likely Outcomes for ' + str(player_selection) + ' after week ' +str(WEEK_OF_THE_SEASON))
+            plt.xlabel('half ppr points scored')
+            plt.ylabel('Expected chance of score')
+            plt.hist(list(histo_hist))
+            st.pyplot(hist_figure)
+        except:
+            st.text(f'Not enough data for {player_selection}')
+        try:
+            if 'neighbor' not in st.session_state:
+                st.session_state['neighbor'] = 10
 
-    # st.plotly_chart(figure)
+            neighbor_dropdown = st.selectbox('Number of Similar Players', np.arange(50),
+                        index = st.session_state.neighbor)
+            df_new = q.cluster(df,clean)
+            close = q.closest_points(df_new,player_selection,10)
+                    
+            figure = q.plot_cluster(close)
+            st.plotly_chart(figure)
+        except:
+            pass
