@@ -9,6 +9,7 @@ We developed an ensemble Machine Learning (ML) based player performance comparis
 To pull the pre-compiled Docker Image from DockerHub, run the command: 
 
 `docker pull asanner3/fantasy_analyzer:latest`
+The image name will be `asanner3/fantasy_analyzer`
 
 Now move on to execution.
 
