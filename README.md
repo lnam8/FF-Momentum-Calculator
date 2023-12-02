@@ -12,6 +12,8 @@ In your terminal, run the code:
 
 `docker build -t <image name> .`
 
+
+## Execution
 Once that finishes, run the docker image using the command:
 
 `docker run -p 8501:8501 <image name>`
@@ -19,3 +21,5 @@ Once that finishes, run the docker image using the command:
 This is not the typical docker run command, but it is imperative to be able to use the streamlit deployed app.
 
 The terminal will tell you to view the streamlit app in your browser at `http://0.0.0.0:8501`, but you SHOULD USE `localhost:8501` in your browser.
+
+Once opening `localhost:8501` in your browser, the app will load and you are free to explore our analysis for the available players.
